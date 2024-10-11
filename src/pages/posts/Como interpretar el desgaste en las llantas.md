@@ -4,7 +4,7 @@ pubDate: "22/08/2024"
 title: "Como Interpretar El Desgaste En Llantas"
 author: "Edwin Camilo"
 image:
-    url: "/public/img/desgaste-en-las-llantas.jpg"
+    url: "/img/desgaste-en-las-llantas.jpg"
     alt: "imagen de post"
 tags: ["Articulo"] 
 previewText: " El desgaste en llantas suele afectar a la flota dado que se traduce en más consumo de combustible, por lo que es importante mantener el buen estado de los elementos que inciden en un desgaste prematuro de estas."
@@ -18,27 +18,27 @@ previewText: " El desgaste en llantas suele afectar a la flota dado que se tradu
     <li class="my-8">
     <h2 class="subtitulos-blog my-2">1. DESPRENDIMIENTO DEL NEUMATICO: </h2>
      <p class="text-blog">Generalmente ocurre cuando se frena demasiado brusco, cuando tenemos frenos nuevos y se usan de manera agresiva o por sistemas no balanceados. </p>
-    <img class="rounded-t-lg w-[200px] my-2" src="/public/img/desprendimiento-del-neumatico.jpg" alt=""> </img>
+    <img class="rounded-t-lg w-[200px] my-2" src="/img/desprendimiento-del-neumatico.jpg" alt=""> </img>
     </li>
     <li  class="my-8">
     <h2 class="subtitulos-blog my-2">2. DESGASTE DEL HOMBRO DE LA LLANTA: </h2>
      <p class="text-blog">Se produce cuando el eje de tracción se encuentra desalineado, o por mantenimiento inadecuado de los elementos de la suspensión. </p>
-    <img class="rounded-t-lg w-[200px]" src="/public/img/desgaste-del-hombro-de-la-llanta.jpg" alt=""> </img>
+    <img class="rounded-t-lg w-[200px]" src="/img/desgaste-del-hombro-de-la-llanta.jpg" alt=""> </img>
     </li>
     <li class="my-8">
     <h2 class="subtitulos-blog my-2">3. DESGASTE DIAGONAL: </h2>
      <p class="text-blog">Se produce cuando el eje de tracción se encuentra desalineado, por elementos gastados de la suspensión, doblados o faltantes. </p>
-    <img class="rounded-t-lg w-[200px]" src="/public/img/desgaste-diagonal.jpg" alt=""> </img>
+    <img class="rounded-t-lg w-[200px]" src="/img/desgaste-diagonal.jpg" alt=""> </img>
     </li>
     <li class="my-8">
     <h2 class="subtitulos-blog my-2">4. DESGASTE ESCALONADO: </h2>
      <p class="text-blog"> Se produce se tienen partes de la suspensión gastadas o dañadas totalmente.</p>
-    <img class="rounded-t-lg w-[200px] " src="/public/img/desgaste-escalonado.png" alt=""> </img>
+    <img class="rounded-t-lg w-[200px] " src="/img/desgaste-escalonado.png" alt=""> </img>
     </li>
     <li class="my-8">
     <h2 class="subtitulos-blog my-2">5. DESGASTE MULTIPLE/ZONAS PLANAS:</h2>
      <p class="text-blog">  Se produce por rodamientos desgastados, suspensiones neumáticas con amortiguadores en mal estado o por llevar el vehículo sin carga a alta velocidad.</p>
-    <img class="rounded-t-lg w-[200px] " src="/public/img/desgaste-multiple.jpg" alt=""> </img>
+    <img class="rounded-t-lg w-[200px] " src="/img/desgaste-multiple.jpg" alt=""> </img>
     </li>  
 </ul>
 
