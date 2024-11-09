@@ -2,18 +2,17 @@
 import BotonPrincipal from "./BotonPrincipal.astro";
 ---
 
-<div class="lg:mt-56 sm:mx-4 sm:w-auto lg:w-[1000px] lg:mx-auto sm:pt-8 lg:pt-0">
-  <h1 class="text-center mb-4 text-[36px]">
-    Estamos aqui para ti, <span class="text-naranja">contactanos</span> en cualquier
-    momento
+<div class="xl:mt-48 sm:mx-4 sm:w-auto lg:w-[1000px] lg:mx-auto sm:pt-8 sm:m-4 lg:pt-0">
+  <h1 class="lg:!text-center !sm:text-justify mb-4 text-[36px]">
+    Estamos aqui para ti, contactanos en cualquier momento
   </h1>
-  <p class="text-center">
+  <p class="lg:!text-center !sm:text-justify ">
     Si tienes alguna duda sobre nuestros servicios, no dudes en hacernoslo saber
   </p>
 </div>
 
 <div
-  class="lg:mb-56 sm:mb-8 mt-8 max-w-6xl max-lg:max-w-3xl mx-auto bg-azul rounded-lg"
+  class="lg:mb-24 sm:mb-8 mt-8 max-w-6xl max-lg:max-w-3xl mx-auto bg-azul rounded-lg"
 >
   <section class="grid lg:grid-cols-2 items-center gap-14 sm:p-8 p-4">
     <div class="flex flex-col gap-8 h-full justify-between">
@@ -30,7 +29,7 @@ import BotonPrincipal from "./BotonPrincipal.astro";
             />
           </div>
 
-          <h3 class="text-2xl text-center">¿Quieres trabajar con nosotros?</h3>
+          <h3 class="text-2xl text-center py-2">¿Quieres trabajar con nosotros?</h3>
           <p class="text-lg pb-2 text-center">Si quieres formar parte de una empresa comprometida con la excelencia y la innovación en el sector de repuestos para tractocamiones.</p>
         </div>
 
@@ -61,7 +60,7 @@ import BotonPrincipal from "./BotonPrincipal.astro";
             />
           </div>
 
-          <h3 class="text-2xl text-center">Area de Mercadeo</h3>
+          <h3 class="text-2xl text-center py-2">Area de Mercadeo</h3>
           <p class="text-lg pb-2 text-center">
             Impulsamos nuestra presencia con estrategias innovadoras para
             conectar eficazmente con nuestros clientes y destacar en el mercado.
@@ -93,7 +92,7 @@ import BotonPrincipal from "./BotonPrincipal.astro";
             />
           </div>
 
-          <h3 class="text-2xl text-center">Gestión de Garantias</h3>
+          <h3 class="text-2xl text-center py-2">Gestión de Garantias</h3>
           <p class="text-lg pb-2 text-center">
             Respaldo total en cada venta. Nuestro servicio de Gestión de Garantías asegura que cualquier inconveniente con los repuestos adquiridos sea atendido de manera eficiente y profesional.
           </p>
@@ -114,6 +113,38 @@ import BotonPrincipal from "./BotonPrincipal.astro";
     </div>
 
     <div class="flex flex-col gap-8">
+    
+      <div
+        class="flex flex-col items-center bg-white rounded-lg shadow-md shadow-[0px_0px_5px_1px_#cbd5e0] px-4"
+      >
+        <div class="pt-4 md:px-8 sm:px-0 flex flex-col items-center">
+          <div class="w-fit bg-blue-200 p-4 rounded-full">
+            <img
+              width="30"
+              height="30"
+              src="https://img.icons8.com/parakeet-line/96/04297e/communication.png"
+              alt="communication"
+            />
+          </div>
+
+          <h3 class="text-2xl !text-center py-2">¿Quieres Ser Proveedor?</h3>
+          <p class="text-lg pb-2 text-center">
+            Siempre en búsqueda de socios estratégicos que compartan nuestro compromiso con la calidad y el servicio. Si tienes productos o servicios que puedan complementar nuestra oferta, nos encantaría colaborar contigo.
+          </p>
+        </div>
+
+        <a
+          href="https://api.whatsapp.com/send?phone=573124615606&text=Hola%2C%20necesito%20informaci%C3%B3n%20sobre..."
+          class="text-center w-full border-black py-4"
+          style="border-top: 1px solid rgba(179, 179, 179, 0.5);"
+        >
+          <span
+            class="bg-naranja w-full text-white display inline-block py-2 px-4 rounded hover:bg-white hover:border border-naranja hover:text-naranja"
+            >Empezar Chat <i class="fa-solid fa-arrow-right ml-2"></i></span
+          >
+        </a>
+      </div>
+
       <form id="form" class="bg-white p-6 rounded-lg">
         <div class="field">
           <label for="nombre">Nombre</label>
@@ -235,38 +266,9 @@ import BotonPrincipal from "./BotonPrincipal.astro";
           />
         </button>
       </form>
-
-      <div
-        class="flex flex-col items-center bg-white rounded-lg shadow-md shadow-[0px_0px_5px_1px_#cbd5e0] px-4"
-      >
-        <div class="pt-4 md:px-8 sm:px-0 flex flex-col items-center">
-          <div class="w-fit bg-blue-200 p-4 rounded-full">
-            <img
-              width="30"
-              height="30"
-              src="https://img.icons8.com/parakeet-line/96/04297e/communication.png"
-              alt="communication"
-            />
-          </div>
-
-          <h3 class="text-2xl text-center">¿Quieres Ser Proveedor?</h3>
-          <p class="text-lg pb-2 text-center">
-            Siempre en búsqueda de socios estratégicos que compartan nuestro compromiso con la calidad y el servicio. Si tienes productos o servicios que puedan complementar nuestra oferta, nos encantaría colaborar contigo.
-          </p>
-        </div>
-
-        <a
-          href="https://api.whatsapp.com/send?phone=573124615606&text=Hola%2C%20necesito%20informaci%C3%B3n%20sobre..."
-          class="text-center w-full border-black py-4"
-          style="border-top: 1px solid rgba(179, 179, 179, 0.5);"
-        >
-          <span
-            class="bg-naranja w-full text-white display inline-block py-2 px-4 rounded hover:bg-white hover:border border-naranja hover:text-naranja"
-            >Empezar Chat <i class="fa-solid fa-arrow-right ml-2"></i></span
-          >
-        </a>
-      </div>
+      
     </div>
+
     <div></div>
   </section>
 </div>

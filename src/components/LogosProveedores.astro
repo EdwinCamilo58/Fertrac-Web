@@ -118,6 +118,32 @@
     }
 }
 
+/* Ajuste para pantallas pequeñas (360px) */
+@media (max-width: 360px) {
+    .slider .slide {
+        padding: 0 10px; /* Reduce el espacio entre logos */
+        width: 100px; /* Reduce el ancho de cada logo */
+    }
+    @keyframes scroll-left {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-100px * 28)); /* Ajusta el cálculo para el nuevo ancho */
+        }
+    }
+
+    @keyframes scroll-right {
+        0% {
+            transform: translateX(calc(-100px * 28));
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+}
+
+
 </style>
 
 <script>
