@@ -3,7 +3,7 @@ import BotonPrincipal from "./BotonPrincipal.astro";
 ---
 
 <div
-  class="xl:mt-48 sm:mx-4 sm:w-auto lg:w-[1000px] lg:mx-auto sm:pt-8 sm:m-4 lg:pt-0"
+  class="xl:mt-48 sm:mx-4 sm:w-auto lg:w-[1000px] lg:mx-auto sm:pt-8 sm:m-4 lg:pt-0  "
 >
   <h1 class="lg:!text-center !sm:text-justify mb-4 text-[36px]">
     Estamos aqui para ti, contactanos en cualquier momento
@@ -13,7 +13,7 @@ import BotonPrincipal from "./BotonPrincipal.astro";
   </p>
 </div>
 
-<div class="lg:mb-24 sm:mb-8 mt-8 w-9/12 max-lg:max-w-3xl mx-auto">
+<!-- <div class="lg:mb-24 sm:mb-8 mt-8 w-9/12 max-lg:max-w-3xl mx-auto">
   <section class="grid grid-cols-1 xl:grid-cols-3 gap-3 px-4 py-3">
     <div
       class="flex flex-col items-center bg-white rounded-lg shadow-md shadow-[0px_0px_5px_1px_#cbd5e0] px-4"
@@ -175,18 +175,55 @@ import BotonPrincipal from "./BotonPrincipal.astro";
       </a>
     </div>
   </section>
-</div>
+</div> -->
 
 <section class="flex flex-col w-9/12 max-lg:max-w-3xl mx-auto items-center">
 
-  <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
+  <div class="mb-4 border-b border-gray-200 w-full">
     <ul
-      class="flex flex-wrap -mb-px text-sm font-medium text-center"
+      class="flex flex-wrap -mb-px text-sm font-medium text-center justify-center"
       id="default-tab"
       data-tabs-toggle="#default-tab-content"
       role="tablist"
     >
-      <li class="me-2" role="presentation">
+
+
+      <p class="flex items-center text-sm text-gray-500 dark:text-gray-400"><button data-popover-target="popover-description" data-popover-placement="bottom-end" type="button"><i class="fa-solid fa-circle-question"></i><span class="sr-only">Show information</span></button></p>
+<div data-popover id="popover-description" role="tooltip" class="absolute z-10 invisible inline-block text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 w-72 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-400">
+    <div class="p-3 space-y-2">
+        <h3 class="font-semibold text-gray-900 dark:text-white">Selecciona el formulario que necesitas</h3>
+        <p>Report helps navigate cumulative growth of community activities. Ideally, the chart should have a growing trend, as stagnating chart signifies a significant decrease of community activity.</p>
+      
+    </div>
+    <div data-popper-arrow></div>
+      </div>
+
+
+    <li class="me-2">
+      <button
+        class="inline-block p-4 border-b-2 rounded-t-lg"
+        id="ventas-tab"
+        data-tabs-target="#ventas"
+        type="button"
+        role="tab"
+        aria-controls="ventas"
+        aria-selected="false">Area de Ventas</button
+      >
+    </li>
+
+    <li class="me-2">
+      <button
+        class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+        id="dashboard-tab"
+        data-tabs-target="#dashboard"
+        type="button"
+        role="tab"
+        aria-controls="dashboard"
+        aria-selected="false">Area de Mercadeo</button
+      >
+    </li>
+
+      <li class="me-2">
         <button
           class="inline-block p-4 border-b-2 rounded-t-lg"
           id="profile-tab"
@@ -194,23 +231,11 @@ import BotonPrincipal from "./BotonPrincipal.astro";
           type="button"
           role="tab"
           aria-controls="profile"
-          aria-selected="false">Trabaja con nosotros</button
+          aria-selected="false">Recursos Humanos</button
         >
       </li>
-
-      <li class="me-2" role="presentation">
-        <button
-          class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
-          id="dashboard-tab"
-          data-tabs-target="#dashboard"
-          type="button"
-          role="tab"
-          aria-controls="dashboard"
-          aria-selected="false">Area de Mercadeo</button
-        >
-      </li>
-      
-      <li class="me-2" role="presentation">
+  
+      <li class="me-2">
         <button
           class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
           id="settings-tab"
@@ -222,7 +247,19 @@ import BotonPrincipal from "./BotonPrincipal.astro";
         >
       </li>
 
-      <li role="presentation">
+      <li class="me-2">
+        <button
+          class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+          id="credito-tab"
+          data-tabs-target="#credito"
+          type="button"
+          role="tab"
+          aria-controls="credito"
+          aria-selected="false">Solicitud de Credito</button
+        >
+      </li>
+
+      <li>
         <button
           class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
           id="contacts-tab"
@@ -233,16 +270,21 @@ import BotonPrincipal from "./BotonPrincipal.astro";
           aria-selected="false">Quiero ser Proveedor</button
         >
       </li>
+
+      
     </ul>
+
+    
+    
   </div>
 
   <div id="default-tab-content">
 
     <div
       class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800"
-      id="profile"
+      id="ventas"
       role="tabpanel"
-      aria-labelledby="profile-tab"
+      aria-labelledby="ventas-tab"
     >
       <div class="flex items-center justify-center w-screen sm:flex-wrap">
         <div
@@ -250,7 +292,7 @@ import BotonPrincipal from "./BotonPrincipal.astro";
         >
           <img
             alt=""
-            src="https://images.unsplash.com/photo-1661956602116-aa6865609028?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80"
+            src="/public/img/area-ventas.jpg"
             class="absolute inset-0 h-full w-full object-cover"
           />
 
@@ -264,7 +306,197 @@ import BotonPrincipal from "./BotonPrincipal.astro";
 
               <a href="#">
                 <h3 class="mt-0.5 text-lg !text-white">
-                  Trabaja con Nosotros
+                  Area de Ventas
+                </h3>
+              </a>
+
+              <p class="mt-2 line-clamp-3 text-sm/relaxed !text-white/95">
+                Si quieres formar parte de una empresa comprometida con la excelencia
+                y la innovación en el sector de repuestos para tractocamiones.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <form id="form" class="p-6 rounded-lg">
+            <div class="flex flex-wrap lg:gap-8 sm:gap-0">
+              <div class="field lg:w-auto sm:w-full">
+                <label for="nombre">Nombre</label>
+
+                <div class="relative">
+                  <div
+                    class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none"
+                  >
+                    <i class="fa-solid fa-user-tie"></i>
+                  </div>
+                  <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm block ps-10 p-2.5"
+                    placeholder="Carlos"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="field lg:w-auto sm:w-full">
+                <label for="nombre">Apellido</label>
+
+                <div class="relative">
+                  <div
+                    class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none"
+                  >
+                    <i class="fa-solid fa-user-tie"></i>
+                  </div>
+                  <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm block ps-10 p-2.5"
+                    placeholder="Carlos"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="correo">Correo electronico</label>
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none"
+                >
+                  <i class="fa-solid fa-user-tie"></i>
+                </div>
+                <input
+                  type="text"
+                  id="correo"
+                  name="correo"
+                  class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm block ps-10 p-2.5"
+                  placeholder="Carlos"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="celular">Numero</label>
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none"
+                >
+                  <i class="fa-solid fa-user-tie"></i>
+                </div>
+                <input
+                  type="text"
+                  id="celular"
+                  name="celular"
+                  class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm block ps-10 p-2.5"
+                  placeholder="+XX XXXXXXXXXX"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="empresa">Empresa</label>
+
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none"
+                >
+                  <i class="fa-solid fa-user-tie"></i>
+                </div>
+                <input
+                  type="text"
+                  id="empresa"
+                  name="empresa"
+                  class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm block ps-10 p-2.5"
+                  placeholder="Carlos"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="correo">Mensaje</label>
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none"
+                >
+                </div>
+                <textarea
+                  rows="6"
+                  id="correo"
+                  name="correo"
+                  class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm block"
+                  placeholder="Hola, quiero saber mas sobre..."
+                  required></textarea>
+              </div>
+            </div>
+
+            <label>
+              <input
+                type="checkbox"
+                name="dataConsent"
+                id="dataConsent"
+                required
+                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              />
+              <label
+                for="link-checkbox"
+                class="text-sm font-medium text-gray-900 dark:text-gray-300"
+                >Acepto la
+                <a
+                  href="/img/politica-manejo-de-datos.pdf"
+                  class="text-azul hover:underline"
+                  download="politica-manejo-de-datos.pdf">Politica de Datos</a
+                ></label
+              >
+            </label>
+
+            <button class="w-full my-2">
+              <input
+                class="cursor-pointer text-white hover:text-naranja w-full bg-naranja w-full display inline-block py-2 px-4 rounded hover:bg-white hover:border border-naranja hover:text-naranja"
+                type="submit"
+                id="button"
+                value="Enviar Correo"
+              />
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800"
+      id="profile"
+      role="tabpanel"
+      aria-labelledby="profile-tab"
+    >
+      <div class="flex items-center justify-center w-screen sm:flex-wrap">
+        <div
+          class="relative flex items-end overflow-hidden rounded-lg shadow transition hover:shadow-lg lg:w-1/4 sm-auto h-[550px]"
+        >
+          <img
+            alt=""
+            src="/public/img/recursos-humanos.jpg"
+            class="absolute inset-0 h-full w-full object-cover"
+          />
+
+          <div
+            class="relative bg-gradient-to-t from-gray-900/50 to-gray-900/25"
+          >
+            <div class="p-4 sm:p-6">
+              <time datetime="2022-10-10" class="block text-xs text-white/90">
+                10th Oct 2022
+              </time>
+
+              <a href="#">
+                <h3 class="mt-0.5 text-lg !text-white">
+                  Recursos Humanos
                 </h3>
               </a>
 
@@ -440,7 +672,7 @@ import BotonPrincipal from "./BotonPrincipal.astro";
         >
           <img
             alt=""
-            src="https://images.unsplash.com/photo-1661956602116-aa6865609028?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80"
+            src="/public/img/area-mercadeo.jpg"
             class="absolute inset-0 h-full w-full object-cover"
           />
 
@@ -630,7 +862,7 @@ import BotonPrincipal from "./BotonPrincipal.astro";
         >
           <img
             alt=""
-            src="https://images.unsplash.com/photo-1661956602116-aa6865609028?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80"
+            src="/public/img/gestion-garantia.jpg"
             class="absolute inset-0 h-full w-full object-cover"
           />
 
@@ -810,6 +1042,198 @@ import BotonPrincipal from "./BotonPrincipal.astro";
     </div>
 
     <div
+    class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800"
+    id="credito"
+    role="tabpanel"
+    aria-labelledby="credito-tab"
+  >
+    <div class="flex items-center justify-center w-screen sm:flex-wrap">
+      <div
+        class="relative flex items-end overflow-hidden rounded-lg shadow transition hover:shadow-lg lg:w-1/4 sm-auto h-[550px]"
+      >
+        <img
+          alt=""
+          src="/public/img/solicitud-creditoo.jpg"
+          class="absolute inset-0 h-full w-full object-cover"
+        />
+
+        <div
+          class="relative bg-gradient-to-t from-gray-900/50 to-gray-900/25"
+        >
+          <div class="p-4 sm:p-6">
+            <time datetime="2022-10-10" class="block text-xs text-white/90">
+              10th Oct 2022
+            </time>
+
+            <a href="#">
+              <h3 class="mt-0.5 text-lg !text-white">
+                Solicitud de Credito
+              </h3>
+            </a>
+
+            <p class="mt-2 line-clamp-3 text-sm/relaxed !text-white/95">
+              Siempre en búsqueda de socios estratégicos que compartan nuestro
+              compromiso con la calidad y el servicio. Si tienes productos o
+              servicios que puedan complementar nuestra oferta, nos encantaría
+              colaborar contigo.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <form id="form" class="bg-white p-6 rounded-lg">
+          <div class="flex flex-wrap lg:gap-8 sm:gap-0">
+            <div class="field lg:w-auto sm:w-full">
+              <label for="nombre">Nombre</label>
+
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none"
+                >
+                  <i class="fa-solid fa-user-tie"></i>
+                </div>
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm block ps-10 p-2.5"
+                  placeholder="Carlos"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="field lg:w-auto sm:w-full">
+              <label for="nombre">Apellido</label>
+
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none"
+                >
+                  <i class="fa-solid fa-user-tie"></i>
+                </div>
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm block ps-10 p-2.5"
+                  placeholder="Carlos"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="correo">Correo electronico</label>
+            <div class="relative">
+              <div
+                class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none"
+              >
+                <i class="fa-solid fa-user-tie"></i>
+              </div>
+              <input
+                type="text"
+                id="correo"
+                name="correo"
+                class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm block ps-10 p-2.5"
+                placeholder="Carlos"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="celular">Numero</label>
+            <div class="relative">
+              <div
+                class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none"
+              >
+                <i class="fa-solid fa-user-tie"></i>
+              </div>
+              <input
+                type="text"
+                id="celular"
+                name="celular"
+                class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm block ps-10 p-2.5"
+                placeholder="+XX XXXXXXXXXX"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="empresa">Empresa</label>
+
+            <div class="relative">
+              <div
+                class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none"
+              >
+                <i class="fa-solid fa-user-tie"></i>
+              </div>
+              <input
+                type="text"
+                id="empresa"
+                name="empresa"
+                class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm block ps-10 p-2.5"
+                placeholder="Carlos"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="correo">Mensaje</label>
+            <div class="relative">
+              <div
+                class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none"
+              >
+              </div>
+              <textarea
+                rows="6"
+                id="correo"
+                name="correo"
+                class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm block"
+                placeholder="Hola, quiero saber mas sobre..."
+                required></textarea>
+            </div>
+          </div>
+
+          <label>
+            <input
+              type="checkbox"
+              name="dataConsent"
+              id="dataConsent"
+              required
+              class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            />
+            <label
+              for="link-checkbox"
+              class="text-sm font-medium text-gray-900 dark:text-gray-300"
+              >Acepto la
+              <a
+                href="/img/politica-manejo-de-datos.pdf"
+                class="text-azul hover:underline"
+                download="politica-manejo-de-datos.pdf">Politica de Datos</a
+              ></label
+            >
+          </label>
+
+          <button class="w-full my-2">
+            <input
+              class="cursor-pointer text-white hover:text-naranja w-full bg-naranja w-full display inline-block py-2 px-4 rounded hover:bg-white hover:border border-naranja hover:text-naranja"
+              type="submit"
+              id="button"
+              value="Enviar Correo"
+            />
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+    <div
       class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800"
       id="contacts"
       role="tabpanel"
@@ -821,7 +1245,7 @@ import BotonPrincipal from "./BotonPrincipal.astro";
         >
           <img
             alt=""
-            src="https://images.unsplash.com/photo-1661956602116-aa6865609028?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80"
+            src="/public/img/proveedor.jpg"
             class="absolute inset-0 h-full w-full object-cover"
           />
 
@@ -1011,7 +1435,7 @@ import BotonPrincipal from "./BotonPrincipal.astro";
 
   .field label {
     display: block;
-    font-size: 12px;
+    font-size: 16px;
     color: #777;
   }
 
