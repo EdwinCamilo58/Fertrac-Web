@@ -33,8 +33,7 @@ import BotonPrincipal from "./BotonPrincipal.astro"
                         <p
                             class="mb-3 font-normal"
                         >
-                            Te ayudamos a seleccionar los repuestos adecuados y
-                            resolver cualquier duda técnica que puedas tener.
+                        Repuestos para tractocamiones con calidad, confianza y marcas líderes. Soluciones eficientes para mantener tu flota en movimiento.
                         </p>
                         <BotonPrincipal
                         url="https://api.whatsapp.com/send?phone=573124615606&text=Hola%2C%20necesito%20informaci%C3%B3n%20sobre..."
@@ -87,7 +86,7 @@ import BotonPrincipal from "./BotonPrincipal.astro"
                         <img class="rounded-t-lg" src="/img/asesoria-tecnica.jpg" alt="asddsa" />
                     <div class="p-5">
                             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Aseroria Tecnica</h5>
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Te ayudamos a seleccionar los repuestos adecuados y resolver cualquier duda técnica que puedas tener. </p>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Asistencia técnica experta, soluciones rápidas, innovación constante y apoyo en tendencias para garantizar satisfacción total.</p>
                         <BotonPrincipal url="https://api.whatsapp.com/send?phone=573124615606&text=Hola%2C%20necesito%20informaci%C3%B3n%20sobre..." text="Mas Información" estilos="hover:bg-white text-white bg-naranja hover:border border-naranja hover:text-naranja lg:w-full" icon="fa-solid fa-arrow-right"/>
                     </div>
                 </div>
@@ -116,8 +115,8 @@ import BotonPrincipal from "./BotonPrincipal.astro"
                         <p
                             class="mb-3 font-normal text-gray-700 dark:text-gray-400"
                         >
-                            Te ayudamos a seleccionar los repuestos adecuados y
-                            resolver cualquier duda técnica que puedas tener.
+                        
+En Fertrac, te ofrecemos opciones de crédito flexibles y convenientes, adaptadas a tus necesidades para facilitar tus compras.
                         </p>
                        
                         <BotonPrincipal
@@ -151,8 +150,9 @@ import BotonPrincipal from "./BotonPrincipal.astro"
                         <p
                             class="mb-3 font-normal text-gray-700 dark:text-gray-400"
                         >
-                            Te ayudamos a seleccionar los repuestos adecuados y
-                            resolver cualquier duda técnica que puedas tener.
+                        Ofrecemos múltiples canales de atención: WhatsApp, teléfono, correo o tienda virtual, para facilitar tu compra.
+                        
+                        
                         </p>
                         <BotonPrincipal
                             text="Mas Información"
@@ -183,8 +183,7 @@ import BotonPrincipal from "./BotonPrincipal.astro"
                         <p
                             class="mb-3 font-normal text-gray-700 dark:text-gray-400"
                         >
-                            Te ayudamos a seleccionar los repuestos adecuados y
-                            resolver cualquier duda técnica que puedas tener.
+                        Nos dedicamos a investigar y comprender nuevos equipos de carga, asegurando estar a la vanguardia de productos y demandas.
                         </p>
                         <BotonPrincipal
                             text="Mas Información"
@@ -297,17 +296,18 @@ import BotonPrincipal from "./BotonPrincipal.astro"
         slidesPerView: "auto",
         coverflowEffect: {
             rotate: 0, // Reduce la rotación para evitar superposición
-            stretch: 750, // Ajusta el espacio entre las tarjetas
+            stretch: -82, // Ajusta el espacio entre las tarjetas
             depth: 200, // Ajusta la profundidad de los elementos
             modifier: 1, // Intensidad del efecto
             slideShadows: false, // Sin sombras en los slides
         },
         autoplay: {
-        delay: 10000, // Tiempo en milisegundos entre cada slide
+        delay: 5000, // Tiempo en milisegundos entre cada slide
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
         },
-
+        preloadImages: true,
+        lazy: false,
         pagination: {
       el: ".carrusel1-pagination",
       clickable: true,

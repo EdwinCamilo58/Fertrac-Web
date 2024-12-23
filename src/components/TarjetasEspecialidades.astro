@@ -26,7 +26,7 @@ import BotonPrincipal from "./BotonPrincipal.astro";
             <h3 class="!text-white !text-center">MOTOR</h3>
           </div>
     
-          <img src="/img/motor.png" alt="imagen2" class="pt-4 h-[320px]">
+          <img src="/img/MOTOR.png" alt="imagen2" class="pt-4 h-[320px] w-auto">
           
           <div class="info px-4">
             <BotonPrincipal url="/especialidades/motor/" icon="fa-solid fa-arrow-right" text="Mas Sobre Motor" estilos="w-full bg-naranja hover:bg-white hover:text-naranja hover:border border-naranja text-white mr-2 "/>
@@ -190,8 +190,8 @@ import BotonPrincipal from "./BotonPrincipal.astro";
 }
 
 .swiper-slide img {
-  height: auto;
-  object-fit: cover;
+
+  object-fit: contain;
   
 }
 
@@ -255,9 +255,9 @@ import BotonPrincipal from "./BotonPrincipal.astro";
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-    autoplay: {
-      delay: 10000,
-    },
+/*     autoplay: {
+      delay: 5000,
+    }, */
     breakpoints:{
         0:{
             slidesPerView:1,
