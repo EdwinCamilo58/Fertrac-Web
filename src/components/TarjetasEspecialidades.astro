@@ -2,19 +2,15 @@
 import BotonPrincipal from "./BotonPrincipal.astro";
 ---
 
-<div>
-
-  
-  <div class="slider-container swiper 2xl:max-w-[1500px] xl:max-w-[1300px] w-full sm:py-0 sm:mb-10 lg:my-10 ">
-    <div class="slider-content h-[450px] sm:px-4">
-      <div class="card-wrapper swiper-wrapper ">
+    <div class="swiper-content carrusel3  h-[450px] sm:px-4 2xl:max-w-[1500px] xl:max-w-[1300px] w-full sm:py-0 sm:mb-10 lg:my-10 mx-auto">
+      <div class="swiper-wrapper ">
 
         <div class="swiper-slide  group rounded-lg border-2 shadow-lg pb-4">
           <div class="bg-naranja py-4 rounded-t-lg">
             <h3 class="!text-white !text-center">TREN DELANTERO</h3>
           </div>
     
-          <img src="/img/EJE-DELANTERO.png" alt="" class="h-[320px] pt-4">
+          <img src="/img/tren-delantero.png" alt="" class="h-[320px] pt-4">
           <div class="info px-4">
             <BotonPrincipal url="/especialidades/tren-delantero/" icon="fa-solid fa-arrow-right" text="Mas Sobre Tren Delantero" estilos="w-full bg-naranja hover:bg-white hover:text-naranja hover:border border-naranja text-white mr-2 "/>
           </div>
@@ -65,7 +61,7 @@ import BotonPrincipal from "./BotonPrincipal.astro";
             <h3 class="!text-white !text-center">CARDAN</h3>
           </div>
     
-          <img src="/img/CARDAN.png" alt="imagen2" class="pt-4 h-[320px]">
+          <img src="/img/cardan.jpg" alt="imagen2" class="pt-4 h-[320px]">
           
           <div class="info px-4">
             <BotonPrincipal url="/especialidades/cardan" icon="fa-solid fa-arrow-right" text="Mas Sobre Cardan" estilos="w-full bg-naranja hover:bg-white hover:text-naranja hover:border border-naranja text-white mr-2 "/>
@@ -104,7 +100,7 @@ import BotonPrincipal from "./BotonPrincipal.astro";
             <h3 class="!text-white !text-center">SISTEMA DE REFRIGERACIÓN</h3>
           </div>
     
-          <img src="/img/SISTEMA-DE-REFRIGERACIÓN.png" alt="imagen2" class="pt-4 h-[320px]">
+          <img src="/img/sistema-de-refrigeración.jpg" alt="imagen2" class="pt-4 h-[320px]">
           
           <div class="info px-4">
             <BotonPrincipal url="/especialidades/sistema-de-refrigeración/" icon="fa-solid fa-arrow-right" text="Mas Sobre Sistema de Refrigeración" estilos="w-full bg-naranja hover:bg-white hover:text-naranja hover:border border-naranja text-white mr-2 !px-0 "/>
@@ -152,26 +148,25 @@ import BotonPrincipal from "./BotonPrincipal.astro";
         </div>
 
       </div>
+      <div class="swiper-button-next carrusel3-next"></div>
+      <div class="swiper-button-prev carrusel3-prev"></div>
+
     </div>
 
-    <div class="swiper-button-next swiper-navBtn"></div>
-    <div class="swiper-button-prev swiper-navBtn"></div>
-
-  </div>
+    
 
  
    
 
-</div>
+
 
 
 <style>
-  .slider-container{
-  width: 100%;
 
-}
-.slider-content {
+.swiper-content {
   overflow: hidden;
+  width: 100%;
+  position: relative;
 }
 
 .swiper-button-next{
@@ -195,11 +190,11 @@ import BotonPrincipal from "./BotonPrincipal.astro";
   
 }
 
-@media screen and (max-width:800px) {
-  .swiper-navBtn{
+
+  .swiper-button-next,
+  .swiper-button-prev {
     display: block;
   }
-
   .swiper-button-next{
   right: 20px;
 
@@ -219,7 +214,7 @@ import BotonPrincipal from "./BotonPrincipal.astro";
         opacity: 1 !important;
         transform: translateY(0) !important;
     }
-}
+
 
 
 .group .info {
@@ -234,26 +229,29 @@ import BotonPrincipal from "./BotonPrincipal.astro";
     }
 </style>
 
-<script>
+<script> 
 
     import Swiper from "swiper/bundle";
     import "swiper/swiper-bundle.css";
 
-  var swiper = new Swiper(".slider-content", {
+  document.addEventListener("DOMContentLoaded", function () {
+    var swiper = new Swiper(".carrusel3", {
     slidesPerView: 3,
+    slidesPerGroup: 3,
     spaceBetween: 25,
     loop: true,
+    speed: 1000,
     centerSlide:'true',
     fade:'true',
     grabCursor:'true',
     pagination: {
-      el: ".swiper-pagination",
+      el: ".carrusel-pagination",
       clickable: true,
       dynamicBullets:true,
     },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".carrusel3-next",
+      prevEl: ".carrusel3-prev",
     },
    autoplay: {
       delay: 5000,
@@ -261,13 +259,19 @@ import BotonPrincipal from "./BotonPrincipal.astro";
     breakpoints:{
         0:{
             slidesPerView:1,
+            slidesPerGroup: 1,
         },
         520:{
             slidesPerView:2,
+            slidesPerGroup: 2,
         },
         950:{
             slidesPerView:3,
+            slidesPerGroup: 3,
         },
-    }
+    },
   });
+  })
+
+  
 </script>

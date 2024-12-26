@@ -120,11 +120,10 @@ En Fertrac, te ofrecemos opciones de crédito flexibles y convenientes, adaptada
                         </p>
                        
                         <BotonPrincipal
-                            url="/img/formato-credito.pdf"
-                            download="formato-datos.pdf"
-                            text="Mas Información"
+                            url="/contactanos/"
+                            text="Enviar Correo"
                             estilos="hover:bg-white text-white bg-naranja hover:border border-naranja hover:text-naranja lg:w-full"
-                            icon="fa-solid fa-arrow-right"
+                            icon="fa-solid fa-envelope-open-text"
                         />
                     </div>
                 </div>
@@ -155,9 +154,11 @@ En Fertrac, te ofrecemos opciones de crédito flexibles y convenientes, adaptada
                         
                         </p>
                         <BotonPrincipal
-                            text="Mas Información"
+                        url="/img/catalogo-diciembre-fertrac.pdf"
+                        download="catalogo-agosto2-fertrac"
+                            text="Descargar Catalogo PDF"
                             estilos="hover:bg-white text-white bg-naranja hover:border border-naranja hover:text-naranja lg:w-full"
-                            icon="fa-solid fa-arrow-right"
+                            icon="fa-solid fa-file-arrow-down"
                         />
                     </div>
                 </div>
@@ -268,6 +269,9 @@ En Fertrac, te ofrecemos opciones de crédito flexibles y convenientes, adaptada
     .swiper-slide {
         width: 300px; /* Tamaño fijo de las tarjetas para pantallas grandes */
     }
+    .swiper-pagination {
+        display: none;
+    }
 }
 
 @media (max-width: 360px) {
@@ -286,7 +290,8 @@ En Fertrac, te ofrecemos opciones de crédito flexibles y convenientes, adaptada
     import Swiper from "swiper/bundle";
     import "swiper/swiper-bundle.css";
 
-    var mySwiper = new Swiper(".carrusel1", {
+    document.addEventListener("DOMContentLoaded", function () {
+        var swiper = new Swiper(".carrusel1", {
         
         loop: true,
         speed: 1000,
@@ -333,4 +338,9 @@ En Fertrac, te ofrecemos opciones de crédito flexibles y convenientes, adaptada
         },
     },
     });
+
+  });
+
+
+   
 </script> 
