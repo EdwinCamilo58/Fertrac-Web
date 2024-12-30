@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/PostLayouts.astro
-pubDate: "22/08/2024"
+pubDate: "2024-09-10"
 title: "DAÑOS FRECUENTES EN LOS PISTONES DEL MOTOR"
 author: "Edwin Camilo"
 image:

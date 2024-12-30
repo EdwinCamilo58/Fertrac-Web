@@ -1,9 +1,16 @@
 ---
 const { image, url, title, pubDate, previewText, tags} = Astro.props;
 import BotonBlog from "../BotonBlog.astro";
+
+const formattedDate = new Date(pubDate).toLocaleDateString('es-ES', {
+  day: '2-digit',
+  month: '2-digit',
+  year: 'numeric',
+});
 ---
 
-<section class=" transition-transform duration-300 hover:scale-110 sm:px-4">
+
+<article class=" transition-transform duration-300 hover:scale-110 sm:px-4">
         
     <a href={url} class="overflow-hidden">
     <div class=" h-44">
@@ -11,12 +18,12 @@ import BotonBlog from "../BotonBlog.astro";
     </div>
     
     <div class="flex gap-4 py-2 justify-between">
-        <p class=" !text-base">{pubDate}</p>
-        <p class=" !text-base !text-naranja !font-semibold" >{tags}</p>
+        <time datetime={pubDate} class="text-base">{formattedDate}</time>
+        <span class="text-base !text-naranja !font-semibold" >{tags}</span>
     </div>
     <h3 class="uppercase">{title}</h3>
 
     <p class="!text-gray-800 !text-lg !text-justify">{previewText}</p>
     <BotonBlog/>
 </a>
-</section>
+</article>

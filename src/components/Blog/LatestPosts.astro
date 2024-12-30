@@ -10,12 +10,12 @@ const postsArray = Object.values(postList).map(post => ({
   title: post.frontmatter.title,
   previewText: post.frontmatter.previewText,
   image: post.frontmatter.image,
-  pubDate: post.frontmatter.pubDate,
+  pubDate: new Date(post.frontmatter.pubDate), // Convertir a objeto Date
   tags: post.frontmatter.tags,
   url: post.url
-})).sort((a, b) => b.date - a.date);
+})).sort((a, b) => b.pubDate - a.pubDate);
 
-const latestPosts = postsArray.slice(0, 4);
+const latestPosts = postsArray.slice(0, 6);
 ---
 
 <div class="max-w-screen-xl mx-auto sm:my-8 md:my-16 lg:px-14">

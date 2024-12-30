@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/PostLayouts.astro
-pubDate: "22/08/2024"
+pubDate: "2024-08-25"
 title: "Como Interpretar El Desgaste En Llantas"
 author: "Edwin Camilo"
 image:

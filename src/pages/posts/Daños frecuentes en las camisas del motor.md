@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/PostLayouts.astro
-pubDate: "22/08/2024"
+pubDate: "2024-07-15"
 title: "DAÑOS FRECUENTES EN LAS CAMISAS DE MOTOR"
 author: "Edwin Camilo"
 image:

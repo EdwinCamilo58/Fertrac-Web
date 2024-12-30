@@ -33,7 +33,11 @@ summary {
     @apply font-bold font-lato text-black  bg-orange-200 rounded-md py-2 px-4;
 }
 
+/* blog */
 
+.fecha {
+    @apply font-lato
+}
 
 
 /* HOVER MEGAMENU */

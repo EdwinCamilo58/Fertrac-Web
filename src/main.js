@@ -19,6 +19,10 @@ document.querySelectorAll('p').forEach((element) => {
     element.classList.add('parrafo');
 });
 
+document.querySelectorAll('time').forEach((element) => {
+    element.classList.add('fecha');
+});
+
 
 
 
