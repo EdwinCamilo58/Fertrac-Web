@@ -1,31 +1,39 @@
 ---
+import CardsBlog from "../components/Blog/CardsBlog.astro";  // Asegúrate de importar el componente CardsBlog
+import BotonPrincipal from "../components/BotonPrincipal.astro";
 import BlogLayout from "../layouts/BlogLayout.astro";
-import PostCard from "../components/Blog/PostCard.astro";
-const postList = await Astro.glob("../pages/posts/*.md");
+const postList = await Astro.glob("/src/pages/posts/*.md");
 
-const title = "Fertrac Blog - Novedades y Consejos para el Mundo de los Tractocamiones";
-const description = "Descubre las últimas novedades, tendencias y consejos en el mundo de los tractocamiones. En el blog de Fertrac, te mantenemos informado sobre innovaciones, guías de mantenimiento, y los mejores consejos para maximizar el rendimiento de tus vehículos pesados.";
+const postsArray = Object.values(postList).map(post => ({
+  title: post.frontmatter.title,
+  previewText: post.frontmatter.previewText,
+  image: post.frontmatter.image,
+  pubDate: new Date(post.frontmatter.pubDate),
+  tags: post.frontmatter.tags,
+  url: post.url
+})).sort((a, b) => b.pubDate - a.pubDate);
+
+const allPosts = postsArray; // Aquí no usamos slice, por lo que se mostrarán todos los posts
 ---
 
-<BlogLayout title={title} description={description}>
+<BlogLayout>
 
-  <div class="max-w-screen-xl mx-auto p-5 sm:p-4 md:p-16 rounded-2xl ">
-    <ul class="grid md:grid-cols-1 sm:grid-cols-1 lg:grid-cols-4 gap-10 pt-8">
-      {
-        postList.map((post) => (
-          <li>
-            <PostCard
-              image={post.frontmatter.image}
-              url={post.url}
-              title={post.frontmatter.title}
-              pubDate={post.frontmatter.pubDate}
-              previewText={post.frontmatter.previewText}
-              tags={post.frontmatter.tags[1]}
-            />
-          </li>
-        ))
-      }
+  <div class="max-w-screen-xl mx-auto sm:my-8 md:my-16 lg:px-14">
+    <hr class="bg-naranja mb-8">
+    <div class="md:mb-4 sm:p-4">
+       <div class="flex mb-4 items-center sm:justify-between lg:justify-start">
+          <h2 class="md:mr-8 sm:mr-2">NUESTRO BLOG</h2>
+          <BotonPrincipal url="/blog/" text="Visitar Blog" estilos="bg-naranja hover:bg-transparent hover:text-naranja hover:border border-naranja text-white !w-auto !text-base"/>
+       </div>
+       <p class="md:w-[600px] sm:w-auto text-azul">Visita nuestro blog y mantente al día con consejos, novedades y tendencias que harán que tu camión siempre esté en su mejor forma. ¡No te lo pierdas!</p>
+    </div>
+ 
+    <ul class="grid md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-4 gap-8">
+       {allPosts.map(post => (
+          <li><CardsBlog title={post.title} image={post.image} url={post.url} previewText={post.previewText} pubDate={post.pubDate} tags={post.tags} /></li>
+       ))}
     </ul>
-  </div>
-  
+ </div>
+
 </BlogLayout>
+

@@ -3,11 +3,21 @@ import BlogLayout from "./BlogLayout.astro";
 import "../estilos.css";
 
 
-const { frontmatter, image, title, tags } = Astro.props;
+const { frontmatter, image, title, tags, pubDate } = Astro.props;
+
+
+const formaterFecha = new Date(pubDate).toLocaleDateString('es-ES', {
+  day: '2-digit',
+  month: '2-digit',
+  year: 'numeric',
+});
+
+
+
 ---
 
 <BlogLayout title={frontmatter.title}>
-    <div class="lg:w-[700px] mx-auto md:p-0 sm:p-4 relative mt-[90px]">
+    <div class="lg:w-[1000px] mx-auto md:p-0 sm:p-4 relative mt-[90px]">
         <article
             class="flex flex-col justify-center md:gap-6 sm:gap-0 sm:p-4"
         >
@@ -21,18 +31,8 @@ const { frontmatter, image, title, tags } = Astro.props;
 
             <section class="post-body">
                 <div class="flex items-center">
-                    <a
-                        href="#"
-                        class="text-lg uppercase font-medium hover:text-azul hover:underline"
-                    >
-                        {frontmatter.tags}
-                    </a>
-
-                    <hr class="h-4 w-[1px] border-0 bg-black mx-4" />
-
-                    <span class="text-lg font-lato font-light text-gray-400"
-                        >{frontmatter.pubDate}</span
-                    >
+                    <time datetime={frontmatter.pubDate} class="text-base">{formaterFecha}</time>
+                    <span class="text-base !text-naranja" >{frontmatter.tags}</span>
                 </div>
                 <h1 class="sm:text-2xl lg:text-1xl xl:text-4xl font-myriad font-extrabold text-azul sm:text-left lg:text-left sm:leading-none uppercase my-4">
                     {frontmatter.title}

@@ -1,0 +1,15 @@
+---
+const { especialidad } = Astro.props;
+const { img } = Astro.props;
+---
+
+<div class="flex items-center justify-center sm:flex-col-reverse md:flex-row sm:mt-[30px] lg:mt-[150px] lg:gap-12 lg:mb-12 sm:gap-0 sm:mb-0">
+    <img class="animacion from-left md:w-[250px] lg:w-[440px] xl:w-[700px] 2xl:w-[700px]  h-auto" src={ img } alt="asd">
+    <div class="animacion from-left">
+      <span class="  !text-white !text-center xl:text-[100px] lg:text-[75px] sm:text-[40px] slide-main--heading lg:!leading-[120px] sm:!leading-normal titulos uppercase w-auto"> ESPECIALIDAD</span>
+      <h1 class="`text-naranja xl:text-[100px] lg:text-[75px] sm:text-[40px] bg-white px-8">{especialidad} </h1>
+    </div>
+<!--     <h1 class="animacion from-left !text-white !text-center xl:text-[100px] lg:text-[75px] sm:text-[40px] slide-main--heading lg:!leading-[120px] sm:!leading-normal titulos uppercase w-auto"> <span class={`text-naranja xl:text-[100px] lg:text-[75px] sm:text-[40px] bg-white px-8` }> ESPECIALIDAD </span> <br> {especialidad} </h1> -->
+  </div>
+
+  

@@ -1,9 +1,6 @@
 ---
-import MegaMenu from "../../components/MegaMenu.astro";
-
-import BotonPrincipal from "../../components/BotonPrincipal.astro";
+import HeaderEspecialidades from "../../components/HeaderEspecialidades.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
-import FAQS from "../../components/FAQS.astro";
 import AsesoriaEspecialidades from "../../components/AsesoriaEspecialidades.astro";
 
 const title = "Sistema de Refrigeración: Temperatura Controlada";
@@ -16,10 +13,8 @@ const description = "Asegura el funcionamiento óptimo de tu motor con nuestros 
   <div class="">
     <div class="bg-cover content-center" style="background-image: url(/img/banner-especialidades.jpg);">
 
-      <div class="flex items-center justify-center sm:flex-col-reverse md:flex-row sm:mt-[30px] lg:mt-[150px] lg:gap-12 lg:mb-12 sm:gap-0 sm:mb-0">
-        <img class="animacion from-left md:w-[250px] lg:w-[440px] xl:w-[500px] 2xl:w-[700px] pt-8  h-auto" src="/img/SISTEMA-DE-REFRIGERACIÓN.png" alt="">
-      <h1 class="animacion from-left !text-white !text-center xl:text-[100px] lg:text-[100px] sm:text-[40px] slide-main--heading lg:leading-none sm:leading-2 titulos uppercase drop-shadow-lg w-auto"><span class="text-naranja xl:text-[100px] lg:text-[75px] sm:text-[40px] bg-white px-8" style="text-shadow: 2px 1px 0px rgba(0,0,0,1);">ESPECIALIDAD</span> <br>SISTEMA DE <br> REFRIGERACIÓN</h1>
-      </div>
+      <HeaderEspecialidades especialidad="Sistema de Refrigeración." img="/img/SISTEMA-DE-REFRIGERACIÓN.png" ></>
+
       
       </div>
     
@@ -28,7 +23,7 @@ const description = "Asegura el funcionamiento óptimo de tu motor con nuestros 
       >
     
       <div class="mb-12 ">
-        <p class="text-justify font-bold animacion from-left">
+        <p class="text-justify animacion from-left">
           Todos los fluidos requieren una temperatura óptima para funcionar, sin este sistema no sería posible que el vehículo opere por largos periodos de tiempo. 
 Componentes vitales para mantener todos los fluidos de tu tren motriz a una temperatura óptima y prevenir el sobrecalentamiento del motor, el turbo y la transmisión. Estos incluyen radiadores, termostatos, fluidos, bombas de agua, bombas de aceite, mangueras, entre muchos más.  
 En Fertrac, ofrecemos una amplia gama de repuestos de sistema de refrigeración de las mejores marcas del mercado. Nos dedicamos a proporcionar productos de alta calidad y durabilidad, asegurando que tu vehículo funcione de manera eficiente y segura.

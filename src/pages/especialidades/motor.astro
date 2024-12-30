@@ -1,9 +1,6 @@
 ---
-import MegaMenu from "../../components/MegaMenu.astro";
-
-import BotonPrincipal from "../../components/BotonPrincipal.astro";
+import HeaderEspecialidades from "../../components/HeaderEspecialidades.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
-import FAQS from "../../components/FAQS.astro";
 import AsesoriaEspecialidades from "../../components/AsesoriaEspecialidades.astro";
 
 const title = "Motor: Potencia y Rendimiento";
@@ -15,10 +12,7 @@ const description = "Contamos con repuestos originales y de alta calidad para mo
   <div class="">
     <div class="flex items-center justify-center flex-wrap sm:p-8 md:flex-row sm:flex-col-reverse bg-cover content-center" style="background-image: url(/img/banner-especialidades.jpg);">
 
-      <div class="flex items-center justify-center sm:flex-col-reverse md:flex-row sm:mt-[30px] lg:mt-[150px] lg:gap-12 lg:mb-12 sm:gap-0 sm:mb-0">
-        <img class="animacion from-left md:w-[250px] lg:w-[440px]  h-auto" src="/img/MOTOR.png" alt="asd">
-        <h1 class="animacion from-left !text-white !text-center xl:text-[100px] lg:text-[75px] sm:text-[40px] slide-main--heading lg:leading-none sm:leading-2 titulos uppercase drop-shadow-lg w-auto"><span class="text-naranja xl:text-[100px] lg:text-[75px] sm:text-[40px] bg-white px-8" style="text-shadow: 2px 1px 0px rgba(0,0,0,1);">ESPECIALIDAD</span> <br> MOTOR.</h1>
-      </div>
+      <HeaderEspecialidades especialidad="Motor." img="/img/MOTOR.png" ></>
       
       </div>
     
@@ -27,7 +21,7 @@ const description = "Contamos con repuestos originales y de alta calidad para mo
       >
     
       <div class="mb-12">
-        <p class="text-justify font-bold animacion from-left">
+        <p class="text-justify animacion from-left">
           El corazón de cualquier vehículo. No solo da vueltas a las llantas, además genera el poder necesario para todos los demás sistemas del vehículo. 
 Con el tiempo estos sistemas se han mejorado en potencia, durabilidad, eficiencia, precisión y emisiones. Buscamos siempre repuestos para toda la gama de motores que se encuentran en el mercado. 
 Podrás encontrar componentes como reparaciones completas o parciales de motor (overhaules), turbos, pistones, camisas, anillos, empaquetaduras, filtros, culatas completas y cada pieza que los compone. Piezas diseñadas para mantener el motor en óptimas condiciones y maximizar su rendimiento.
@@ -53,22 +47,22 @@ En Fertrac, ofrecemos una amplia gama de repuestos de motor de las mejores marca
 
           <div class="grid lg:grid-cols-2 xl:grid-cols-4 gap-8 mx-auto mt-16 sm:grid-cols-1">
             <div class="lg:text-xl sm:text-base font-bold flex flex-col lg:gap-4 sm:gap-0 items-center">
-              <span class="bg-azul text-white lg:px-4 lg:py-4 sm:px-2 sm:py-2 sm:mb-4 font-myriad">TURBO CARGADORES</span>
+              <h3 class="bg-azul !text-center text-white lg:px-4 lg:py-4 sm:px-2 sm:py-2 sm:mb-4">TURBO CARGADORES</h3>
               <img src="/img/borgwarner.png" alt="">
             </div>
       
             <div class="lg:text-xl sm:text-base font-bold flex flex-col lg:gap-4 sm:gap-0 items-center">
-              <span class="bg-azul text-white lg:px-4 lg:py-4 sm:px-2 sm:py-2 sm:mb-4 font-myriad">TENSORES Y POLEAS</span>
+              <h3 class="bg-azul !text-center text-white lg:px-4 lg:py-4 sm:px-2 sm:py-2 sm:mb-4">TENSORES Y POLEAS</h3>
               <img src="/img/dayco.png" alt="">
             </div>
       
             <div class="lg:text-xl sm:text-base font-bold flex flex-col lg:gap-4 sm:gap-0 items-center">
-              <span class="bg-azul text-white lg:px-4 lg:py-4 sm:px-2 sm:py-2 sm:mb-4 font-myriad" >ABRAZADERAS DE EXOSTO</span>
+              <h3 class="bg-azul !text-center text-white lg:px-4 lg:py-4 sm:px-2 sm:py-2 sm:mb-4" >ABRAZADERAS DE EXOSTO</h3>
               <img src="/img/torctite.png" alt="">
             </div>
       
             <div class="lg:text-xl sm:text-base font-bold flex flex-col lg:gap-4 sm:gap-0 items-center">
-              <span class="bg-azul text-white lg:px-4 lg:py-4 sm:px-2 sm:py-2 sm:mb-4 font-myriad">COMPRESORES DE AIRE ACONDICIONADO</span>
+              <h3 class="bg-azul !text-center text-white lg:px-4 lg:py-4 sm:px-2 sm:py-2 sm:mb-4 ">COMPRESORES DE AIRE ACONDICIONADO</h3>
               <img src="/img/alliance.png" alt="">
             </div>
           </div>

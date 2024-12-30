@@ -3,34 +3,33 @@
 @tailwind utilities;
 
 .titulos {
-    @apply sm:text-[35px] md:text-[60px] text-azul lg:text-4xl xl:text-5xl font-myriad font-bold sm:text-justify sm:leading-none lg:text-left;
+    @apply sm:text-[35px] md:text-[60px] text-azul lg:text-4xl xl:text-5xl font-myriad font-black sm:text-justify sm:leading-none lg:text-left;
 }
 .subtitulos {
     @apply sm:text-2xl lg:text-3xl xl:text-4xl font-myriad font-extrabold text-azul sm:text-left lg:text-left sm:leading-none;
 }
 
+.titulos-h3 {
+    @apply sm:text-2xl lg:text-xl xl:text-2xl font-myriad font-semibold sm:text-left lg:text-left sm:leading-none;
+}
+
+
 .parrafo {
-    @apply lg:text-xl sm:text-lg font-lato text-black sm:text-justify;
+    @apply lg:text-lg sm:text-lg font-lato text-black sm:text-justify;
 }
 
-.titulos-blog {
-    @apply sm:text-2xl lg:text-xl xl:text-2xl font-myriad font-extrabold text-azul sm:text-left lg:text-left sm:leading-none;
-}
 
-.subtitulos-blog {
-    @apply sm:text-2xl lg:text-xl xl:text-2xl font-myriad font-extrabold text-azul sm:text-left lg:text-left sm:leading-none;
-}
-
-.text-blog {
-    @apply font-semibold tracking-wide lg:text-xl sm:text-lg font-lato;
-}
 
 .introduce {
     @apply text-black lg:text-base sm:text-xl  sm:text-justify lg:text-center;
 }
 
 summary {
-    @apply font-bold font-lato text-black  bg-orange-200 rounded-md py-2 px-4;
+    @apply font-lato text-black text-lg  bg-orange-200 rounded-md py-2 px-4;
+}
+
+details {
+    @apply cursor-pointer;
 }
 
 /* blog */
@@ -38,6 +37,18 @@ summary {
 .fecha {
     @apply font-lato
 }
+
+
+.titulos-blog-card {
+    @apply sm:text-2xl lg:text-lg xl:text-2xl font-myriad font-extrabold sm:text-left lg:text-left sm:leading-none text-azul !leading-7 tracking-tighter py-2;
+}
+
+.text-blog {
+    @apply tracking-wide lg:text-lg sm:text-lg font-lato !leading-6 ;
+}
+
+
+
 
 
 /* HOVER MEGAMENU */

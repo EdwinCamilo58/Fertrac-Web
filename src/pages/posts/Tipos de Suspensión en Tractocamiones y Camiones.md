@@ -1,13 +1,13 @@
 ---
 layout: ../../layouts/PostLayouts.astro
 pubDate: "2025-12-30"
-title: "La Evolución de los Pistones de Camiones"
+title: "Tipos de Suspensión en Tractocamiones y Camiones"
 author: "Edwin Camilo"
 image:
     url: "/img/pistones-del-motor.webp"
     alt: "imagen de post"
 tags: ["Articulo"] 
-previewText: "En los albores de la motorización, los camiones eran máquinas robustas pero sencillas. Sus motores, aunque potentes para la época, eran relativamente básicos. El corazón de estos motores, los pistones, eran piezas de fundición de hierro, diseñadas para soportar grandes cargas y temperaturas."
+previewText: "La suspensión de un vehículo es un sistema complejo de componentes que conectan las ruedas al chasis, amortiguando los impactos y vibraciones de la carretera. En el caso de tractocamiones y camiones, la suspensión juega un papel crucial en la seguridad, estabilidad, el confort del conductor y la vida útil del vehículo."
 ---
 
 

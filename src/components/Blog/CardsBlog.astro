@@ -1,0 +1,39 @@
+---
+import BotonPrincipal from "../BotonPrincipal.astro"
+import BotonBlog from "../BotonBlog.astro";
+
+const { image, url, title, pubDate, previewText, tags} = Astro.props;
+const formaterFecha = new Date(pubDate).toLocaleDateString('es-ES', {
+  day: '2-digit',
+  month: '2-digit',
+  year: 'numeric',
+});
+
+function LimitarPalabras(text, maxWords) {
+    const words = text.split(" ");
+    return words.length > maxWords ? words.slice(0, maxWords).join(" ") + " [...]" : text;
+}
+
+
+---
+    
+
+<article class=" transition-transform duration-300 hover:scale-110 sm:px-4  bg-white">
+        
+    
+
+    <a href={url} class="overflow-hidden">
+    <div class=" h-44">
+        <img src={image.url} alt={image.alt} class="w-full h-full object-cover">
+    </div>
+    
+    <div class="flex gap-4 py-2 justify-between">
+        <time datetime={pubDate} class="text-base">{formaterFecha}</time>
+        <span class="text-base !text-naranja" >{tags}</span>
+    </div>
+    <h3 class="titulos-blog-card">{title}</h3>
+
+    <p class=" !text-justify text-blog">{LimitarPalabras(previewText, 40)}</p>
+    <BotonBlog/>
+</a>
+</article>

@@ -1,7 +1,7 @@
 ---
 import MegaMenu from "../components/MegaMenu.astro";
 import Footer from "../components/Footer.astro";
-import LatestPosts from "../components/Blog/LatestPosts.astro"
+import UltimosPost from "../components/Blog/UltimosPost.astro";
 import BotonesFlotantes from "../components/BotonesFlotantes.astro";
 import "../estilos.css";
 
@@ -21,11 +21,7 @@ const { description } = Astro.props;
     <title>{title}</title>
     <link rel="icon" href="/img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="/src/estilos.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <link href="https://fonts.cdnfonts.com/css/myriad-pro" rel="stylesheet" />
-    <link rel="stylesheet" href="https://use.typekit.net/nfy3ymk.css" />
-    <link rel='stylesheet' href='https://unpkg.com/emoji.css/dist/emoji.min.css'>
     <script type="text/javascript"
   src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
@@ -45,7 +41,7 @@ const { description } = Astro.props;
     <main class="mt-[90px]">
       <slot />
       <BotonesFlotantes/>
-      <LatestPosts/>
+      <UltimosPost/>
 
     </main>
 

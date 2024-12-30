@@ -1,9 +1,6 @@
 ---
-import MegaMenu from "../../components/MegaMenu.astro";
-
-import BotonPrincipal from "../../components/BotonPrincipal.astro";
+import HeaderEspecialidades from "../../components/HeaderEspecialidades.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
-import FAQS from "../../components/FAQS.astro";
 import AsesoriaEspecialidades from "../../components/AsesoriaEspecialidades.astro";
 
 const title = "Sistema de Frenado: Seguridad Ante Todo";
@@ -16,10 +13,8 @@ const description = "Ofrecemos repuestos para sistemas de frenado que garantizan
   <div class="">
     <div class="bg-cover content-center" style="background-image: url(/img/banner-especialidades.jpg);">
 
-      <div class="flex items-center justify-center sm:flex-col-reverse md:flex-row sm:mt-[30px] lg:mt-[150px] lg:gap-2 lg:mb-12 sm:gap-0 sm:mb-0"> 
-        <img class="animacion from-left md:w-[250px] lg:w-[440px] xl:w-[600px] 2xl:w-[700px]  h-auto" src="/img/SISTEMA-DE-FRENADO.png" alt="">
-      <h1 class="animacion from-left !text-white !text-center xl:text-[100px] lg:text-[75px] sm:text-[50px] slide-main--heading lg:leading-none sm:leading-2 titulos uppercase drop-shadow-lg  w-min"><span class="text-naranja xl:text-[100px] lg:text-[75px] sm:text-[40px] bg-white px-8" style="text-shadow: 2px 1px 0px rgba(0,0,0,1);">ESPECIALIDAD</span> <br>SISTEMA DE FRENADO</h1>
-      </div>
+      <HeaderEspecialidades especialidad="Sistema de Frenado." img="/img/SISTEMA-DE-FRENADO.png" ></>
+
       
       </div>
     
@@ -28,7 +23,7 @@ const description = "Ofrecemos repuestos para sistemas de frenado que garantizan
       >
     
       <div class="mb-12">
-        <p class="text-justify font-bold animacion from-left">
+        <p class="text-justify  animacion from-left">
           Los elementos que proveen la mayor seguridad a cualquier vehículo, cuya calidad y desempeño determinan la seguridad en las carreteras. 
 Componentes como cámaras de aire, calipers, campanas, discos de freno, pastillas y bloques de freno, entre muchos más. Diseñados para asegurar una frenada eficiente y confiable.
 En Fertrac, ofrecemos una amplia gama de repuestos de sistema de frenado de las mejores marcas del mercado. Nos comprometemos a proporcionar productos de alta calidad y durabilidad, asegurando que tu vehículo funcione de manera óptima y segura.

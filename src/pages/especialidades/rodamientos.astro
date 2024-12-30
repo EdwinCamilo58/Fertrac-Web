@@ -1,9 +1,6 @@
 ---
-import MegaMenu from "../../components/MegaMenu.astro";
-
-import BotonPrincipal from "../../components/BotonPrincipal.astro";
+import HeaderEspecialidades from "../../components/HeaderEspecialidades.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
-import FAQS from "../../components/FAQS.astro";
 import AsesoriaEspecialidades from "../../components/AsesoriaEspecialidades.astro";
 
 const title = "Rodamientos: Durabilidad y Fiabilidad";
@@ -15,10 +12,8 @@ const description = "Nuestros rodamientos están diseñados para soportar condic
   <div class="">
     <div class="bg-cover content-center" style="background-image: url(/img/banner-especialidades.jpg);">
 
-      <div class="flex items-center justify-center sm:flex-col-reverse md:flex-row sm:mt-[30px] lg:mt-[150px] lg:gap-12 lg:mb-12 sm:gap-0 sm:mb-0"> 
-        <img class="animacion from-left md:w-[250px] lg:w-[440px] xl:w-[500px] 2xl:w-[700px]  h-auto" src="/img/rodamientos.png" alt="">
-      <h1 class="animacion from-left !text-white !text-center xl:text-[100px] lg:text-[100px] sm:text-[50px] slide-main--heading lg:leading-none sm:leading-2 titulos uppercase drop-shadow-lg w-auto"><span class="text-naranja xl:text-[100px] lg:text-[75px] sm:text-[40px] bg-white px-8" style="text-shadow: 2px 1px 0px rgba(0,0,0,1);">ESPECIALIDAD</span> <br>RODAMIENTOS</h1>
-      </div>
+      <HeaderEspecialidades especialidad="Rodamiento." img="/img/rodamientos.png" ></>
+
       
       </div>
     
@@ -27,7 +22,7 @@ const description = "Nuestros rodamientos están diseñados para soportar condic
       >
     
       <div class="mb-12">
-        <p class="text-justify font-bold animacion from-left">
+        <p class="text-justify animacion from-left">
           Cualquier parte que dé vueltas y que lleve una carga debe llevar algún tipo de rodamiento para asegurar su durabilidad, estabilidad y eficiencia. 
 Componentes como rodamientos de bolas, rodamientos cónicos, rodamientos de agujas, rodillos pilotos, diseñados para soportar cargas y mejorar el rendimiento general del vehículo. 
 También conocidos como rodillos, balineras, cojinetes, casquillo, entre otros. 

@@ -6,8 +6,8 @@ document.querySelectorAll('h2').forEach((element) => {
     element.classList.add('subtitulos');
 });
 
-document.querySelectorAll('h3').forEach((element) => {
-    element.classList.add('titulos-blog');
+ document.querySelectorAll('h3').forEach((element) => {
+    element.classList.add('titulos-h3');
 });
 
 document.querySelectorAll('h4').forEach((element) => {

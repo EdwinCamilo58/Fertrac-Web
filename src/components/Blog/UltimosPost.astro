@@ -15,18 +15,17 @@ const postsArray = Object.values(postList).map(post => ({
   url: post.url
 })).sort((a, b) => b.pubDate - a.pubDate);
 
-const latestPosts = postsArray.slice(0, 6);
+const latestPosts = postsArray.slice(0, 4);
 ---
 
 <div class="max-w-screen-xl mx-auto sm:my-8 md:my-16 lg:px-14">
-   <hr class="bg-naranja mb-8">
   <div class=" md:mb-4 sm:p-4">
     <div class="flex mb-4 items-center sm:justify-between lg:justify-start">
       <h2 class="md:mr-8 sm:mr-2">NUESTRO BLOG</h2>
     <BotonPrincipal url="/blog/" text="Visitar Blog" estilos="bg-naranja hover:bg-transparent hover:text-naranja hover:border border-naranja text-white !w-auto !text-base"/>
     </div>
-    <p class="md:w-[600px] sm:w-auto text-azul font-bold" >Visita nuestro blog y mantente al día con consejos, novedades y tendencias que harán que tu camión siempre esté en su mejor forma. ¡No te lo pierdas!</p>
- 
+    <p class="md:w-[600px] sm:w-auto text-azul" >Visita nuestro blog y mantente al día con consejos, novedades y tendencias que harán que tu camión siempre esté en su mejor forma. ¡No te lo pierdas!</p>
+    <hr class="mt-4 h-1 bg-naranja">
   </div>
 
 

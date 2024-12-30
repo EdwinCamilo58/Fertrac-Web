@@ -1,13 +1,13 @@
 ---
 layout: ../../layouts/PostLayouts.astro
 pubDate: "2025-12-30"
-title: "La Evolución de los Pistones de Camiones"
+title: "El Fan Clutch: Más que un simple interruptor"
 author: "Edwin Camilo"
 image:
     url: "/img/pistones-del-motor.webp"
     alt: "imagen de post"
 tags: ["Articulo"] 
-previewText: "En los albores de la motorización, los camiones eran máquinas robustas pero sencillas. Sus motores, aunque potentes para la época, eran relativamente básicos. El corazón de estos motores, los pistones, eran piezas de fundición de hierro, diseñadas para soportar grandes cargas y temperaturas."
+previewText: "Como ya sabemos, el fan clutch es un componente clave en el sistema de enfriamiento de un vehículo. Su función principal es activar el ventilador del motor cuando la temperatura alcanza niveles críticos, garantizando así un funcionamiento óptimo y evitando el sobrecalentamiento. Sin embargo, la tecnología ha evolucionado, y los fan clutch de 2 velocidades ofrecen ventajas significativas sobre los modelos tradicionales de encendido/apagado."
 ---
 
 
