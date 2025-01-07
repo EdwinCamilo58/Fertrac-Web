@@ -1,11 +1,12 @@
 ---
 import BotonPrincipal from "./BotonPrincipal.astro";
-
+import LogosProveedores from "./LogosProveedores.astro";
+/* 
 const postList = await Astro.glob("/src/pages/posts/*.md");
 
 const specificTitle = "GRAN PREMIO MOBIL DELVAC™ EDICIÓN 36 AÑOS";
 const specificPost = Object.values(postList).find(post => post.frontmatter.title === specificTitle);
-const specificUrl = specificPost ? specificPost.url : "#";
+const specificUrl = specificPost ? specificPost.url : "#"; */
 
 ---
 <section class="creative-parallax--slider">
@@ -13,13 +14,14 @@ const specificUrl = specificPost ? specificPost.url : "#";
             <div class="parallax-slider slider-wrap lg:h-[80vh] sm:h-[80vh]">
                 <div class="swiper-wrapper">
                     <!-- Slide 1 -->
-                    <div class="swiper-slide" style="background-image: url(/img/banner-principal.jpg);">           
+                    <div class="swiper-slide" style="background-image: url(/img/hero.jpg);">           
                         <div class="swiper-slide--inner">
-                            <div class="slide-detail lg:w-[50%] 2xl:top-[30%] 2xl:w-[55%] lg:top-[25%] sm:top-[15%] lg:left-[10%] sm:px-4 md:px-8  relative">
-                                    <h1 class="text-white !text-left 2xl:text-7xl xl:text-5xl lg:text-7xl sm:text-[34px] md:text-[60px] slide-main--heading lg:leading-none sm:leading-2 sm:w-full from-left" >Venta de respuestos originales para tractocamiones en todo el territorio Colombiano
+                            <div class="slide-detail lg:w-[50%] 2xl:top-[25%] 2xl:w-[45%] lg:top-[25%] sm:top-[5%] lg:left-[10%] sm:px-4 md:px-8  relative">
+                                    <span class="from-left bg-naranja px-4 py-2 inline-block text-xl text-white text-lato tracking-wides rounded-r-xl mb-4">Fertrac tiene presencia en todo el territorio Colombiano</span>
+                                    <h1 class="text-white !text-left 2xl:text-6xl xl:text-5xl lg:text-7xl sm:text-4xl md:text-[60px] slide-main--heading lg:leading-none sm:leading-2 sm:w-full from-left" >Venta de respuestos originales para tractocamiones
                                     </h1>
 
-                                <div class="slide-des  border-0 p-0 pb-[25px] tracking-normal max-w-[600px]  opacity-0">
+                                <div class="slide-des pb-[25px] tracking-normal max-w-[600px]  opacity-0">
                                     <p class="!text-white lg:text-left sm:text-justify  leading-[25px]">Nos especializamos en ofrecer una amplia gama de repuestos originales de alta calidad para tractocamiones, diseñados para garantizar el máximo rendimiento y la durabilidad de tus vehículos pesados. </p>
                                 </div>
                                 <div class="slide-cta ">
@@ -30,9 +32,11 @@ const specificUrl = specificPost ? specificPost.url : "#";
                         </div>
                     </div>
                    
-                    
+                   
 					
                 </div>
+
+                
                 <!-- <div class="swiper-button-next slide-btns bg-naranja hover:bg-white"></div>
                 <div class="swiper-button-prev slide-btns bg-naranja hover:bg-white "></div> -->
             </div>

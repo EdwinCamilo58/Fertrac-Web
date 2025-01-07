@@ -4,9 +4,6 @@ import Footer from "../components/Footer.astro";
 import UltimosPost from "../components/Blog/UltimosPost.astro";
 import BotonesFlotantes from "../components/BotonesFlotantes.astro";
 
-
-
-
 const { title } = Astro.props;
 const { description } = Astro.props;
 ---
@@ -19,33 +16,37 @@ const { description } = Astro.props;
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <link rel="icon" href="/img/favicon.png" type="image/x-icon">
+    <link rel="icon" href="/img/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="/src/estilos.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
 
-
-    
+    <script src="https://static.elfsight.com/platform/platform.js" async
+    ></script>
   </head>
 
-  <body class=" overflow-x-hidden">
-
-<header>
-  <MegaMenu positionNav="fixed" bgNav="sm:bg-naranja md:bg-transparent border-b border-white hover:bg-naranja"/>
-</header>
+  <body class="overflow-x-hidden">
+    <header>
+      <MegaMenu
+        positionNav="fixed"
+        bgNav="sm:bg-naranja md:bg-transparent border-b border-white hover:bg-naranja"
+      />
+    </header>
 
     <main class="sm:mt-[90px] lg:mt-0">
       <slot />
-      <BotonesFlotantes/>
-      <UltimosPost/>
-
+      <BotonesFlotantes />
+      <UltimosPost />
     </main>
 
     <footer>
       <Footer />
     </footer>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+    ></script>
     <script src="/src/main.js"></script>
     <script src="flowbite/dist/flowbite.min.js"></script>
   </body>
