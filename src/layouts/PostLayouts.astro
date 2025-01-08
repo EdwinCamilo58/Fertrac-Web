@@ -1,6 +1,7 @@
 ---
 import BlogLayout from "./BlogLayout.astro";
 import "../estilos.css";
+import AsesoriaEspecialidades from "../components/AsesoriaEspecialidades.astro";
 
 
 const { frontmatter, image, title, tags, pubDate } = Astro.props;
@@ -18,7 +19,7 @@ const formaterFecha = new Date(pubDate).toLocaleDateString('es-ES', {
 
 <BlogLayout title={frontmatter.title}>
     <div class="lg:w-[1000px] mx-auto md:p-0 sm:p-4 relative mt-[90px]">
-        <article
+        <div
             class="flex flex-col justify-center md:gap-6 sm:gap-0 sm:p-4"
         >
             <div class="w-full h-[300px]">
@@ -27,19 +28,22 @@ const formaterFecha = new Date(pubDate).toLocaleDateString('es-ES', {
                     src={frontmatter.image.url}
                     alt=""
                 />
-            </div>
-
-            <section class="post-body">
                 <div class="flex items-center">
                     <time datetime={frontmatter.pubDate} class="text-base">{formaterFecha}</time>
                     <span class="text-base !text-naranja" >{frontmatter.tags}</span>
                 </div>
-                <h1 class="sm:text-2xl lg:text-1xl xl:text-4xl font-myriad font-extrabold text-azul sm:text-left lg:text-left sm:leading-none uppercase my-4">
-                    {frontmatter.title}
-                </h1>
+            </div>
 
-                <slot />
-            </section>
-        </article>
+            <article class="post-body">
+                <header>
+                    <h1 class="sm:text-2xl lg:text-1xl xl:text-4xl font-myriad font-extrabold !leading-7 tracking-tighter text-azul sm:text-left lg:text-left sm:leading-none my-4">
+                        {frontmatter.title}
+                    </h1>
+                </header>
+                <slot />  
+            </article>
+        
+        </div>
     </div>
+
 </BlogLayout>

@@ -9,9 +9,13 @@ const formaterFecha = new Date(pubDate).toLocaleDateString('es-ES', {
   year: 'numeric',
 });
 
-function LimitarPalabras(text, maxWords) {
+/* function LimitarPalabras(text, maxWords) {
     const words = text.split(" ");
     return words.length > maxWords ? words.slice(0, maxWords).join(" ") + " [...]" : text;
+} */
+
+function LimitarLetras(text, maxLength) {
+    return text.length > maxLength ? text.slice(0, maxLength) + "[...]" : text;
 }
 
 
@@ -33,7 +37,7 @@ function LimitarPalabras(text, maxWords) {
     </div>
     <h3 class="titulos-blog-card">{title}</h3>
 
-    <p class=" !text-justify text-blog">{LimitarPalabras(previewText, 40)}</p>
+    <p class=" !text-justify text-blog">{LimitarLetras(previewText, 250)}</p>
     <BotonBlog/>
 </a>
 </article>

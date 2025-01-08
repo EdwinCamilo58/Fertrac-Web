@@ -37,7 +37,7 @@ previewText: " El desgaste en llantas suele afectar a la flota dado que se tradu
     </li>
     <li class="my-8">
     <h2 class="subtitulos-blog my-2">5. DESGASTE MULTIPLE/ZONAS PLANAS:</h2>
-     <p class="text-blog">  Se produce por rodamientos desgastados, suspensiones neumáticas con amortiguadores en mal estado o por llevar el vehículo sin carga a alta velocidad.</p>
+     <p class="text-blog">  Se produce por rodamientos desgastados, suspensiones neumáticas con amortiguadores en mal estado o por llevar el camión sin carga a alta velocidad.</p>
     <img class="rounded-t-lg w-[200px] " src="/img/desgaste-multiple.jpg" alt=""> </img>
     </li>  
 </ul>

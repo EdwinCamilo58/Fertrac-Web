@@ -12,7 +12,7 @@ previewText: "Lorem Ipsum es simplemente el texto de relleno de las imprentas y 
 
 <h2 class="title-blog md:my-4 sm:my-4">Jornada de eliminación en el GP de Tractomulas </h2>
 
-<span class="text-blog"> En horas de la mañana del sábado 13 de julio se desarrollaron las diferentes pruebas de eliminación entre los 150 participantes que se inscribieron para este Gran Premio que prueba a los conductores de estos vehículos de carga pesada que recorren durante el año las diferentes carreteras del país <br>
+<span class="text-blog"> En horas de la mañana del sábado 13 de julio se desarrollaron las diferentes pruebas de eliminación entre los 150 participantes que se inscribieron para este Gran Premio que prueba a los conductores de estos camións de carga pesada que recorren durante el año las diferentes carreteras del país <br>
 Vale recordar que en esta edición estuvieron presentes tres mujeres, quienes hicieron vibrar a los cientos de espectadores con sus maniobras en el autódromo. Todas lograron su segunda participación en este GP Mobil Delvac:.<span>
 
 

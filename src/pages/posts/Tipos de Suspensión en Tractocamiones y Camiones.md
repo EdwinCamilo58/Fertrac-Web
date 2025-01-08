@@ -1,13 +1,13 @@
 ---
 layout: ../../layouts/PostLayouts.astro
 pubDate: "2025-12-30"
-title: "Tipos de Suspensión en Tractocamiones y Camiones"
+title: "Tipos de Suspensión en Tractocamiones"
 author: "Edwin Camilo"
 image:
-    url: "/img/pistones-del-motor.webp"
+    url: "/img/suspension-de-camión.jpg"
     alt: "imagen de post"
 tags: ["Articulo"] 
-previewText: "La suspensión de un vehículo es un sistema complejo de componentes que conectan las ruedas al chasis, amortiguando los impactos y vibraciones de la carretera. En el caso de tractocamiones y camiones, la suspensión juega un papel crucial en la seguridad, estabilidad, el confort del conductor y la vida útil del vehículo."
+previewText: "La suspensión de un camión es un sistema complejo de componentes que conectan las ruedas al chasis, amortiguando los impactos y vibraciones de la carretera. En el caso de tractocamiones y camiones, la suspensión juega un papel crucial en la seguridad, estabilidad, el confort del conductor y la vida útil del camión."
 ---
 
 
@@ -23,8 +23,8 @@ Con la llegada de la electrónica a los motores de combustión interna, los pist
 Los pistones de hoy: una obra de ingeniería
 Los pistones de los tractocamiones actuales son piezas de ingeniería de alta precisión, fabricadas con materiales compuestos y aleaciones especiales. Incorporan tecnologías como el recubrimiento cerámico para reducir la fricción y el desgaste, y están diseñados para trabajar en conjunto con sistemas de gestión electrónica avanzados.
 El futuro de los pistones:
-El futuro de los pistones de camiones se vislumbra cada vez más eléctrico. Con la creciente adopción de vehículos eléctricos, los pistones tradicionales podrían ser reemplazados por motores eléctricos. Sin embargo, es probable que los motores de combustión interna sigan siendo relevantes durante muchos años, y los pistones seguirán evolucionando para adaptarse a nuevas tecnologías y normativas ambientales.
-En resumen, la historia de los pistones de camiones es una historia de innovación y adaptación. Desde las sencillas piezas de fundición de hierro hasta las sofisticadas piezas de ingeniería de hoy, los pistones han desempeñado un papel fundamental en la evolución del transporte por carretera y el movimiento de cualquier vehiculo de combustión interna a través de la historia.
+El futuro de los pistones de camiones se vislumbra cada vez más eléctrico. Con la creciente adopción de camións eléctricos, los pistones tradicionales podrían ser reemplazados por motores eléctricos. Sin embargo, es probable que los motores de combustión interna sigan siendo relevantes durante muchos años, y los pistones seguirán evolucionando para adaptarse a nuevas tecnologías y normativas ambientales.
+En resumen, la historia de los pistones de camiones es una historia de innovación y adaptación. Desde las sencillas piezas de fundición de hierro hasta las sofisticadas piezas de ingeniería de hoy, los pistones han desempeñado un papel fundamental en la evolución del transporte por carretera y el movimiento de cualquier camión de combustión interna a través de la historia.
 
 </p>
 

@@ -1,13 +1,13 @@
 ---
 layout: ../../layouts/PostLayouts.astro
-pubDate: "22/08/2024"
-title: "Freno del embrague"
+pubDate: "2025-12-30"
+title: "¿Que es el freno del embrague?"
 author: "Edwin Camilo"
 image:
-    url: "/img/pistones-del-motor.webp"
+    url: "/img/freno-del-embrague.jpg"
     alt: "imagen de post"
 tags: ["Eventos"] 
-previewText: "Las camisas del motor Diesel son un elemento demasiado importante en el motor, pues estas son las que alojan los pistones que en conjunto son los que hacen que la combustión suceda. "
+previewText: "El freno de embrague es un dispositivo que permite bajar la rotacion de la flecha de entrada hasta detenerla, se ubica justo detrás del balero collarin, aumentan la vida util de las transmisiones dado que disminuye el esfuerzo y elimina los choques que se producen en el engranaje al cambiar desde una marcha alta a primera o reversa, se usa solo en embragues tipo jalon."
 ---
 
 

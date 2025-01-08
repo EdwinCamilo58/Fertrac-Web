@@ -10,7 +10,7 @@
 }
 
 .titulos-h3 {
-    @apply sm:text-2xl lg:text-xl xl:text-2xl font-myriad font-semibold sm:text-left lg:text-left sm:leading-none;
+    @apply sm:text-2xl lg:text-xl xl:text-2xl font-myriad font-semibold sm:text-left lg:text-left sm:leading-none !leading-7 tracking-tighter;
 }
 
 
@@ -41,6 +41,10 @@ details {
 
 .titulos-blog-card {
     @apply sm:text-2xl lg:text-lg xl:text-2xl font-myriad font-extrabold sm:text-left lg:text-left sm:leading-none text-azul !leading-7 tracking-tighter py-2;
+}
+
+.subtitulos-blog {
+    @apply !leading-7 tracking-tighter lg:text-lg xl:text-2xl;
 }
 
 .text-blog {
