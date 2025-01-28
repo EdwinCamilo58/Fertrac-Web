@@ -12,7 +12,9 @@ const postsArray = Object.values(postList).map(post => ({
   image: post.frontmatter.image,
   pubDate: new Date(post.frontmatter.pubDate), // Convertir a objeto Date
   tags: post.frontmatter.tags,
-  url: post.url
+  url: post.url,
+  tiempoLectura: post.frontmatter.tiempoLectura
+  
 })).sort((a, b) => b.pubDate - a.pubDate);
 
 const latestPosts = postsArray.slice(0, 4);
@@ -31,7 +33,7 @@ const latestPosts = postsArray.slice(0, 4);
 
     <ul class="grid md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-4 gap-8">
             {latestPosts.map(post => (
-                <li><CardsBlog title={post.title} image={post.image} url={post.url} previewText={post.previewText} pubDate={post.pubDate} tags={post.tags} /></li>
+                <li><CardsBlog title={post.title} image={post.image} url={post.url} previewText={post.previewText} pubDate={post.pubDate} tags={post.tags} tiempoLectura={post.tiempoLectura}/></li>
               
             ))}
     </ul>

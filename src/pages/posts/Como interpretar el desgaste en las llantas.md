@@ -8,6 +8,7 @@ image:
     alt: "imagen de post"
 tags: ["Articulo"] 
 previewText: " El desgaste en llantas suele afectar a la flota dado que se traduce en más consumo de combustible, por lo que es importante mantener el buen estado de los elementos que inciden en un desgaste prematuro de estas."
+tiempoLectura: "3 minutos"
 ---
 
 <div class="">

@@ -4,14 +4,16 @@ import "../estilos.css";
 import AsesoriaEspecialidades from "../components/AsesoriaEspecialidades.astro";
 
 
-const { frontmatter, image, title, tags, pubDate } = Astro.props;
+const { frontmatter, image, title, tags } = Astro.props;
+const pubDate = frontmatter.pubDate;
 
-
-const formaterFecha = new Date(pubDate).toLocaleDateString('es-ES', {
-  day: '2-digit',
-  month: '2-digit',
-  year: 'numeric',
-});
+const formatearFecha = pubDate
+  ? new Date(pubDate).toLocaleDateString("es-ES", {
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+    })
+  : "Fecha no disponible";
 
 
 
@@ -28,9 +30,10 @@ const formaterFecha = new Date(pubDate).toLocaleDateString('es-ES', {
                     src={frontmatter.image.url}
                     alt=""
                 />
-                <div class="flex items-center">
-                    <time datetime={frontmatter.pubDate} class="text-base">{formaterFecha}</time>
-                    <span class="text-base !text-naranja" >{frontmatter.tags}</span>
+                <div class="flex gap-4 py-2 justify-between">
+                    <time datetime={pubDate} class="text-base">{formatearFecha}</time>
+                    <span class="font-semibold font-lato text-naranja"> {frontmatter.tags}</span>
+                    
                 </div>
             </div>
 

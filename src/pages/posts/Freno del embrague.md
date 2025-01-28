@@ -8,6 +8,7 @@ image:
     alt: "imagen de post"
 tags: ["Eventos"] 
 previewText: "El freno de embrague es un dispositivo que permite bajar la rotacion de la flecha de entrada hasta detenerla, se ubica justo detrás del balero collarin, aumentan la vida util de las transmisiones dado que disminuye el esfuerzo y elimina los choques que se producen en el engranaje al cambiar desde una marcha alta a primera o reversa, se usa solo en embragues tipo jalon."
+tiempoLectura: "3 minutos"
 ---
 
 

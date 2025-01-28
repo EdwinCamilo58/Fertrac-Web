@@ -1,10 +1,18 @@
 ---
-const { url } = Astro.props;
+export interface Props {
+  tiempoLectura: string;
+}
+
+const { tiempoLectura } = Astro.props;
 ---
 
-<button class="relative effect text-azul py-2  hover:text-azul font-semibold font-lato"
-  >Seguir Leyendo</button
+<div
+  class="flex flex-col font-semibold font-lato text-naranja py-2"
 >
+  <span>Tiempo de lectura aproximado: {tiempoLectura}</span>
+
+  <button class="relative effect text-azul py-2 hover:text-azul  text-left w-fit">Seguir Leyendo</button>
+</div>
 
 <style>
   .effect:after {

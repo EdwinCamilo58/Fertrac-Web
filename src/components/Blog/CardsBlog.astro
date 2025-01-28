@@ -2,21 +2,26 @@
 import BotonPrincipal from "../BotonPrincipal.astro"
 import BotonBlog from "../BotonBlog.astro";
 
-const { image, url, title, pubDate, previewText, tags} = Astro.props;
+
+
+const { image, url, title, pubDate, previewText, tags, tiempoLectura} = Astro.props;
 const formaterFecha = new Date(pubDate).toLocaleDateString('es-ES', {
   day: '2-digit',
   month: '2-digit',
   year: 'numeric',
 });
 
+
+
+
 /* function LimitarPalabras(text, maxWords) {
     const words = text.split(" ");
     return words.length > maxWords ? words.slice(0, maxWords).join(" ") + " [...]" : text;
-} */
+}  */
 
-function LimitarLetras(text, maxLength) {
+/* function LimitarLetras(text, maxLength) {
     return text.length > maxLength ? text.slice(0, maxLength) + "[...]" : text;
-}
+} */
 
 
 ---
@@ -32,12 +37,23 @@ function LimitarLetras(text, maxLength) {
     </div>
     
     <div class="flex gap-4 py-2 justify-between">
-        <time datetime={pubDate} class="text-base">{formaterFecha}</time>
-        <span class="text-base !text-naranja" >{tags}</span>
+        <time datetime={pubDate} class="tbaseext-">{formaterFecha}</time>
+        <span class="font-semibold font-lato text-naranja text-base" >{tags}</span>
+        
     </div>
     <h3 class="titulos-blog-card">{title}</h3>
 
-    <p class=" !text-justify text-blog">{LimitarLetras(previewText, 250)}</p>
-    <BotonBlog/>
+    <p id="previewText" class="previewText !text-justify text-blog">{previewText}</p>
+    <BotonBlog tiempoLectura={tiempoLectura}/>
 </a>
 </article>
+
+<style>
+    .previewText {
+  display: -webkit-box;
+  -webkit-line-clamp: 10; /* Número de líneas deseadas */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+</style>

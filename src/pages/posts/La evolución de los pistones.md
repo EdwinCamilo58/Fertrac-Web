@@ -1,13 +1,14 @@
 ---
 layout: ../../layouts/PostLayouts.astro
 pubDate: "2025-12-30"
-title: "La Evolución de los Pistones de vehiculos de carga"
+title: "Evolución pistones  de vehiculos de carga"
 author: "Edwin Camilo"
 image:
     url: "/img/pistones-del-motor-en-camiones.jpg"
     alt: "Pistones de vehiculos de carga modernos, componentes esenciales para mantener la potencia y eficiencia del motor."
 tags: ["Articulo"] 
 previewText: "En los albores de la motorización, los vehiculos de carga eran máquinas robustas pero sencillas. Sus motores, aunque potentes para la época, eran relativamente básicos. El corazón de estos motores, los pistones, eran piezas de fundición de hierro, diseñadas para soportar grandes cargas y temperaturas."
+tiempoLectura: "2 minutos"
 ---
 
 
