@@ -24,7 +24,7 @@ const {bgNav} = Astro.props;
         <i class="fa-solid fa-caret-down"></i>
       </a>
         <div
-          class="absolute w-[800px] top-0 -left-[320px] transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[560px] transform">
+          class="absolute w-[1000px] top-0 -left-[320px] transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[560px] transform">
           <div class="relative w-full p-6 bg-white shadow-xl top-6 rounded-xl">
             <div
               class="w-10 h-10 bg-white transform rotate-45 absolute top-0 left-[22%] z-0 translate-x-0 transition-transform group-hover:translate-x-[12rem] duration-500 ease-in-out rounded-sm">
@@ -41,11 +41,11 @@ const {bgNav} = Astro.props;
                         <a href="/especialidades/motor/"
                           class="flex items-center p-2 -mx-2 space-x-2 font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-blue-200">
                           <div class="p-2 bg-blue-500 rounded-full">
-                            <img width="24" height="24" src="https://img.icons8.com/ios-filled/100/FFFFFF/engine.png" alt="icono de un motor"/>
+                            <img width="24" height="24" src="https://img.icons8.com/ios-filled/FFFFFF/engine.png" alt="icono de un motor"/>
                           </div>
                           <div>
                             Motor
-                            <p class="!text-sm font-light !text-gray-600">El corazón de cualquier camión.</p>
+                            <p class="!text-sm font-light !text-gray-600">Potencia y rendimiento para un viaje sin límites.</p>
                           </div>
                         </a>
                       </li>
@@ -54,14 +54,29 @@ const {bgNav} = Astro.props;
                         <a href="/especialidades/tren-delantero/"
                           class="flex items-center p-2 -mx-2 space-x-2 font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-orange-200">
                           <div class="p-2 bg-orange-500 rounded-full">
-                            <img width="24" height="24" src="https://img.icons8.com/external-obvious-glyph-kerismaker/96/FFFFFF/external-accessories-car-auto-parts-glyph-obvious-glyph-kerismaker-6.png" alt="icono de un eje delantero"/>
+                            <img width="24" height="24" src="https://img.icons8.com/external-goofy-line-kerismaker/50/FFFFFF/external-Suspension-car-auto-parts-goofy-line-kerismaker.png" alt="external-Suspension-car-auto-parts-goofy-line-kerismaker"/>
                           </div>
                           <div>
                             Tren Delantero
-                            <p class="!text-sm font-light !text-gray-600">Asegura una conducción suave y segura</p>
+                            <p class="!text-sm font-light !text-gray-600">Precisión y control para una conducción segura.</p>
                           </div>
                         </a>
                       </li>
+
+                      <li>
+                        <a href="/especialidades/sistema-de-frenado/"
+                          class="flex items-center p-2 -mx-2 space-x-2 font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-slate-200">
+                          <div class="p-2 bg-slate-900 rounded-full">
+                            <img width="24" height="24" src="https://img.icons8.com/external-icongeek26-glyph-icongeek26/64/FFFFFF/external-break-car-parts-and-service-icongeek26-glyph-icongeek26.png" alt="icono de un freno de camión"/>
+                          </div>
+                          <div>
+                            Sistema de Frenado
+                            <p class="!text-sm font-light !text-gray-600">Seguridad y control, reduciendo la velocidad de manera eficiente.</p>
+                          </div>
+                        </a>
+                      </li>
+
+                      
 
                       <li>
                         <a href="/especialidades/embrague-y-transmisión/"
@@ -71,10 +86,11 @@ const {bgNav} = Astro.props;
                           </div>
                           <div>
                             Embrague y Transmisión
-                            <p class="!text-sm font-light !text-gray-600">Transferencia de potencia del motor a las ruedas.</p>
+                            <p class="!text-sm font-light !text-gray-600">Conexión y transferencia de potencia del motor a las ruedas.</p>
                           </div>
                         </a>
                       </li>
+
                   </ul>
                 </div>
 
@@ -125,7 +141,7 @@ const {bgNav} = Astro.props;
                       <li>
                         <a href="/especialidades/diferencial/"
                           class="flex items-center p-2 -mx-2 space-x-2 font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-green-200">
-                          <div class="p-2 bg-green-900 rounded-xl">
+                          <div class="p-2 bg-green-900 rounded-full">
                             <img width="24" height="24" src="https://img.icons8.com/external-obvious-glyph-kerismaker/96/FFFFFF/external-accessories-car-auto-parts-glyph-obvious-glyph-kerismaker-6.png" alt="external-accessories-car-auto-parts-glyph-obvious-glyph-kerismaker-6"/>
                           </div>
                           <div>
@@ -134,6 +150,8 @@ const {bgNav} = Astro.props;
                           </div>
                         </a>
                       </li>
+
+                      
 
                       
 
@@ -151,7 +169,7 @@ const {bgNav} = Astro.props;
                           </div>
                           <div>
                             Sistema de Refrigeración
-                            <p class="!text-sm font-light !text-gray-600">Los motores son el corazón de nuestros vehiculos de carga.</p>
+                            <p class="!text-sm font-light !text-gray-600">regula la temperatura del motor, evitando sobrecalentamiento.</p>
                           </div>
                         </a>
                       </li>
@@ -161,12 +179,12 @@ const {bgNav} = Astro.props;
                       <li>
                         <a href="/especialidades/rodamientos/"
                           class="flex items-center p-2 -mx-2 space-x-2 font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-lime-200">
-                          <div class="p-2 bg-lime-300 rounded-xl">
+                          <div class="p-2 bg-lime-300 rounded-full">
                             <img width="24" height="24" src="https://img.icons8.com/external-icongeek26-glyph-icongeek26/64/FFFFFF/external-ball-bearing-car-parts-and-service-icongeek26-glyph-icongeek26.png" alt="icono de un rodamiento"/>
                           </div>
                           <div>
                             Rodamientos
-                            <p class="!text-sm font-light !text-gray-600">Rodamientos para asegurar su durabilidad, estabilidad y eficiencia.</p>
+                            <p class="!text-sm font-light !text-gray-600">Durabilidad, estabilidad y eficiencia asegurada.</p>
                           </div>
                         </a>
                       </li>
@@ -185,14 +203,14 @@ const {bgNav} = Astro.props;
                       </li>
 
                       <li>
-                        <a href="/especialidades/sistema-de-frenado/"
-                          class="flex items-center p-2 -mx-2 space-x-2 font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-slate-200">
-                          <div class="p-2 bg-slate-900 rounded-full">
-                            <img width="24" height="24" src="https://img.icons8.com/external-icongeek26-glyph-icongeek26/64/FFFFFF/external-break-car-parts-and-service-icongeek26-glyph-icongeek26.png" alt="icono de un freno de camión"/>
+                        <a href="/especialidades/embrague-y-transmisión/"
+                          class="flex items-center p-2 -mx-2 space-x-2 font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-fuchsia-200">
+                          <div class="p-2 bg-violet-500 rounded-full">
+                            <img width="24" height="24" src="https://img.icons8.com/ios-filled/50/FFFFFF/settings-3.png" alt="icono de un engranaje"/>
                           </div>
                           <div>
-                            Sistema de Frenado
-                            <p class="!text-sm font-light !text-gray-600">Componente vital del sistema de transmisión.</p>
+                            Otras especialidades
+                            <p class="!text-sm font-light !text-gray-600">Repuestos para el óptimo desempeño de tu camión.</p>
                           </div>
                         </a>
                       </li>
@@ -458,7 +476,7 @@ const {bgNav} = Astro.props;
                       <li class="">
                         <a href="/especialidades/tren-delantero/" class="flex items-center justify-between flex-col  font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
                           <div class="p-2 bg-orange-500 rounded-xl">
-                            <img class="w-4 h-4" src="https://img.icons8.com/external-obvious-glyph-kerismaker/96/FFFFFF/external-accessories-car-auto-parts-glyph-obvious-glyph-kerismaker-6.png" alt="icono de un eje delantero"/>
+                           <img width="16" height="16" src="https://img.icons8.com/external-goofy-solid-kerismaker/50/FFFFFF/external-Suspension-car-auto-parts-goofy-solid-kerismaker.png" alt="external-Suspension-car-auto-parts-goofy-solid-kerismaker"/>
                           </div>
                             Tren <br> Delantero
                         </a>
@@ -497,7 +515,7 @@ const {bgNav} = Astro.props;
   
                       <li class="">
                         <a href="/especialidades/cardan/" class="flex items-center justify-between flex-col  font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
-                          <div class="p-2 bg-green-500 rounded-xl">
+                          <div class="p-2 bg-green-500 rounded-full">
                             <img class="w-4" height="h-4" src="/img/cardan-menu.png" alt="icono de un diferencial"/>
                           </div>
                             Cardan

@@ -1,4 +1,7 @@
-<section class=" lg:px-14 sm:mb-4 mt-8 sm:px-4 lg:py-16">
+<div id="testimonios-elf" class="elfsight-app-6964a610-d9c6-4733-a55b-3936e313a3c2 py-24" data-elfsight-app-lazy></div>
+
+
+<section id="testimonios-estaticos" class="hidden lg:px-14 sm:mb-4 mt-8 sm:px-4 lg:py-16">
   <div class="flex flex-col items-center justify-center lg:gap-4 sm:gap-2 mb-4">
     <h2>
         Testimonios
@@ -191,6 +194,28 @@
     },
   });
     })
+
+    const elfsightUrl = 'https://static.elfsight.com/platform/platform.js'; 
+
+
+fetch(elfsightUrl)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('No se pudo conectar con Elfsight');
+    }
+    console.log('Conexión exitosa con Elfsight');
+    return response.json();
+  })
+  .then(data => {
+    console.log('Datos recibidos:', data);
+    
+  })
+  .catch(error => {
+    console.error('Error al cargar Elfsight:', error);
+    document.getElementById('testimonios-estaticos').style.display = 'none';
+    document.getElementById('testomios-elf').style.display = 'block';
+  });
+
 
 
 </script>
