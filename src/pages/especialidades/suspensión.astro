@@ -1,0 +1,119 @@
+---
+import HeaderEspecialidades from "../../components/HeaderEspecialidades.astro";
+import MainLayout from "../../layouts/MainLayout.astro";
+import AsesoriaEspecialidades from "../../components/AsesoriaEspecialidades.astro";
+
+const title = "Suspensión: Estabilidad y Confort";
+const description = "Nuestros componentes de suspensión ofrecen estabilidad y confort en la conducción, mejorando la experiencia en carretera de tus vehiculos de carga.";
+---
+
+<MainLayout title={title} descripción={description}>
+
+
+  <div class="">
+    <div class="bg-cover content-center" style="background-image: url(/img/banner-especialidades.jpg);">
+
+      <HeaderEspecialidades especialidad="Suspensión." img="/img/suspensión.webp" ></>
+
+      </div>
+    
+      <div
+        class="flex justify-center flex-col text-center lg:w-[1000px] sm:w-auto lg:mx-auto sm:mx-4 lg:my-12 sm:my-4"
+      >
+    
+      <div class="mb-12">
+        <p class="text-justify animacion from-left">
+          Capacidad de carga, amortiguación, baja vibración, seguridad, estabilidad. Las funciones principales de este sistema son: suspensión.
+          Componentes fundamentales para garantizar una conducción cómoda y segura. Incluyen componentes como bolsas de aire, amortiguadores, arandelas, bujes, barras estabilizadoras y mucho más. 
+          No importa si tienes suspensión neumática o mecánica, encontrarás todas las piezas que necesitas para repararlas en Fertrac. 
+          En Fertrac, ofrecemos una amplia gama de repuestos de suspensión de las mejores marcas del mercado. Nos dedicamos a proporcionar productos de alta calidad y durabilidad, asegurando que tu camión ofrezca una experiencia de conducción suave y segura.
+          
+    
+        </p>
+      </div>
+    
+          <div class="animacion from-left logos flex flex-wrap justify-center items-center lg:gap-28 sm:gap-8 mx-auto">
+            <img src="/img/hendrickson.png" alt="" />
+          <img src="/img/firestone.png" alt="" />
+          <img src="/img/firestone-airide.png" alt="" />
+          <img src="/img/neway.png" alt="" />
+          <img src="/img/national.png" alt="" />
+          <img src="/img/bostrom.png" alt="" />
+          <img src="/img/tenneco.png" alt="" />
+          <img src="/img/mansons.png" alt="" />
+          <img src="/img/goodyear.png" alt="" />
+          <img src="/img/sampa.png" alt="" />
+
+          <div class="">
+            <span class="bg-azul text-white lg:px-4 lg:py-4 sm:px-2 sm:py-2 sm:mb-4 font-gotham">AMORTIGUADORES</span>
+            <div class="grid lg:grid-cols-3 xl:grid-cols-3 gap-8 mx-auto mt-16 sm:grid-cols-1 justify-center items-end">
+
+                
+                <img src="/img/gabriel.png" alt="">
+                <img src="/img/monroe.png" alt="">
+                <img src="/img/meritor.png" alt=""></div>
+              
+    
+          </div>
+          
+          
+          
+      </div>
+  </div>
+
+  <AsesoriaEspecialidades/>
+  </div>
+  </div>
+
+
+
+
+</MainLayout>
+<style>
+.animacion img {
+    width: 14rem;
+  }
+
+  @media (min-width: 360px) {
+    .animacion img  {
+        width: 8rem;
+    }
+  }
+
+  @media (min-width: 1080px) {
+    .animacion img {
+        width: 14rem;
+    }
+  }
+
+  .animacion{
+   transition: opacity 0s ease, filter 0.5s ease; 
+   animation: fadeInUp 1s ease forwards; 
+   animation-delay: 1s;
+}
+
+.from-left {
+  opacity: 0;
+  filter: blur(4px); 
+  animation: fadeInLeft 2s ease forwards;
+  animation-delay: 0.8s; 
+}
+
+
+
+  @keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+100% {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+}
+}
+
+
+
+
+</style>

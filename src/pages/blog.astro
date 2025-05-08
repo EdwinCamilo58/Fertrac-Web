@@ -1,0 +1,50 @@
+---
+import CardsBlog from "../components/Blog/CardsBlog.astro";  // Asegúrate de importar el componente CardsBlog
+import BotonPrincipal from "../components/BotonPrincipal.astro";
+import BlogLayout from "../layouts/BlogLayout.astro";
+const postList = await Astro.glob("/src/pages/posts/*.md");
+
+const postsArray = Object.values(postList).map(post => ({
+  title: post.frontmatter.title,
+  previewText: post.frontmatter.previewText,
+  image: post.frontmatter.image,
+  pubDate: new Date(post.frontmatter.pubDate),
+  tags: post.frontmatter.tags,
+  url: post.url,
+  tiempoLectura: post.frontmatter.tiempoLectura
+})).sort((a, b) => b.pubDate - a.pubDate);
+
+const allPosts = postsArray; // Aquí no usamos slice, por lo que se mostrarán todos los posts
+---
+
+<BlogLayout>
+
+  <div class="max-w-screen-xl mx-auto sm:my-8 md:my-16 lg:px-14">
+
+   <div class="relative w-full md:h-[600px] sm:h-[450px]">
+      <!-- Imagen de fondo -->
+      <img src="/img/blog-banner.png" alt="Banner" class="absolute inset-0 w-full h-full object-cover z-0" />
+    
+      <!-- Capa oscura opcional -->
+      <div class="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
+    
+      <!-- Texto encima -->
+      <div class="relative z-20 flex flex-col items-center justify-center h-full text-white px-4 ">
+        <div class="justify-center max-w-2xl">
+          <h1 class="!text-white font-bold 2xl:text-6xl xl:text-5xl lg:text-7xl sm:text-3xl md:text-[60px] md:text-center sm:text-left">Descubre el corazón de cada tractocamión</h1>
+          <p class="!text-white text-lg md:text-xl mt-4 text-center">Explora artículos detallados sobre los repuestos esenciales que mantienen a los tractocamiones en movimiento. Desde motores hasta sistemas de frenos, aquí encuentras la información que impulsa tu ruta</p>    
+        </div>
+       
+      </div>
+    </div>
+
+    <hr class="bg-naranja mb-8">
+    <ul class="grid md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-4 gap-8">
+       {allPosts.map(post => (
+          <li><CardsBlog title={post.title} image={post.image} url={post.url} previewText={post.previewText} pubDate={post.pubDate} tags={post.tags} tiempoLectura={post.tiempoLectura} /></li>
+       ))}
+    </ul>
+ </div>
+
+</BlogLayout>
+

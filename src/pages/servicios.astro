@@ -1,0 +1,106 @@
+---
+
+import BotonPrincipal from "../components/BotonPrincipal.astro";
+import FAQS from "../components/FAQS.astro";
+import LayoutSecundario from "../layouts/LayoutSecundario.astro"
+
+const title = "Fertrac - Servicios de Venta de Repuestos para vehiculos de carga";
+const description = "En Fertrac, ofrecemos una amplia gama de servicios relacionados con la venta de repuestos para vehiculos de carga. Con más de 20 años de experiencia, garantizamos la calidad y fiabilidad de nuestros productos, incluyendo asesoría técnica y atención personalizada para ayudarte a encontrar las piezas adecuadas para tus necesidades.";
+---
+
+<LayoutSecundario title={title} description={description}>
+
+  <div class="grid lg:grid-cols-1 sm:grid-cols-1 2xl:mx-56 lg:mx-14 xl:mt-36 sm:m-4 sm:gap-8 lg:gap-12 items-center sm:py-8">
+
+    <div class="flex flex-wrap sm:flex-col-reverse lg:flex-row lg:bg-azul-opaco sm:bg-none lg:shadow-md sm:shadow-none">
+      
+      <div class="lg:w-[50%] sm:w-auto xl:px-36 lg:p-8 sm:py-2 sm:px-0 gap-4 flex flex-col justify-center items-left ">
+        <h2 class="">VENTA DE REPUESTOS PARA VEHÍCULOS DE CARGA</h2>
+        <p>En Fertrac, somos especialistas en la venta de repuestos para vehiculos de carga, ofreciendo calidad, confianza y un amplio portafolio de marcas reconocidas. Nos enfocamos en brindar soluciones eficientes para mantener tu flota siempre en movimiento, con productos diseñados para durar y optimizar el rendimiento de tus vehiculos de carga.</p>
+      </div>   
+      <div class="clip-izq lg:w-[50%] sm:w-auto img-container"><img src="/img/productos-fertrac.jpg" alt="" ></div>
+    </div>
+
+<!--     <div id="tienda-online" class="flex flex-wrap lg:bg-azul-opaco sm:bg-none lg:shadow-md sm:shadow-none sm:flex-col-reverse lg:flex-row">
+      <div class="lg:w-[50%] sm:w-auto xl:px-36 lg:p-8 sm:py-2 sm:px-0 gap-4 flex flex-col justify-center items-left ">
+        <h2 class="">TIENDA EN LINEA</h2>
+        <p>En la tienda en línea de Fertrac, encuentras repuestos originales para vehiculos de carga pesados, con garantía de calidad y envío rápido. Compra de forma segura y sencilla desde cualquier lugar, con la confianza de que recibirás productos duraderos y un servicio personalizado. Mantén tus vehiculos de carga en movimiento con Fertrac.</p>
+        <BotonPrincipal url="/especialidades/eje-delantero/" icon="fa-solid fa-shop" text="Visitar Tienda Online" estilos="bg-naranja hover:bg-white hover:text-naranja hover:border border-naranja text-white mr-2 "/>
+      </div>
+      <div class="lg:w-[50%] sm:w-auto img-container"><img src="/img/catalogo-en-linea.webp" alt="" style="clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+"></div> 
+    </div> -->
+
+    <div id="catalogo-online" class="flex flex-wrap lg:bg-azul-opaco sm:bg-none lg:shadow-md sm:shadow-none">
+      <div class="clip-der lg:w-[50%] sm:w-auto img-container"><img src="/img/catalogos-fertrac.png" alt=""></div>
+      <div class="lg:w-[50%] sm:w-auto xl:px-36 lg:p-8 sm:py-2 sm:px-0 gap-4 flex flex-col justify-center items-left" >
+        <h2 class="">CATALOGO EN LINEA</h2>
+        <p>En Fertrac entendemos la importancia de que realices tus pedidos de acuerdo a tus necesidades específicas. Por eso, te ofrecemos múltiples opciones de servicio: a través de nuestro canal de WhatsApp Comercial,  por teléfono, por correo o accediendo a nuestra tienda virtual. 
+          <br>
+          <br>
+          Contactanos por cualquiera de nuestros canales para guiarte en todo el proceso de compra, asegurando que encuentres todas las soluciones que necesitas. 
+          </p>
+        <BotonPrincipal url="/img/catalogo-agosto2-fertrac.pdf" download="catalogo-agosto2-fertrac" icon="fa-solid fa-file-arrow-down" text="Descargar Catalogo Quincenal" estilos="bg-naranja hover:bg-white hover:text-naranja hover:border border-naranja text-white mr-2 "/>
+      </div>
+    </div>
+
+    <div id="solicitud-credito" class="flex flex-wrap lg:bg-azul-opaco sm:bg-none lg:shadow-md sm:shadow-none sm:flex-col-reverse lg:flex-row">
+      <div class="lg:w-[50%] sm:w-auto xl:px-36 lg:p-8 sm:py-2 sm:px-0 gap-4 flex flex-col justify-center items-left ">
+        <h2 class="">SOLICITUD DE CREDITO</h2>
+        <p>¡Solicita tu crédito con Fertrac aquí! 
+
+          En Fertrac, es importante que puedas acceder a los repuestos de confianza que necesitas, cuando los necesitas. Por eso, te ofrecemos la posibilidad de obtener un crédito directamente con nuestra empresa.
+          
+          No te quedes sin la oportunidad de unirte a este gran equipo y asegurar todo lo que necesitas para tu camión. ¡Realiza el proceso ahora y forma parte de la familia Fertrac!
+          
+          .</p>
+        <BotonPrincipal url="/especialidades/eje-delantero/" icon="fa-solid fa-file-arrow-down" text="Descargar Formato" estilos="bg-naranja hover:bg-white hover:text-naranja hover:border border-naranja text-white mr-2 "/>
+      </div>
+      <div class="clip-izq lg:w-[50%] sm:w-auto img-container"><img src="/img/solicitud-credito.jpg" alt="" ></div>
+    </div>
+    
+    <div id="asesoria-tecnica" class="flex flex-wrap lg:bg-azul-opaco sm:bg-none lg:shadow-md sm:shadow-none">
+      <div class="clip-der lg:w-[50%] sm:w-auto img-container"><img src="/img/asesoria-tecnica.jpg" alt="" ></div>
+      <div class="lg:w-[50%] sm:w-auto xl:px-36 lg:p-8 sm:py-2 sm:px-0 gap-4 flex flex-col justify-center items-left">
+        <h2 class="">ASESORÍA TÉCNICA</h2>
+        <ul class="lg:list-disc sm:list-none font-lato text-lg flex flex-col gap-4 text-justify">
+          <li>Ofrecemos asistencia técnica respaldada por un profundo conocimiento del producto y los ensambles, garantizando una asesoría al cliente que asegura el 100% de satisfacción.</li>
+          <li>Nos comprometemos a acompañar de cerca a nuestros clientes en la búsqueda constante de mejoras en sus servicios y portafolios, mediante el respaldo en la investigación de nuevas tendencias</li>
+          <li>Contamos con un equipo altamente capacitado que no sólo ofrece respuestas oportunas, sino que también se dedica a innovar constantemente en la prestación de nuestros servicios.</li>
+        </ul>
+      </div>
+    </div>  
+<!--     
+    <div id="innovación-investigación" class="flex flex-wrap lg:bg-azul-opaco sm:bg-none lg:shadow-md sm:shadow-none sm:flex-col-reverse lg:flex-row">
+      <div class="lg:w-[50%] sm:w-auto xl:px-36 lg:p-8 sm:py-2 sm:px-0  gap-4 flex flex-col justify-center items-left">
+        <h2 class="!text-[22px]">INNOVACION E INVESTIGACIÓN</h2>
+        <p>Nos dedicamos a la constante investigación y entendimiento de los nuevos equipos de carga. Asegurando tener información precisa y a la vanguardia de los nuevos productos y demandas del mercado.</p>
+      </div>
+      <div class="clip-izq lg:w-[50%] sm:w-auto img-container"><img src="/img/innovación-fertrac.jpg" alt=""></div>
+    </div> -->
+
+  </div>
+
+  <FAQS/>
+        
+</LayoutSecundario>
+
+<style>
+/* Aplicar clip-path solo en pantallas grandes */
+@media (min-width: 768px) {
+/*   .img-container img {
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  } */
+  .clip-izq {
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+  }
+
+  .clip-der {
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  }
+}
+
+
+
+/* Puedes agregar otros estilos para diferentes pantallas aquí si es necesario */
+</style>

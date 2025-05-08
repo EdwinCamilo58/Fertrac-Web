@@ -1,0 +1,111 @@
+---
+import HeaderEspecialidades from "../../components/HeaderEspecialidades.astro";
+import MainLayout from "../../layouts/MainLayout.astro";
+import AsesoriaEspecialidades from "../../components/AsesoriaEspecialidades.astro";
+
+const title = "Sistema de Refrigeración: Temperatura Controlada";
+const description = "Asegura el funcionamiento óptimo de tu motor con nuestros sistemas de refrigeración, que previenen el sobrecalentamiento y garantizan un rendimiento constante.";
+---
+
+<MainLayout title={title} descripción={description}>
+
+
+  <div class="">
+    <div class="bg-cover content-center" style="background-image: url(/img/banner-especialidades.jpg);">
+
+      <HeaderEspecialidades especialidad="Sistema de Refrigeración." img="/img/sistema-de-refrigeración.webp" estilo="lg:w-[min-content] lg:!text-[75px] mx-auto"></>
+
+      
+      </div>
+    
+      <div
+        class="flex justify-center flex-col text-center lg:w-[1000px] sm:w-auto lg:mx-auto sm:mx-4 lg:my-12 sm:my-4"
+      >
+    
+      <div class="mb-12 ">
+        <p class="text-justify animacion from-left">
+          Todos los fluidos requieren una temperatura óptima para funcionar, sin este sistema no sería posible que el camión opere por largos periodos de tiempo. 
+Componentes vitales para mantener todos los fluidos de tu tren motriz a una temperatura óptima y prevenir el sobrecalentamiento del motor, el turbo y la transmisión. Estos incluyen radiadores, termostatos, fluidos, bombas de agua, bombas de aceite, mangueras, entre muchos más.  
+En Fertrac, ofrecemos una amplia gama de repuestos de sistema de refrigeración de las mejores marcas del mercado. Nos dedicamos a proporcionar productos de alta calidad y durabilidad, asegurando que tu camión funcione de manera eficiente y segura.
+
+    
+        </p>
+      </div>
+    
+          <div class="animacion from-left logos flex flex-wrap justify-center items-center lg:gap-28 sm:gap-8 mx-auto">
+            <img class="w-56" src="/img/horton.png" alt="" />
+            <img class="w-56" src="/img/kysor.png" alt="" />
+            <img class="w-56" src="/img/borgwarner.png" alt="" />
+
+
+          <div class="">
+            <span class="bg-azul text-white lg:px-4 lg:py-4 sm:px-2 sm:py-2 sm:mb-4 font-gotham">MANGUERAS DE AIRE</span>
+            <div class="grid lg:grid-cols-1 xl:grid-cols-1 gap-8 mx-auto mt-16 sm:grid-cols-1 justify-center">
+
+                <img src="/img/flexfab.png" alt="">
+
+              
+    
+          </div>
+          
+          </div>
+          
+      </div>
+  </div>
+
+  <AsesoriaEspecialidades/>
+  </div>
+  </div>
+
+
+
+
+</MainLayout>
+<style>
+.animacion img {
+    width: 14rem;
+  }
+
+  @media (min-width: 360px) {
+    .animacion img  {
+        width: 8rem;
+    }
+  }
+
+  @media (min-width: 1080px) {
+    .animacion img {
+        width: 14rem;
+    }
+  }
+
+  .animacion{
+   transition: opacity 0s ease, filter 0.5s ease; 
+   animation: fadeInUp 1s ease forwards; 
+   animation-delay: 1s;
+}
+
+.from-left {
+  opacity: 0;
+  filter: blur(4px); 
+  animation: fadeInLeft 2s ease forwards;
+  animation-delay: 0.8s; 
+}
+
+
+
+  @keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+100% {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+}
+}
+
+
+
+
+</style>

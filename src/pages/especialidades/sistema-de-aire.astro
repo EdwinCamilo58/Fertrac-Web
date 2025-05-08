@@ -1,0 +1,98 @@
+---
+import HeaderEspecialidades from "../../components/HeaderEspecialidades.astro";
+import MainLayout from "../../layouts/MainLayout.astro";
+import AsesoriaEspecialidades from "../../components/AsesoriaEspecialidades.astro";
+
+const title = "Sistema de Aire: Eficiencia en el Rendimiento";
+const description = "Mantén el rendimiento de tu camión con nuestros sistemas de aire de calidad, que mejoran la eficiencia y reducen el consumo de combustible.";
+---
+
+<MainLayout title={title} descripción={description}>
+
+
+  <div class="">
+    <div class="bg-cover content-center" style="background-image: url(/img/banner-especialidades.jpg);">
+      <HeaderEspecialidades especialidad="Sistema de Aire." img="/img/sistema-de-aire.webp" ></>
+
+      
+      </div>
+    
+      <div
+        class="flex justify-center flex-col text-center lg:w-[1000px] sm:w-auto lg:mx-auto sm:mx-4 lg:my-12 sm:my-4"
+      >
+    
+      <div class="mb-12">
+        <p class="text-justify  animacion from-left">
+          Como el aceite al motor, el aire comprimido es el componente esencial del sistema de frenado y de suspensión de la mayoría de vehiculos de carga de carga pesada. 
+Componentes como compresores de aire, válvulas de levantamiento, cámaras de aire, calipers, racks, campanas, discos de freno, pastillas de freno, entre muchos más. Diseñados para asegurar una frenada eficiente y confiable.
+En Fertrac, ofrecemos una amplia gama de repuestos de sistema de aire y frenado de las mejores marcas del mercado. Nos comprometemos a proporcionar productos de alta calidad y durabilidad, asegurando que tu camión funcione de manera óptima y segura.
+
+        </p>
+      </div>
+    
+          <div class="animacion from-left logos flex flex-wrap justify-center items-center lg:gap-28 sm:gap-8 mx-auto">
+            <img src="/img/wabco.png" alt="" />
+          <img src="/img/vaden.png" alt="" />
+          <img src="/img/meritor.png" alt="" />
+          <img src="/img/frasle.png" alt="" />
+          <img src="/img/sealco.png" alt="" />
+           
+      </div>
+  </div>
+
+  <AsesoriaEspecialidades/>
+  </div>
+  </div>
+
+
+
+
+</MainLayout>
+<style>
+.animacion img {
+    width: 14rem;
+  }
+
+  @media (min-width: 360px) {
+    .animacion img  {
+        width: 8rem;
+    }
+  }
+
+  @media (min-width: 1080px) {
+    .animacion img {
+        width: 14rem;
+    }
+  }
+
+  .animacion{
+   transition: opacity 0s ease, filter 0.5s ease; 
+   animation: fadeInUp 1s ease forwards; 
+   animation-delay: 1s;
+}
+
+.from-left {
+  opacity: 0;
+  filter: blur(4px); 
+  animation: fadeInLeft 2s ease forwards;
+  animation-delay: 0.8s; 
+}
+
+
+
+  @keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+100% {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+}
+}
+
+
+
+
+</style>

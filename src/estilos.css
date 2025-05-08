@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.titulos {
+    @apply sm:text-[32px] md:text-[60px] text-azul lg:text-4xl xl:text-5xl font-gotham font-black sm:text-justify sm:leading-none lg:text-left tracking-tight;
+}
+.subtitulos {
+    @apply sm:text-2xl lg:text-3xl xl:text-4xl font-gotham font-black text-azul sm:text-justify lg:text-left sm:leading-none tracking-tight;
+}
+
+.titulos-h3 {
+    @apply sm:text-2xl lg:text-xl xl:text-2xl font-gotham font-bold sm:text-center lg:text-left sm:leading-none !leading-7 tracking-tighter;
+}
+
+
+.parrafo {
+    @apply lg:text-lg sm:text-lg font-lato font-normal text-black sm:text-justify sm:leading-[1.5rem];
+}
+
+.faqs-titles {
+    @apply lg:text-lg sm:text-lg font-lato font-normal text-black sm:text-justify
+}
+
+.introduce {
+    @apply text-black lg:text-base sm:text-xl  sm:text-justify lg:text-center;
+}
+
+summary {
+    @apply font-lato text-black text-lg  bg-orange-200 rounded-md py-2 px-4;
+}
+
+details {
+    @apply cursor-pointer;
+}
+
+/* blog */
+
+.fecha {
+    @apply font-lato
+}
+
+
+.titulos-blog-card {
+    @apply sm:text-2xl lg:text-lg xl:text-2xl font-gotham font-extrabold sm:text-left lg:text-left sm:leading-none text-azul !leading-7 tracking-tighter py-2;
+}
+
+.subtitulos-blog {
+    @apply !leading-7 tracking-tighter lg:text-lg xl:text-2xl;
+}
+
+
+
+
+/* HOVER MEGAMENU */
+
+.background {
+    border-radius: 5px;
+    transition: background-color 0.3s ease
+}
+
+.background:hover {
+
+    color: #f2790c;
+    background-color: white; /* Color al hacer hover */
+  }

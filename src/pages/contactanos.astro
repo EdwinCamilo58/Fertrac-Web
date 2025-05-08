@@ -1,0 +1,958 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Contacto from "../components/Contacto.astro";
+import LayoutSecundario from "../layouts/LayoutSecundario.astro";
+import ContactoMercadeo from "../components/Formularios/ContactoMercadeo.astro";
+import ContactoGarantias from "../components/Formularios/ContactoGarantias.astro";
+
+
+const title = "Contáctanos - Fertrac";
+const description = "¿Tienes preguntas o necesitas más información sobre nuestros repuestos para vehiculos de carga? En Fertrac, estamos aquí para ayudarte. Completa nuestro formulario de contacto o envíanos un mensaje por WhatsApp y un miembro de nuestro equipo se pondrá en contacto contigo a la brevedad.";
+---
+
+<LayoutSecundario title={title} description={description}>
+
+<div
+  class="xl:mt-48 sm:mx-4 sm:w-auto lg:w-[1000px] lg:mx-auto sm:pt-8 sm:m-4 lg:pt-0"
+>
+  <h1 class="lg:!text-center !sm:text-justify mb-4 text-[36px]">
+    Estamos aqui para ti, contactanos en cualquier momento
+  </h1>
+  <p class="lg:!text-center !sm:text-justify">
+    Si tienes alguna duda sobre nuestros servicios, no dudes en preguntarnos.
+  </p>
+</div>
+
+<section class="flex flex-col  max-lg:max-w-3xl mx-auto items-center ">
+    
+  <div class="mb-4 border-b border-gray-200 w-full">
+    <ul
+      class="flex md:flex-wrap sm:flex-nowrap text-sm font-medium text-center justify-center"
+      id="default-tab"
+      data-tabs-toggle="#default-tab-content"
+      role="tablist"
+    >
+      <p class="flex items-center text-sm text-gray-500 dark:text-gray-400">
+        <button
+          data-popover-target="popover-description"
+          data-popover-placement="bottom-end"
+          type="button"
+          ><i class="fa-solid fa-circle-question"></i><span class="sr-only"
+            >Show information</span
+          ></button
+        >
+      </p>
+      <div
+        data-popover
+        id="popover-description"
+        role="tooltip"
+        class="absolute z-10 invisible inline-block text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 w-72 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-400"
+      >
+        <div class="p-3 space-y-2">
+          <h3 class="text-gray-900 !text-base !font-lato font-black">
+            Selecciona el formulario que necesites y envíanos tu solicitud.
+          </h3>
+          <p class="!text-base !font-lato">
+            Ponemos a tu disposición canales directos con nuestro equipo para brindarte una atención ágil y especializada, ya sea para gestionar garantías o coordinar acciones con el área de mercadeo.
+          </p>
+        </div>
+        <div data-popper-arrow></div>
+      </div>
+
+<!--       <li class="me-2">
+        <button
+          class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300"
+          id="credito-tab"
+          data-tabs-target="#credito"
+          type="button"
+          role="tab"
+          aria-controls="credito"
+          aria-selected="false">Solicitud de Credito</button
+        >
+      </li>
+ -->
+<!--       <li class="me-2">
+        <button
+          class="inline-block p-4 border-b-2 rounded-t-lg"
+          id="ventas-tab"
+          data-tabs-target="#ventas"
+          type="button"
+          role="tab"
+          aria-controls="ventas"
+          aria-selected="false">Area de Ventas</button
+        >
+      </li>
+ -->
+      <li class="me-2">
+        <button
+          class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+          id="dashboard-tab"
+          data-tabs-target="#dashboard"
+          type="button"
+          role="tab"
+          aria-controls="dashboard"
+          aria-selected="false">Area de Mercadeo</button
+        >
+      </li>
+
+<!--       <li class="me-2">
+        <button
+          class="inline-block p-4 border-b-2 rounded-t-lg"
+          id="profile-tab"
+          data-tabs-target="#profile"
+          type="button"
+          role="tab"
+          aria-controls="profile"
+          aria-selected="false">Gestión Humana</button
+        >
+      </li>
+ -->
+      <li class="me-2">
+        <button
+          class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+          id="settings-tab"
+          data-tabs-target="#settings"
+          type="button"
+          role="tab"
+          aria-controls="settings"
+          aria-selected="false">Gestion de Garantias</button
+        >
+      </li>
+
+<!--       <li>
+        <button
+          class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+          id="contacts-tab"
+          data-tabs-target="#contacts"
+          type="button"
+          role="tab"
+          aria-controls="contacts"
+          aria-selected="false">Quiero ser Proveedor</button
+        >
+      </li> -->
+
+    </ul>
+  </div>
+
+  <div id="default-tab-content">
+
+    <!-- CREDITO -->
+
+<!--     <div
+      class="hidden tab-content p-4 rounded-lg bg-gray-50 dark:bg-gray-800"
+      id="credito"
+      role="tabpanel"
+      aria-labelledby="credito-tab"
+    >
+      <div
+        class="flex items-center justify-center w-screen sm:flex-wrap animacion from-left"
+      >
+        <div
+          class="relative flex items-end overflow-hidden rounded-lg shadow transition hover:shadow-lg lg:w-1/4 sm-auto h-[550px]"
+        >
+          <img
+            alt=""
+            src="/img/solicitud-de-credito.webp"
+            class="absolute inset-0 h-full w-full object-cover"
+          />
+
+          <div
+            class="relative bg-gradient-to-t from-gray-900/50 to-gray-900/100"
+          >
+            <div class="p-4 sm:p-6">
+              <a href="#">
+                <h3 class="mt-0.5 text-lg !text-white">Solicitud de Credito</h3>
+              </a>
+
+              <p class="mt-2 text-sm/relaxed !text-white/95">
+                En Fertrac, es importante que puedas acceder a los repuestos de
+                confianza que necesitas, cuando los necesitas. Por eso, te
+                ofrecemos la posibilidad de obtener un crédito directamente con
+                nuestra empresa. ¡Realiza el proceso ahora y forma parte de la familia
+                Fertrac!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <form id="form" class="bg-white p-6 rounded-lg">
+            <div class="flex flex-wrap lg:gap-8 sm:gap-0">
+              <div class="field lg:w-auto sm:w-full">
+                <label for="nombre">Nombre</label>
+
+                <div class="relative">
+                  <div
+                    class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none"
+                  >
+                    <i class="fa-solid fa-user-tie"></i>
+                  </div>
+                  <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm block ps-10 p-2.5"
+                    placeholder="Carlos"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="field lg:w-auto sm:w-full">
+                <label for="nombre">Apellido</label>
+
+                <div class="relative">
+                  <div
+                    class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none"
+                  >
+                    <i class="fa-solid fa-user-tie"></i>
+                  </div>
+                  <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm block ps-10 p-2.5"
+                    placeholder="Carlos"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="correo">Correo electronico</label>
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none"
+                >
+                  <i class="fa-solid fa-user-tie"></i>
+                </div>
+                <input
+                  type="text"
+                  id="correo"
+                  name="correo"
+                  class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm block ps-10 p-2.5"
+                  placeholder="Carlos"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="celular">Numero</label>
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none"
+                >
+                  <i class="fa-solid fa-user-tie"></i>
+                </div>
+                <input
+                  type="text"
+                  id="celular"
+                  name="celular"
+                  class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm block ps-10 p-2.5"
+                  placeholder="+XX XXXXXXXXXX"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="empresa">Empresa</label>
+
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none"
+                >
+                  <i class="fa-solid fa-user-tie"></i>
+                </div>
+                <input
+                  type="text"
+                  id="empresa"
+                  name="empresa"
+                  class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm block ps-10 p-2.5"
+                  placeholder="Carlos"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="correo">Mensaje</label>
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none"
+                >
+                </div>
+                <textarea
+                  rows="6"
+                  id="correo"
+                  name="correo"
+                  class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm block"
+                  placeholder="Hola, quiero saber mas sobre..."
+                  required></textarea>
+              </div>
+            </div>
+
+            <label>
+              <input
+                type="checkbox"
+                name="dataConsent"
+                id="dataConsent"
+                required
+                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              />
+              <label
+                for="link-checkbox"
+                class="text-sm font-medium text-gray-900 dark:text-gray-300"
+                >Acepto la
+                <a
+                  href="/img/politica-manejo-de-datos.pdf"
+                  class="text-azul hover:underline"
+                  download="politica-manejo-de-datos.pdf">Politica de Datos</a
+                ></label
+              >
+            </label>
+
+            <button class="w-full my-2">
+              <input
+                class="cursor-pointer text-white hover:text-naranja w-full bg-naranja w-full display inline-block py-2 px-4 rounded hover:bg-white hover:border border-naranja hover:text-naranja"
+                type="submit"
+                id="button"
+                value="Enviar Correo"
+              />
+            </button>
+          </form>
+
+          <script type="text/javascript"
+          src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        
+        <script type="text/javascript">
+          emailjs.init('spB4LlCX64uCkft7n')
+        </script>
+        </div>
+      </div>
+    </div>
+ -->
+<!--     VENTAS -->
+<!-- 
+    <div
+      class="hidden tab-content p-4 rounded-lg bg-gray-50 dark:bg-gray-800 animacion from-left"
+      id="ventas"
+      role="tabpanel"
+      aria-labelledby="ventas-tab"
+    >
+      <div class="flex items-center justify-center w-screen sm:flex-wrap">
+        <div
+          class="relative flex items-end overflow-hidden rounded-lg shadow transition hover:shadow-lg lg:w-1/4 sm-auto h-[550px]"
+        >
+          <img
+            alt=""
+            src="/img/area-ventas.jpg"
+            class="absolute inset-0 h-full w-full object-cover"
+          />
+
+          <div
+            class="relative bg-gradient-to-t from-gray-900/50 to-gray-900/100"
+          >
+            <div class="p-4 sm:p-6">
+              <a href="#">
+                <h3 class="mt-0.5 text-lg !text-white">Area de Ventas</h3>
+              </a>
+
+              <p class="mt-2 text-sm/relaxed !text-white/95">
+                Entendemos la importancia de contar con repuestos de calidad para mantener sus vehiculos de carga en óptimas condiciones. Por eso, ponemos a su disposición un equipo de profesionales comprometidos en asesorarle y garantizarle el acceso a productos originales y de alto rendimiento.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <form id="form" class="p-6 rounded-lg">
+            <div class="flex flex-wrap lg:gap-8 sm:gap-0">
+              <div class="field lg:w-auto sm:w-full">
+                <label for="nombre">Nombre</label>
+
+                <div class="relative">
+                  <div
+                    class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none"
+                  >
+                    <i class="fa-solid fa-user-tie"></i>
+                  </div>
+                  <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm block ps-10 p-2.5"
+                    placeholder="Carlos"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="field lg:w-auto sm:w-full">
+                <label for="nombre">Apellido</label>
+
+                <div class="relative">
+                  <div
+                    class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none"
+                  >
+                    <i class="fa-solid fa-user-tie"></i>
+                  </div>
+                  <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm block ps-10 p-2.5"
+                    placeholder="Carlos"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="correo">Correo electronico</label>
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none"
+                >
+                  <i class="fa-solid fa-user-tie"></i>
+                </div>
+                <input
+                  type="text"
+                  id="correo"
+                  name="correo"
+                  class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm block ps-10 p-2.5"
+                  placeholder="Carlos"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="celular">Numero</label>
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none"
+                >
+                  <i class="fa-solid fa-user-tie"></i>
+                </div>
+                <input
+                  type="text"
+                  id="celular"
+                  name="celular"
+                  class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm block ps-10 p-2.5"
+                  placeholder="+XX XXXXXXXXXX"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="empresa">Empresa</label>
+
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none"
+                >
+                  <i class="fa-solid fa-user-tie"></i>
+                </div>
+                <input
+                  type="text"
+                  id="empresa"
+                  name="empresa"
+                  class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm block ps-10 p-2.5"
+                  placeholder="Carlos"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="correo">Mensaje</label>
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none"
+                >
+                </div>
+                <textarea
+                  rows="6"
+                  id="correo"
+                  name="correo"
+                  class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm block"
+                  placeholder="Hola, quiero saber mas sobre..."
+                  required></textarea>
+              </div>
+            </div>
+
+            <label>
+              <input
+                type="checkbox"
+                name="dataConsent"
+                id="dataConsent"
+                required
+                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              />
+              <label
+                for="link-checkbox"
+                class="text-sm font-medium text-gray-900 dark:text-gray-300"
+                >Acepto la
+                <a
+                  href="/img/politica-manejo-de-datos.pdf"
+                  class="text-azul hover:underline"
+                  download="politica-manejo-de-datos.pdf">Politica de Datos</a
+                ></label
+              >
+            </label>
+
+            <button class="w-full my-2">
+              <input
+                class="cursor-pointer text-white hover:text-naranja w-full bg-naranja w-full display inline-block py-2 px-4 rounded hover:bg-white hover:border border-naranja hover:text-naranja"
+                type="submit"
+                id="button"
+                value="Enviar Correo"
+              />
+            </button>
+          </form>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- GESTION HUMANA -->
+
+<!--     <div
+      class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800 animacion from-left"
+      id="profile"
+      role="tabpanel"
+      aria-labelledby="profile-tab"
+    >
+      <div class="flex items-center justify-center w-screen sm:flex-wrap">
+        <div
+          class="relative flex items-end overflow-hidden rounded-lg shadow transition hover:shadow-lg lg:w-1/4 sm-auto h-[550px]"
+        >
+          <img
+            alt=""
+            src="/img/recursos-humanos.jpg"
+            class="absolute inset-0 h-full w-full object-cover"
+          />
+
+          <div
+            class="relative bg-gradient-to-t from-gray-900/50 to-gray-900/100"
+          >
+            <div class="p-4 sm:p-6">
+              <a href="#">
+                <h3 class="mt-0.5 text-lg !text-white">Gestión Humana</h3>
+              </a>
+
+              <p class="mt-2 text-sm/relaxed !text-white/95">
+                Si estás buscando ser parte de una empresa en crecimiento, donde tu desarrollo profesional y personal es una prioridad, Fertrac es el lugar para ti. ¡Te invitamos a unirte a nuestra familia y ser parte de nuestro éxito!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <form id="form" class="bg-white p-6 rounded-lg">
+            <div class="flex flex-wrap lg:gap-8 sm:gap-0">
+              <div class="field lg:w-auto sm:w-full">
+                <label for="nombre">Nombre</label>
+
+                <div class="relative">
+                  <div
+                    class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none"
+                  >
+                    <i class="fa-solid fa-user-tie"></i>
+                  </div>
+                  <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm block ps-10 p-2.5"
+                    placeholder="Carlos"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="field lg:w-auto sm:w-full">
+                <label for="nombre">Apellido</label>
+
+                <div class="relative">
+                  <div
+                    class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none"
+                  >
+                    <i class="fa-solid fa-user-tie"></i>
+                  </div>
+                  <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm block ps-10 p-2.5"
+                    placeholder="Carlos"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="correo">Correo electronico</label>
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none"
+                >
+                  <i class="fa-solid fa-user-tie"></i>
+                </div>
+                <input
+                  type="text"
+                  id="correo"
+                  name="correo"
+                  class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm block ps-10 p-2.5"
+                  placeholder="Carlos"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="celular">Numero</label>
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none"
+                >
+                  <i class="fa-solid fa-user-tie"></i>
+                </div>
+                <input
+                  type="text"
+                  id="celular"
+                  name="celular"
+                  class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm block ps-10 p-2.5"
+                  placeholder="+XX XXXXXXXXXX"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="empresa">Empresa</label>
+
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none"
+                >
+                  <i class="fa-solid fa-user-tie"></i>
+                </div>
+                <input
+                  type="text"
+                  id="empresa"
+                  name="empresa"
+                  class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm block ps-10 p-2.5"
+                  placeholder="Carlos"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="correo">Mensaje</label>
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none"
+                >
+                </div>
+                <textarea
+                  rows="6"
+                  id="correo"
+                  name="correo"
+                  class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm block"
+                  placeholder="Hola, quiero saber mas sobre..."
+                  required></textarea>
+              </div>
+            </div>
+
+            <label>
+              <input
+                type="checkbox"
+                name="dataConsent"
+                id="dataConsent"
+                required
+                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              />
+              <label
+                for="link-checkbox"
+                class="text-sm font-medium text-gray-900 dark:text-gray-300"
+                >Acepto la
+                <a
+                  href="/img/politica-manejo-de-datos.pdf"
+                  class="text-azul hover:underline"
+                  download="politica-manejo-de-datos.pdf">Politica de Datos</a
+                ></label
+              >
+            </label>
+
+            <button class="w-full my-2">
+              <input
+                class="cursor-pointer text-white hover:text-naranja w-full bg-naranja w-full display inline-block py-2 px-4 rounded hover:bg-white hover:border border-naranja hover:text-naranja"
+                type="submit"
+                id="button"
+                value="Enviar Correo"
+              />
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+ -->
+
+    <!-- MERCADEO -->
+
+    <ContactoMercadeo/>
+
+    <!-- GARANTIAS -->
+
+    <ContactoGarantias/>
+
+
+
+<!--     QUIERO SER PROVEEDOR -->
+
+<!--     <div
+      class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800 animacion from-left"
+      id="contacts"
+      role="tabpanel"
+      aria-labelledby="contacts-tab"
+    >
+      <div class="flex items-center justify-center w-screen sm:flex-wrap">
+        <div
+          class="relative flex items-end overflow-hidden rounded-lg shadow transition hover:shadow-lg lg:w-1/4 sm-auto h-[550px]"
+        >
+          <img
+            alt=""
+            src="/img/proveedor.jpg"
+            class="absolute inset-0 h-full w-full object-cover"
+          />
+
+          <div
+            class="relative bg-gradient-to-t from-gray-900/50 to-gray-900/100"
+          >
+            <div class="p-4 sm:p-6">
+              <a href="#">
+                <h3 class="mt-0.5 text-lg !text-white">Quiero ser Proveedor</h3>
+              </a>
+
+              <p class="mt-2 text-sm/relaxed !text-white/95">
+                Siempre en búsqueda de socios estratégicos que compartan nuestro
+                compromiso con la calidad y el servicio. Si tienes productos o
+                servicios que puedan complementar nuestra oferta, nos encantaría
+                colaborar contigo.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <form id="form" class="bg-white p-6 rounded-lg">
+            <div class="flex flex-wrap lg:gap-8 sm:gap-0">
+              <div class="field lg:w-auto sm:w-full">
+                <label for="nombre">Nombre</label>
+
+                <div class="relative">
+                  <div
+                    class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none"
+                  >
+                    <i class="fa-solid fa-user-tie"></i>
+                  </div>
+                  <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm block ps-10 p-2.5"
+                    placeholder="Carlos"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="field lg:w-auto sm:w-full">
+                <label for="nombre">Apellido</label>
+
+                <div class="relative">
+                  <div
+                    class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none"
+                  >
+                    <i class="fa-solid fa-user-tie"></i>
+                  </div>
+                  <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm block ps-10 p-2.5"
+                    placeholder="Carlos"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="correo">Correo electronico</label>
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none"
+                >
+                  <i class="fa-solid fa-user-tie"></i>
+                </div>
+                <input
+                  type="text"
+                  id="correo"
+                  name="correo"
+                  class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm block ps-10 p-2.5"
+                  placeholder="Carlos"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="celular">Numero</label>
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none"
+                >
+                  <i class="fa-solid fa-user-tie"></i>
+                </div>
+                <input
+                  type="text"
+                  id="celular"
+                  name="celular"
+                  class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm block ps-10 p-2.5"
+                  placeholder="+XX XXXXXXXXXX"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="empresa">Empresa</label>
+
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none"
+                >
+                  <i class="fa-solid fa-user-tie"></i>
+                </div>
+                <input
+                  type="text"
+                  id="empresa"
+                  name="empresa"
+                  class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm block ps-10 p-2.5"
+                  placeholder="Carlos"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="correo">Mensaje</label>
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none"
+                >
+                </div>
+                <textarea
+                  rows="6"
+                  id="correo"
+                  name="correo"
+                  class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm block"
+                  placeholder="Hola, quiero saber mas sobre..."
+                  required></textarea>
+              </div>
+            </div>
+
+            <label>
+              <input
+                type="checkbox"
+                name="dataConsent"
+                id="dataConsent"
+                required
+                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              />
+              <label
+                for="link-checkbox"
+                class="text-sm font-medium text-gray-900 dark:text-gray-300"
+                >Acepto la
+                <a
+                  href="/img/politica-manejo-de-datos.pdf"
+                  class="text-azul hover:underline"
+                  download="politica-manejo-de-datos.pdf">Politica de Datos</a
+                ></label
+              >
+            </label>
+
+            <button class="w-full my-2">
+              <input
+                class="cursor-pointer text-white hover:text-naranja w-full bg-naranja display inline-block py-2 px-4 rounded hover:bg-white hover:border border-naranja"
+                type="submit"
+                id="button"
+                value="Enviar Correo"
+              />
+            </button>
+          </form>
+        </div>
+      </div>
+    </div> -->
+
+
+  </div>
+</section>
+
+
+
+
+
+</LayoutSecundario>
+
+<!-- <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Obtener referencia al botón de envío del formulario
+      const btn = document.getElementById("button");
+  
+      // Agregar el manejador de eventos para el envío del formulario
+      const formElement = document.getElementById("form");
+      if (formElement) {
+        formElement.addEventListener("submit", function (event) {
+          event.preventDefault(); // Evita el envío predeterminado del formulario
+  
+          btn.value = "Sending..."; // Cambiar texto del botón a "Sending..."
+  
+          // Crear un objeto FormData a partir del formulario
+          const formData = new FormData(this);
+  
+          // Agregar el estado del checkbox con un mensaje personalizado
+          const dataConsent = document.getElementById("dataConsent").checked
+            ? "He aceptado el tratamiento de mis datos personales."
+            : "No he aceptado el tratamiento de mis datos personales.";
+  
+          formData.append("dataConsent", dataConsent); // Agregar estado del checkbox
+  
+          const serviceID = "service_umm7dcs";
+          const templateID = "template_f5tfw7e";
+  
+          // Enviar el formulario a EmailJS
+          emailjs.sendForm(serviceID, templateID, this).then(
+            () => {
+              btn.value = "Send Email"; // Restaurar el texto del botón
+              alert("¡Enviado!"); // Mostrar mensaje de éxito
+            },
+            (err) => {
+              btn.value = "Send Email"; // Restaurar el texto del botón
+              alert("Error: " + JSON.stringify(err)); // Mostrar mensaje de error
+            },
+          );
+        });
+      } else {
+        console.error("Formulario no encontrado.");
+      }
+    });
+  </script> -->

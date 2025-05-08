@@ -1,0 +1,99 @@
+<!-- ---
+import MegaMenu from "../../components/MegaMenu.astro";
+
+import BotonPrincipal from "../../components/BotonPrincipal.astro";
+import MainLayout from "../../layouts/MainLayout.astro";
+import FAQS from "../../components/FAQS.astro";
+import AsesoriaEspecialidades from "../../components/AsesoriaEspecialidades.astro";
+
+const title = "Transmisión: Potencia Sin Límites";
+const description = "Asegura una transmisión de potencia eficiente con nuestros repuestos de alta calidad, diseñados para soportar las exigencias del transporte pesado.";
+---
+
+<MainLayout title={title} descripción={description}>
+
+
+  <MegaMenu positionNav="sticky" bgNav="lg:bg-naranja sm:bg-naranja"/>
+
+  <div class="">
+    <div class="flex items-center justify-center flex-wrap sm:p-8 md:flex-row sm:flex-col-reverse bg-cover content-center" style="background-image: url(/img/banner-especialidades.jpg);">
+      <img class="animacion from-left md:w-[250px] lg:w-[440px] xl:w-[700px]  h-auto" src="/img/TRANSMISIÓN.webp" alt="">
+      <h1 class="animacion from-left !text-white !text-center xl:text-[150px] lg:text-[100px] sm:text-[50px] slide-main--heading lg:leading-none sm:leading-2 titulos uppercase drop-shadow-lg w-auto"><span class="text-naranja xl:text-[120px] lg:text-[75px] sm:text-[30px] bg-white px-8" style="text-shadow: 2px 1px 0px rgba(0,0,0,1);">ESPECIALIDAD</span> <br>TRANSMISIÓN</h1>
+      </div>
+    
+      <div
+        class="flex justify-center flex-col text-center lg:w-[1000px] sm:w-auto lg:mx-auto sm:mx-4 lg:my-12 sm:my-4"
+      >
+    
+      <div class="mb-12">
+        <p class="text-justify font-bold animacion from-left">
+          Componentes cruciales que garantizan el funcionamiento eficiente y prolongado del corazón de tu camión. Estos incluyen piezas como pistones, anillos, juntas, bujías y filtros, diseñadas para mantener el motor en óptimas condiciones y maximizar su rendimiento.
+    En Fertrac, ofrecemos una amplia gama de repuestos de motor de las mejores marcas del mercado. Nos comprometemos a proporcionar productos de alta calidad y durabilidad, asegurando que tu motor funcione de manera óptima y fiable.
+    
+        </p>
+      </div>
+    
+          <div class="animacion from-left logos flex flex-wrap justify-center items-center lg:gap-28 sm:gap-8 mx-auto">
+            <img class="w-56" src="/img/eaton.png" alt="" />
+            <img class="w-56" src="/img/tas.png" alt="" />
+            <img class="w-56" src="/img/mid-america.png" alt="" />
+ 
+      </div>
+  </div>
+
+  <AsesoriaEspecialidades/>
+  </div>
+  </div>
+
+
+
+
+</MainLayout>
+<style>
+.animacion img {
+    width: 14rem;
+  }
+
+  @media (min-width: 360px) {
+    .animacion img  {
+        width: 8rem;
+    }
+  }
+
+  @media (min-width: 1080px) {
+    .animacion img {
+        width: 14rem;
+    }
+  }
+
+  .animacion{
+   transition: opacity 0s ease, filter 0.5s ease; 
+   animation: fadeInUp 1s ease forwards; 
+   animation-delay: 1s;
+}
+
+.from-left {
+  opacity: 0;
+  filter: blur(4px); 
+  animation: fadeInLeft 2s ease forwards;
+  animation-delay: 0.8s; 
+}
+
+
+
+  @keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+100% {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+}
+}
+
+
+
+
+</style> -->

@@ -1,0 +1,34 @@
+---
+import BotonBlog from './BotonBlog.astro'
+
+ interface Props {
+  bgBlog: string
+  titulo : string
+  parrafo: string
+ }
+
+ const {bgBlog} = Astro.props 
+ const {titulo} = Astro.props 
+ const {parrafo} = Astro.props 
+---
+
+
+<div class="rounded md:shadow ">
+    <div class={`lg:w-[500px] xl:w-auto flex items-center justify-center flex-wrap ${bgBlog}  xl:gap-8`}>
+      <div class={`lg:text-center xl:text-left ${bgBlog}`}>
+        <h3 class={`text-3xl font-bold mb-4 ${titulo}`}>Suscribete a nuestro boletin informativo</h3>
+      <p class={`text-lg text-center  mb-4 ${parrafo}`}>Recibe Información sobre nuestros productos y enterate de todas las novedades</p>
+      </div>
+      
+      <div>
+        <form class="pb-2">
+          <input type="email" class="rounded bg-gray-100 px-4 py-2 border focus:border-naranja w-full mb-4" placeholder="Ingresa tu correo electronico"/>
+          <button class="px-4 py-2 rounded bg-naranja text-white w-full font-bold font-lato hover:bg-white hover:text-naranja transition-all duration-500 ease-in-out">
+            Suscribir
+            <i class='bx bx-right-arrow-alt' ></i>
+          </button>
+        </form>
+      </div>
+      
+    </div>
+  </div>

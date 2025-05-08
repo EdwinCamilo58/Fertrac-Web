@@ -1,0 +1,270 @@
+---
+import BotonPrincipal from "./BotonPrincipal.astro";
+import LogosProveedores from "./LogosProveedores.astro";
+/* 
+const postList = await Astro.glob("/src/pages/posts/*.md");
+
+const specificTitle = "GRAN PREMIO MOBIL DELVAC™ EDICIÓN 36 AÑOS";
+const specificPost = Object.values(postList).find(post => post.frontmatter.title === specificTitle);
+const specificUrl = specificPost ? specificPost.url : "#"; */
+
+---
+<section class="creative-parallax--slider">
+
+            <div class="parallax-slider slider-wrap lg:h-[80vh] sm:h-[60vh]">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide" style="background-image: url(/img/hero.jpg);">           
+                        <div class="swiper-slide--inner">
+                            <div class="slide-detail lg:w-[40%] 2xl:top-[25%] 2xl:w-[45%] lg:top-[25%] sm:top-[5%] lg:left-[10%] sm:px-4 md:px-8  relative">
+                                    <span class="from-left bg-naranja px-4 py-2 inline-block text-xl text-white text-lato tracking-wides rounded-r-xl mb-4">Fertrac tiene presencia en todo el territorio Colombiano</span>
+                                    <h1 class="text-white !text-left 2xl:text-6xl xl:text-5xl lg:text-7xl sm:text-3xl md:text-[60px] slide-main--heading lg:leading-none sm:leading-2 sm:w-full from-left" >Venta de respuestos originales para vehiculos de carga
+                                    </h1>
+
+                                <div class="slide-des pb-[25px] tracking-normal max-w-[600px] opacity-0 " >
+                                    <p class="!text-white lg:text-left sm:text-justify  leading-[25px]">Nos especializamos en ofrecer una amplia gama de repuestos originales de alta calidad para vehiculos de carga, diseñados para garantizar el máximo rendimiento y la durabilidad. </p>
+                                </div>
+                                <div class="slide-cta ">
+                                    <span class="slide-btn"><BotonPrincipal url="https://api.whatsapp.com/send?phone=573124615606&text=Hola%2C%20necesito%20informaci%C3%B3n%20sobre..." icon="fa-brands fa-whatsapp" text="Solicita una Cotización " estilos="bg-naranja hover:bg-white hover:text-naranja hover:border text-white mr-2 sm:!w-full lg:!w-auto"/></span> 
+                                </div>
+                                
+                            </div>							
+                        </div>
+                    </div>
+                   
+                   
+					
+                </div>
+
+                
+                <!-- <div class="swiper-button-next slide-btns bg-naranja hover:bg-white"></div>
+                <div class="swiper-button-prev slide-btns bg-naranja hover:bg-white "></div> -->
+            </div>
+</section>
+
+
+<style>
+@media (min-width: 360px) and (max-width: 1080px) {
+    .swiper-button-prev,
+    .swiper-button-next{
+    display: none;
+}
+}
+
+
+@media screen and (max-width: 1080px) {
+    .swiper-button-prev {
+    left: 30px;
+}
+.swiper-button-next {
+    right: 30px;
+}
+
+}
+
+
+.slider-wrap{
+    overflow: hidden;
+    background: -webkit-linear-gradient(150deg, #f2790c,#db6600,#000000);/* Chrome 10-25, Safari 5.1-6 */                          background: linear-gradient(150deg, #f2790c,#db6600,#000000);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */                                                                                         
+
+}
+.swiper-slide--inner {
+    height: 100%;
+}
+.swiper-slide{
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.swiper-slide-active .slide--bg .slide-bg--inner{
+  animation: zoomInInner 1s ease forwards;
+}
+
+
+.slide-main--heading {
+    display: block;
+    color: #fff;
+    text-shadow: 2px 0px 0px rgba(0,0,0,0.6);
+    padding: 0px 0px 5px;
+    white-space: normal;
+}
+.from-left, .from-right {
+  opacity: 0;
+  filter: blur(4px); 
+  transition: opacity 0.5s ease, filter 0.5s ease; 
+}
+
+.swiper-slide-active .from-left {
+  animation: fadeInLeft 1s ease forwards;
+  animation-delay: 0.8s; 
+}
+
+.swiper-slide-active .slide-des{
+   transition: opacity 0.5s ease, filter 0.5s ease; 
+   animation: fadeInUp 1s ease forwards; 
+   animation-delay: 1.4s;
+}
+.slide-cta .slide-btn{
+
+    transition: .3s ease-in-out !important;
+    opacity: 0;     
+}
+.swiper-slide-active .slide-cta .slide-btn{
+  transition: opacity 0.5s ease, filter 0.5s ease; 
+  animation: fadeInUp2 1s ease forwards; 
+  animation-delay: 1.4s;  
+} 
+
+
+/* Keyframe animations for CTA */
+@keyframes fadeInUp2 {
+  0% {
+    opacity: 0;
+    transform: translateY(50px); 
+}
+100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0); 
+}
+}
+/* Keyframe animations for Description */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px); 
+}
+100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0); 
+}
+}
+
+
+/* Keyframe animations for Main Heading */
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+100% {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+}
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px); 
+}
+100% {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0); 
+}
+}
+
+/* Keyframe animations for background */
+@keyframes zoomInBg {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+}
+to {
+    opacity: 1;
+    transform: scale(1);
+}
+}
+
+@keyframes zoomInInner {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+}
+to {
+    opacity: 1;
+    transform: scale(1);
+}
+}
+.parallax-slider .slide-btns{
+        width: 54px;
+    height: 54px;
+    border: 1px solid rgba(255, 255, 255, .2);
+    -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: 900;
+}
+.slide-btns.swiper-button-next:after, .slide-btns.swiper-button-prev:after{
+        font-size: 16px;
+    font-weight: 900;
+    color: #fff;
+}
+.slide-btns:hover{
+    border: 1px solid #fff;
+    background: #fff;
+}
+.slide-btns:hover:after{
+    color: #232323;
+} 
+span.swiper-pagination-bullet {
+    width: 16px;
+    height: 16px;
+    background: transparent;
+    background-color: transparent;
+    box-shadow: inset 0 0 0 2px #fff;
+    -webkit-transition: background .3s ease;
+    transition: background .3s ease;
+    opacity: 1;
+    display: none;
+}
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #fff;
+}
+
+</style>
+
+<script>
+
+
+import Swiper from "swiper/bundle";
+import "swiper/swiper-bundle.css";
+
+document.addEventListener('DOMContentLoaded', function() {
+    const progressFill = document.querySelector(".progress-fill");
+    var swiper = new Swiper(".parallax-slider", {
+        speed: 1000,
+        parallax: true,
+        loop: true, 
+        /* autoplay: {
+            delay: 9000, // Adjust autoplay delay as needed
+            disableOnInteraction: false
+        }, */
+        grabCursor: true,
+        effect: "creative",
+        creativeEffect: {
+            prev: {
+                shadow: true,
+                translate: [0, 0, -1000]
+            },
+            next: {
+                translate: ["100%", 0, 0]
+            }
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+        },
+    });
+});
+
+</script>

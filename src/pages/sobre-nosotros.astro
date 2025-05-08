@@ -1,0 +1,102 @@
+---
+import BotonPrincipal from "../components/BotonPrincipal.astro";
+import MegaMenu from "../components/MegaMenu.astro";
+import LayoutSecundario from "../layouts/LayoutSecundario.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+
+const title = "Fertrac - Conociendo Nuestro Compromiso con la Calidad";
+const description = "En Fertrac, somos expertos en la venta de repuestos originales para vehiculos de carga. Con más de 20 años en el mercado, nuestro compromiso es proporcionar productos de alta calidad y un servicio excepcional. Conoce a nuestro equipo de profesionales dedicados a garantizar que tus vehiculos de carga pesados funcionen de manera óptima y eficiente.";
+---
+
+<LayoutSecundario title={title}>  
+
+<div class="max-w-screen-xl mx-auto sm:px-4 lg:mt-0 sm:mt-14 lg:px-0  sm:pt-8 lg:pt-0">
+
+    <h1 class="xl:mt-48 sm:w-auto lg:w-[1000px] lg:mx-auto sm:pb-8  lg:pt-0 lg:!text-center sm:text-justify">Conoce a Fertrac; Tu Aliado en el Camino: Calidad y Confianza en Repuestos</h1>
+    <div class="grid sm:grid-cols-1 lg:grid-cols-4 lg:gap-12 sm:gap-6 lg:px-12">
+         
+
+        <!-- ¿Quiénes Somos? -->
+
+        <div class="md:col-span-2 ">
+            <img class="w-full h-full object-cover rounded-md" src="/img/colaboradores-fertrac.png" alt="foto-colaboradores-fertrac">
+        </div>
+
+        <div class="md:col-span-2 border rounded-md shadow-md lg:p-8 sm:p-4 transition-transform duration-300 hover:scale-110 bg-azul-opaco">
+            <span class="text-naranja font-lato font-bold tracking-wide">¿Quiénes Somos?</span>
+            <h2 class="mb-4">Fertrac es la realización del sueño de comprender cómo funciona un camión.</h2>
+            <p>Desde esa comprensión ha logrado dar el mejor servicio y dedicación a sus clientes. <br><br>Con más de 20 años de experiencia en el mercado de los vehiculos de carga. Nuestra visión profesional, y constante crecimiento nos ha posicionado en Colombia como uno de los principales distribuidores de las marcas más reconocidas en el mundo. 
+            </p>
+        </div>
+
+        <!-- Imagen -->
+       
+
+        <!-- Métricas -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4 md:mt-0 md:col-span-4">
+            <div class="bg-naranja text-white border rounded-md shadow-md px-8 py-4 flex flex-wrap lg:justify-between sm:justify-center lg:text-left sm:text-center items-center">
+                <div>
+                    <span class="font-gotham font-black text-4xl">24+</span>
+                    <p class="!text-white ">Marcas De Repuestos</p>
+                </div>
+                <img class="h-16 w-16" src="https://img.icons8.com/ios-filled/100/FFFFFF/gears.png" alt="gears"/>
+            </div>
+            <div class="bg-naranja text-white border rounded-md shadow-md px-8 py-4 flex flex-wrap lg:justify-between sm:justify-center lg:text-left sm:text-center items-center">
+                <div>
+                    <span class="font-gotham font-black text-4xl">25+</span>
+                    <p class="!text-white">Años de experiencia</p>
+                </div>
+                <img class="h-16 w-16" src="https://img.icons8.com/external-anggara-basic-outline-anggara-putra/96/FFFFFF/external-stats-ecommerce-anggara-line-anggara-putra.png" alt="external-stats-ecommerce-anggara-line-anggara-putra"/>
+            </div>
+            <div class="bg-naranja text-white border rounded-md shadow-md px-8 py-4 flex flex-wrap lg:justify-between sm:justify-center lg:text-left sm:text-center items-center">
+                <div>
+                    <span class="font-gotham font-black text-4xl ">9+</span>
+                    <p class="!text-white">Especialidades</p>
+                </div>
+                <img class="h-16 w-16" src="https://img.icons8.com/ios-filled/100/FFFFFF/sell.png" alt="sell"/>
+            </div>
+            <div class="bg-naranja text-white border rounded-md shadow-md px-8 py-4 flex flex-wrap lg:justify-between sm:justify-center lg:text-left sm:text-center items-center">
+                <div>
+                    <span class="font-gotham font-black text-4xl">110+</span>
+                    <p class="!text-white">Empleados</p>
+                </div>
+                <img class="h-16 w-16" src="https://img.icons8.com/ios-filled/100/FFFFFF/groups.png" alt="groups"/>
+            </div>
+
+            
+        </div>
+
+        <!-- filosofia -->
+        <div class="lg:col-span-2 border rounded-md shadow-md lg:p-8 sm:p-4 transition-transform duration-300 hover:scale-110 bg-azul-opaco ">
+            <span class="text-naranja font-lato font-bold tracking-wide">Filosofia</span>
+            <h2 class=" mb-4">Para nosotros, cada llamada representa un compromiso que va más allá de un negocio</h2>
+            <p class="font-normal">Buscamos brindar acompañamiento y apoyo continuo en el crecimiento de su empresa. Nos destacamos por contar con alta disponibilidad y variedad de productos OEM y de marcas alternativas. Superando las expectativas de nuestros clientes con soluciones integrales diseñadas para satisfacer plenamente sus requerimientos.
+                </p>
+        </div>
+
+        <!-- Historia -->
+        <div class="md:col-span-2 border rounded-md shadow-md lg:p-8 sm:p-4 transition-transform duration-300 hover:scale-110 bg-azul-opaco">
+            <span class="text-naranja font-lato font-bold tracking-wide">Historia</span>
+            <h2 class="text-normal mb-4">Fertrac nació oficialmente en el 2003 como resultado de la visión de servicio y calidad</h2>
+            <p>Se ha transformado en una plataforma que cubre todo el país con un portafolio lleno de soluciones para el mercado de carga a los mejores precios. Hoy distribuye directamente a los principales almacenes y flotas de todo el país. 
+                Inicio con todo lo relacionado a partes para transmisión y diferencial, eventualmente abarca todo lo mecánico y motriz de los vehiculos de carga de carga. 
+                </p>
+        </div>
+
+        <!-- Misión -->
+        <div class="lg:col-span-2 border rounded-md shadow-md lg:p-8 sm:p-4 transition-transform duration-300 hover:scale-110 bg-azul-opaco">
+            <span class="text-naranja font-lato font-bold tracking-wide">Misión</span>
+            <h2 class="text-normal mb-4">Proporcionar repuestos de alta calidad para vehiculos de carga</h2>
+            <p class="font-normal">Respaldados por un servicio excepcional y una atención personalizada. Nos dedicamos a satisfacer las necesidades de nuestros clientes, ofreciendo soluciones confiables y efectivas que garanticen el óptimo desempeño y la longevidad de sus vehiculos de carga.</p>
+        </div>
+
+        <!-- Visión -->
+        <div class="md:col-span-2 border rounded-md shadow-md lg:p-8 sm:p-4 transition-transform duration-300 hover:scale-110 bg-azul-opaco">
+            <span class="text-naranja font-lato font-bold tracking-wide">Visión</span>
+            <h2 class="text-normal mb-4">Convertirnos en el líder del mercado en la distribución de repuestos para vehiculos de carga</h2>
+            <p>Reconocido por nuestra innovación, calidad y compromiso con la satisfacción del cliente. Aspiramos a expandir nuestra presencia a nivel nacional e internacional, desarrollando constantemente nuevas soluciones que respondan a las demandas cambiantes de la industria.</p>
+        </div>
+    </div>
+
+</div>
+</LayoutSecundario>

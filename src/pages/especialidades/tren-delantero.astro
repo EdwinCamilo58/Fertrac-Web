@@ -1,0 +1,112 @@
+---
+import HeaderEspecialidades from "../../components/HeaderEspecialidades.astro";
+import MainLayout from "../../layouts/MainLayout.astro";
+import AsesoriaEspecialidades from "../../components/AsesoriaEspecialidades.astro";
+
+const title = "Tren Delantero: Manejo y Control";
+const description = "Mejora el manejo y la estabilidad de tus vehiculos de carga pesados con nuestros repuestos para tren delantero, garantizando un rendimiento óptimo en carretera.";
+---
+
+<MainLayout title={title} descripción={description}>
+
+
+  <div class="">
+    <div class="bg-cover content-center" style="background-image: url(/img/banner-especialidades.jpg);">
+
+      <HeaderEspecialidades especialidad="Tren Delantero." img="/img/tren-delantero.webp" estilo="lg:w-[min-content] lg:!text-[75px] mx-auto"></>
+
+     
+      </div>
+    
+      <div
+        class="flex justify-center flex-col text-center lg:w-[1000px] sm:w-auto lg:mx-auto sm:mx-4 lg:my-12 sm:my-4"
+      >
+    
+      <div class="mb-12">
+        <p class="text-justify animacion from-left">
+          Dirección, suspensión, seguridad, estabilidad. Las funciones principales de este sistema del tren delantero. 
+Se compone principalmente de partes como king pines, rodamientos, retenedores, juntas, barras, buje, amortiguadores, y muchos más. 
+Todas estas piezas están diseñadas y optimizadas para soportar el peso del camión y asegurar una conducción suave y segura.
+En Fertrac, ofrecemos una amplia gama de repuestos para el tren delantero de las mejores marcas del mercado. Garantizamos calidad y durabilidad en cada producto, asegurando que tu camión funcione de manera óptima y segura. 
+
+    
+        </p>
+      </div>
+    
+          <div class="animacion from-left logos flex flex-wrap justify-center items-center lg:gap-28 sm:gap-8 mx-auto">
+            <img src="/img/dana-spicer.png" alt="" />
+            <img src="/img/dana-spicer-select.png" alt="" />
+            <img  src="/img/skf.png" alt="" />
+            <img src="/img/elgin.png" alt="" />
+            <img src="/img/meritor.png" alt="" />
+            <img src="/img/stemco.png" alt="" />
+            <img  src="/img/timken.png" alt="" />
+
+          <div class="grid  lg:grid-cols-1 xl:grid-cols-3 gap-8 mx-auto mt-16 sm:grid-cols-1">
+            <div class="lg:text-xl sm:text-base font-bold flex flex-col lg:gap-4 sm:gap-0 items-center col-start-2">
+              <span class="bg-azul text-white lg:px-4 lg:py-4 sm:px-2 sm:py-2 sm:mb-4">EMPAQUETADURAS CAJAS DE DIRECCIÓN</span>
+              <img src="/img/transtec.png" alt="">
+            </div>
+          </div> 
+          
+          
+          
+      </div>
+  </div>
+
+  <AsesoriaEspecialidades/>
+  </div>
+  </div>
+
+
+
+
+</MainLayout>
+<style>
+.animacion img {
+    width: 14rem;
+  }
+
+  @media (min-width: 360px) {
+    .animacion img  {
+        width: 8rem;
+    }
+  }
+
+  @media (min-width: 1080px) {
+    .animacion img {
+        width: 14rem;
+    }
+  }
+
+  .animacion{
+   transition: opacity 0s ease, filter 0.5s ease; 
+   animation: fadeInUp 1s ease forwards; 
+   animation-delay: 1s;
+}
+
+.from-left {
+  opacity: 0;
+  filter: blur(4px); 
+  animation: fadeInLeft 2s ease forwards;
+  animation-delay: 0.8s; 
+}
+
+
+
+  @keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+100% {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+}
+}
+
+
+
+
+</style>

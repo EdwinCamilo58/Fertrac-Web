@@ -1,0 +1,100 @@
+---
+import HeaderEspecialidades from "../../components/HeaderEspecialidades.astro";
+import MainLayout from "../../layouts/MainLayout.astro";
+import AsesoriaEspecialidades from "../../components/AsesoriaEspecialidades.astro";
+
+const title = "Embrague y Transmisión: Cambio Perfecto";
+const description = "Nuestros repuestos de embrague y transmisión aseguran cambios suaves y precisos, prolongando la vida útil de tus vehiculos de carga.";
+---
+
+<MainLayout title={title} descripción={description}>
+
+  <div class="">
+    <div class="bg-cover content-center" style="background-image: url(/img/banner-especialidades.jpg);">
+
+      <HeaderEspecialidades especialidad="Embrague y Transmisión." img="/img/embrague-y-transmisión.webp" estilo="lg:w-[min-content] lg:!text-[75px] mx-auto" ></>
+<br>
+
+      </div>
+    
+      <div
+        class="flex justify-center flex-col text-center lg:w-[1000px] sm:w-auto lg:mx-auto sm:mx-4 lg:my-12 sm:my-4"
+      >
+    
+      <div class="mb-12">
+        <p class="text-justify  animacion from-left">
+          <span class="font-bold">“Dame una palanca lo suficientemente larga y un punto de apoyo, y moveré el mundo” - Arquimedes</span>
+
+          <br>
+          La transmisión no es más que una palanca que tiene muchos fulcros para que el motor siempre pueda hacer una palanca adecuada. Sin una transmisión y la posibilidad de desconectarla del motor, no conoceríamos el mundo del transporte como es hoy. 
+          Componentes esenciales para garantizar cambios de marcha suaves y la transferencia efectiva de potencia del motor a las ruedas. Estos incluyen discos de embrague, platos de presión, volantes, y conjuntos de transmisión, diseñados para mantener el rendimiento y la fiabilidad de tu camión.
+          En Fertrac, ofrecemos una amplia gama de repuestos de embrague y transmisión de las mejores marcas del mercado. Nos comprometemos a proporcionar productos de alta calidad y durabilidad, asegurando que tu camión funcione de manera óptima y segura.
+          
+    
+        </p>
+      </div>
+    
+          <div class="animacion from-left logos flex flex-wrap justify-center items-center lg:gap-28 sm:gap-8 mx-auto">
+            <img class="w-56" src="/img/eaton.png" alt="" />
+            <img class="w-56" src="/img/tas.png" alt="" />
+            <img class="w-56" src="/img/mid-america.png" alt="" />
+      
+      </div>
+  </div>
+
+  <AsesoriaEspecialidades/>
+  </div>
+  </div>
+
+
+
+
+</MainLayout>
+<style>
+.animacion img {
+    width: 14rem;
+  }
+
+  @media (min-width: 360px) {
+    .animacion img  {
+        width: 8rem;
+    }
+  }
+
+  @media (min-width: 1080px) {
+    .animacion img {
+        width: 14rem;
+    }
+  }
+
+  .animacion{
+   transition: opacity 0s ease, filter 0.5s ease; 
+   animation: fadeInUp 1s ease forwards; 
+   animation-delay: 1s;
+}
+
+.from-left {
+  opacity: 0;
+  filter: blur(4px); 
+  animation: fadeInLeft 2s ease forwards;
+  animation-delay: 0.8s; 
+}
+
+
+
+  @keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+100% {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+}
+}
+
+
+
+
+</style>

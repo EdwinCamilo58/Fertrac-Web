@@ -1,0 +1,107 @@
+---
+import HeaderEspecialidades from "../../components/HeaderEspecialidades.astro";
+import MainLayout from "../../layouts/MainLayout.astro";
+import AsesoriaEspecialidades from "../../components/AsesoriaEspecialidades.astro";
+
+const title = "Diferencial: Desempeño Superior";
+const description = "Ofrecemos diferenciales de alta calidad que garantizan una distribución adecuada de la potencia, mejorando la maniobrabilidad y el rendimiento de tus vehiculos de carga pesados.";
+---
+
+<MainLayout title={title} descripción={description}>
+
+
+  <div class="">
+    <div class="flex items-center justify-center flex-wrap md:flex-row sm:flex-col-reverse bg-cover content-center" style="background-image: url(/img/banner-especialidades.jpg);">
+
+      <HeaderEspecialidades especialidad="Diferencial." img="/img/diferencial.webp" ></>
+     
+      </div>
+    
+      <div
+        class="flex justify-center flex-col text-center lg:w-[1000px] sm:w-auto lg:mx-auto sm:mx-4 lg:my-12 sm:my-4"
+      >
+    
+      <div class="mb-12">
+        <p class="text-justify font-bold animacion from-left">
+          Un sistema que pocos reconocen, pero que presta un servicio vital para el cuidado de todos los componentes del tren motriz, la larga vida de las llantas, la transmisión constante de potencia, la seguridad en la vida y la eficiencia de los vehiculos de carga. 
+          Componentes esenciales como satelites, planetarios, crucetas, ejes laterales o semi-ejes, diferenciales completos, carcasas, entre muchos otros más. Todos diseñados para garantizar una distribución eficiente de la fuerza del motor a las ruedas.
+          En Fertrac, ofrecemos una amplia gama de repuestos de diferencial de las mejores marcas del mercado. Nos dedicamos a proporcionar productos de alta calidad y durabilidad, asegurando que tu camión funcione de manera óptima y fiable.
+          
+    
+        </p>
+      </div>
+    
+          <div class="animacion from-left logos flex flex-wrap justify-center items-center lg:gap-28 sm:gap-8 mx-auto">
+            <img class="w-56" src="/img/ftparts.png" alt="" />
+            <img class="w-56" src="/img/sampa.png" alt="" />
+            <img class="w-56" src="/img/dana-spicer.png" alt="" />
+            <img class="w-56" src="/img/dana-spicer-select.png" alt="" />
+            <img class="w-56" src="/img/sys.png" alt="" />
+            <img class="w-56" src="/img/transejes.png" alt="" />
+            <img class="w-56" src="/img/meritor.png" alt="" />
+            <img class="w-56" src="/img/pai.png" alt="" />
+            <img class="w-56" src="/img/pai-genuine.png" alt="" /> 
+
+          </div>
+          
+          
+          
+      </div>
+  </div>
+
+  <AsesoriaEspecialidades/>
+  </div>
+  </div>
+
+
+
+
+</MainLayout>
+<style>
+.animacion img {
+    width: 14rem;
+  }
+
+  @media (min-width: 360px) {
+    .animacion img  {
+        width: 8rem;
+    }
+  }
+
+  @media (min-width: 1080px) {
+    .animacion img {
+        width: 14rem;
+    }
+  }
+
+  .animacion{
+   transition: opacity 0s ease, filter 0.5s ease; 
+   animation: fadeInUp 1s ease forwards; 
+   animation-delay: 1s;
+}
+
+.from-left {
+  opacity: 0;
+  filter: blur(4px); 
+  animation: fadeInLeft 2s ease forwards;
+  animation-delay: 0.8s; 
+}
+
+
+
+  @keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+100% {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+}
+}
+
+
+
+
+</style>

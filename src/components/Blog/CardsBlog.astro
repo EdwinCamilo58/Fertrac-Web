@@ -1,0 +1,60 @@
+---
+import BotonPrincipal from "../BotonPrincipal.astro"
+import BotonBlog from "../BotonBlog.astro";
+
+
+
+const { image, url, title, pubDate, previewText, tags, tiempoLectura} = Astro.props;
+const formaterFecha = new Date(pubDate).toLocaleDateString('es-ES', {
+  day: '2-digit',
+  month: '2-digit',
+  year: 'numeric',
+});
+
+
+
+
+/* function LimitarPalabras(text, maxWords) {
+    const words = text.split(" ");
+    return words.length > maxWords ? words.slice(0, maxWords).join(" ") + " [...]" : text;
+}  */
+
+/* function LimitarLetras(text, maxLength) {
+    return text.length > maxLength ? text.slice(0, maxLength) + "[...]" : text;
+} */
+
+
+---
+    
+
+<article class=" transition-transform duration-300 hover:scale-110 sm:px-4  bg-white">
+        
+    
+
+    <a href={url} class="overflow-hidden">
+    <div class=" h-44">
+        <img src={image.url} alt={image.alt} class="w-full h-full object-cover">
+    </div>
+    
+    <div class="flex gap-4 py-2 justify-between">
+        <time datetime={pubDate} class="text-lg">{formaterFecha}</time>
+        <span class="font-semibold font-lato text-naranja text-lg" >{tags}</span>
+        
+    </div>
+    <h3 class="titulos-blog-card">{title}</h3>
+
+    <p id="previewText" class="previewText !text-justify">{previewText}</p>
+    <BotonBlog tiempoLectura={tiempoLectura}/>
+</a>
+</article>
+
+<style>
+    .previewText {
+        line-height: 1.5rem !important;
+  display: -webkit-box;
+  -webkit-line-clamp: 8; /* Número de líneas deseadas */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+</style>

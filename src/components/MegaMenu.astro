@@ -1,0 +1,971 @@
+---
+import Form from "./Form.astro";
+
+const {positionNav} = Astro.props;
+const {bgNav} = Astro.props;
+---
+
+<div class={`navbar w-screen transition duration-1000 ease-in-out flex items-center sm:justify-between px-8 py-6 lg:justify-around top-0 ${positionNav} ${bgNav} z-50 `}>
+  <a href="/">
+    <!-- <img id="imagen1" src="/img/fertrac-footer.png" alt="" class="w-44 hidden" > -->
+    <img id="imagen2" src="/img/fertrac-footerb.png" class="sm:w-32 lg:w-44" alt=""
+      />
+  </a>
+
+  <nav class="sm:hidden lg:block">
+    <ul class="flex items-center justify-center font-semibold text-white">
+        <li class="background relative px-3 py-2 group">
+            <a href="/" class="effect"><!-- <i class="fa-solid fa-house mr-2"> --></i>Inicio</a>
+          </li>
+
+      <li class="background relative px-3 py-2  cursor-pointer group">
+        <a href="#"><!-- <i class="fa-solid fa-gear mr-2"> --></i>
+          Especialidades
+        <i class="fa-solid fa-caret-down"></i>
+      </a>
+        <div
+          class="absolute w-[1000px] top-0 -left-[320px] transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[560px] transform">
+          <div class="relative w-full p-6 bg-white shadow-xl top-6 rounded-xl">
+            <div
+              class="w-10 h-10 bg-white transform rotate-45 absolute top-0 left-[22%] z-0 translate-x-0 transition-transform group-hover:translate-x-[12rem] duration-500 ease-in-out rounded-sm">
+            </div>
+
+            <div class="relative z-10 justify-between">
+              <div class="grid items-stretch grid-cols-3 gap-6">
+
+                <div>
+
+                  <ul class="mt-3 text-[15px] space-y-4">
+                    
+                      <li>
+                        <a href="/especialidades/motor/"
+                          class="flex items-center p-2 -mx-2 space-x-2 font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-blue-200">
+                          <div class="p-2 bg-blue-500 rounded-full">
+                            <img width="24" height="24" src="https://img.icons8.com/ios-filled/FFFFFF/engine.png" alt="icono de un motor"/>
+                          </div>
+                          <div>
+                            Motor
+                            <p class="!text-sm font-light !text-gray-600">Potencia y rendimiento para un viaje sin límites.</p>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="/especialidades/tren-delantero/"
+                          class="flex items-center p-2 -mx-2 space-x-2 font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-orange-200">
+                          <div class="p-2 bg-orange-500 rounded-full">
+                            <img width="24" height="24" src="https://img.icons8.com/external-goofy-line-kerismaker/50/FFFFFF/external-Suspension-car-auto-parts-goofy-line-kerismaker.png" alt="external-Suspension-car-auto-parts-goofy-line-kerismaker"/>
+                          </div>
+                          <div>
+                            Tren Delantero
+                            <p class="!text-sm font-light !text-gray-600">Precisión y control para una conducción segura.</p>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="/especialidades/sistema-de-frenado/"
+                          class="flex items-center p-2 -mx-2 space-x-2 font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-slate-200">
+                          <div class="p-2 bg-slate-900 rounded-full">
+                            <img width="24" height="24" src="https://img.icons8.com/external-icongeek26-glyph-icongeek26/64/FFFFFF/external-break-car-parts-and-service-icongeek26-glyph-icongeek26.png" alt="icono de un freno de camión"/>
+                          </div>
+                          <div>
+                            Sistema de Frenado
+                            <p class="!text-sm font-light !text-gray-600">Seguridad y control, reduciendo la velocidad de manera eficiente.</p>
+                          </div>
+                        </a>
+                      </li>
+
+                      
+
+                      <li>
+                        <a href="/especialidades/embrague-y-transmisión/"
+                          class="flex items-center p-2 -mx-2 space-x-2 font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-fuchsia-200">
+                          <div class="p-2 bg-fuchsia-500 rounded-full">
+                            <img width="24" height="24" src="https://img.icons8.com/external-icongeek26-glyph-icongeek26/64/FFFFFF/external-clutch-disc-equipments-icongeek26-glyph-icongeek26.png" alt="icono de un embrague"/>
+                          </div>
+                          <div>
+                            Embrague y Transmisión
+                            <p class="!text-sm font-light !text-gray-600">Conexión y transferencia de potencia del motor a las ruedas.</p>
+                          </div>
+                        </a>
+                      </li>
+
+                  </ul>
+                </div>
+
+                <div>
+                  <ul class="mt-3 text-[15px] space-y-4">
+                    
+                      <li>
+                        <a href="/especialidades/filtración/"
+                          class="flex items-center p-2 -mx-2 space-x-2 font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-red-200">
+                          <div class="p-2 bg-red-500 rounded-full">
+                            <img width="24" height="24" src="https://img.icons8.com/external-icongeek26-glyph-icongeek26/64/FFFFFF/external-bottle-travel-accessories-icongeek26-glyph-icongeek26.png" alt="external-bottle-travel-accessories-icongeek26-glyph-icongeek26"/>
+                          </div>
+                          <div>
+                            Filtración
+                            <p class="!text-sm font-light !text-gray-600">Sistemas de tu camión libres de impurezas.</p>
+                          </div>
+                        </a>
+                      </li>
+
+
+                      <li>
+                        <a href="/especialidades/suspensión/"
+                          class="flex items-center p-2 -mx-2 space-x-2 font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-yellow-200">
+                          <div class="p-2 bg-yellow-500 rounded-full">
+                            <img width="24" height="24" src="https://img.icons8.com/external-icongeek26-glyph-icongeek26/64/FFFFFF/external-suspension-equipments-icongeek26-glyph-icongeek26-2.png" alt="icono de una suspensión"/>
+                          </div>
+                          <div>
+                            Suspensión
+                            <p class="!text-sm font-light !text-gray-600">Garantiza una conducción cómoda y segura.</p>
+                          </div>
+                        </a>
+                      </li>
+
+
+                      <li>
+                        <a href="/especialidades/cardan/"
+                          class="flex items-center p-2 -mx-2 space-x-2 font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-green-200">
+                          <div class="p-2 bg-green-500 rounded-xl">
+                            <img width="24" height="24" src="/img/cardan-menu.png" alt="icono de un cardan"/>
+                          </div>
+                          <div>
+                            Cardan
+                            <p class="!text-sm font-light !text-gray-600">Distribución de la fuerza del motor a las ruedas.</p>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="/especialidades/diferencial/"
+                          class="flex items-center p-2 -mx-2 space-x-2 font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-green-200">
+                          <div class="p-2 bg-green-900 rounded-full">
+                            <img width="24" height="24" src="https://img.icons8.com/external-obvious-glyph-kerismaker/96/FFFFFF/external-accessories-car-auto-parts-glyph-obvious-glyph-kerismaker-6.png" alt="external-accessories-car-auto-parts-glyph-obvious-glyph-kerismaker-6"/>
+                          </div>
+                          <div>
+                            Diferencial
+                            <p class="!text-sm font-light !text-gray-600">Componente vital del sistema de transmisión.</p>
+                          </div>
+                        </a>
+                      </li>
+
+                      
+
+                      
+
+                  </ul>
+                </div>
+
+                <div>
+                  <ul class="mt-3 text-[15px] space-y-4">
+                    
+                      <li>
+                        <a href="/especialidades/sistema-de-refrigeración/"
+                          class="flex items-center p-2 -mx-2 space-x-2 font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-teal-200">
+                          <div class="p-2 bg-teal-500 rounded-full">
+                            <img width="24" height="24" src="https://img.icons8.com/ios-filled/100/FFFFFF/heating.png" alt="icono representando un filtro de un camion"/>
+                          </div>
+                          <div>
+                            Sistema de Refrigeración
+                            <p class="!text-sm font-light !text-gray-600">regula la temperatura del motor, evitando sobrecalentamiento.</p>
+                          </div>
+                        </a>
+                      </li>
+
+                      
+
+                      <li>
+                        <a href="/especialidades/rodamientos/"
+                          class="flex items-center p-2 -mx-2 space-x-2 font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-lime-200">
+                          <div class="p-2 bg-lime-300 rounded-full">
+                            <img width="24" height="24" src="https://img.icons8.com/external-icongeek26-glyph-icongeek26/64/FFFFFF/external-ball-bearing-car-parts-and-service-icongeek26-glyph-icongeek26.png" alt="icono de un rodamiento"/>
+                          </div>
+                          <div>
+                            Rodamientos
+                            <p class="!text-sm font-light !text-gray-600">Durabilidad, estabilidad y eficiencia asegurada.</p>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="/especialidades/sistema-de-aire/"
+                          class="flex items-center p-2 -mx-2 space-x-2 font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-slate-200">
+                          <div class="p-2 bg-slate-500 rounded-full">
+                            <img width="24" height="24" src="https://img.icons8.com/glyph-neue/64/FFFFFF/air-element.png" alt="icono de sistema de aire"/>
+                          </div>
+                          <div>
+                            Sistema de Aire
+                            <p class="!text-sm font-light !text-gray-600">Componente vital del sistema de transmisión.</p>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="/especialidades/otras-especialidades/"
+                          class="flex items-center p-2 -mx-2 space-x-2 font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-fuchsia-200">
+                          <div class="p-2 bg-violet-500 rounded-full">
+                            <img width="24" height="24" src="https://img.icons8.com/ios-filled/50/FFFFFF/settings-3.png" alt="icono de un engranaje"/>
+                          </div>
+                          <div>
+                            Otras especialidades
+                            <p class="!text-sm font-light !text-gray-600">Repuestos para el óptimo desempeño de tu camión.</p>
+                          </div>
+                        </a>
+                      </li>
+
+                  </ul>
+                </div>
+
+
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </li>
+      
+
+
+      <li class="background relative px-3 py-2 group cursor-pointer">
+        <a href="#"><!-- <i class="fa-regular fa-square-check mr-2"> --></i>Servicios
+        <i class="fa-solid fa-caret-down"></i>
+      </a>
+        <div
+          class="absolute w-[800px] top-0 left-[-335px] transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[560px] transform">
+          <div class="relative w-full p-6 bg-white shadow-xl top-6 rounded-xl">
+            <div
+              class="absolute top-0 z-0 w-10 h-10  right-[405px] transition-transform duration-500 ease-in-out transform rotate-45 -translate-x-4 bg-white rounded-sm group-hover:translate-x-3">
+            </div>
+
+            <div class="relative z-10 justify-between">
+              <div class="grid items-stretch grid-cols-2 gap-6">
+                <div>
+                  <ul class="mt-3 text-[15px] space-y-4">
+
+                    <li>
+                      <a href="/servicios#ventas"
+                        class="flex items-center p-2 -mx-2 space-x-2 font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-blue-200">
+                        <div class="p-2 bg-blue-500 rounded-full">
+                          <img width="24" height="24" src="https://img.icons8.com/ios-filled/50/FFFFFF/checked-truck.png" alt="checked-truck"/>
+                        </div>
+                        <div>
+                          Venta de repuestos para vehiculos de carga
+                          <p class="!text-sm font-light !text-gray-600">Calidad, confianza y marcas lideres.</p>
+                        </div>
+                      </a>
+                    </li>
+                    
+                   <!--  <li>
+                      <a href="/servicios#ventas"
+                        class="flex items-center p-2 -mx-2 space-x-2 font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-orange-200">
+                        <div class="p-2 bg-orange-500 rounded-xl">
+                          <img width="30" height="30" src="https://img.icons8.com/pastel-glyph/64/FFFFFF/shopping-trolley--v1.png" alt="shopping-trolley--v1"/>
+                        </div>
+                        <div>
+                          Tienda Online
+                          <p class="text-sm font-bold text-gray-600">Componente vital del sistema de transmisión.</p>
+                        </div>
+                      </a>
+                    </li> -->
+
+                    <li>
+                      <a href="/servicios#tienda-online"
+                        class="flex items-center p-2 -mx-2 space-x-2 font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-fuchsia-200">
+                        <div class="p-2 bg-fuchsia-500  rounded-full">
+                          <img width="24" height="24" src="https://img.icons8.com/glyph-neue/64/FFFFFF/pdf-2.png" alt="icono de un catalogo pdf"/>
+                        </div>
+                        <div>
+                          Catalogo En Linea
+                          <p class="!text-sm font-light !text-gray-600">Referencias destacadas mensuales en formato PDF.</p>
+                        </div>
+                      </a>
+                    </li>
+
+                        
+
+                  </ul>
+                </div>
+
+                <div>
+                  <ul class="mt-3 text-[15px] space-y-4">
+
+                    <li>
+                      <a href="/servicios#catalogo-online"
+                        class="flex items-center p-2 -mx-2 space-x-2 font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-green-200">
+                        <div class="p-2 bg-green-500 rounded-full">
+                          <img width="24" height="24" src="https://img.icons8.com/external-anggara-glyph-anggara-putra/32/FFFFFF/external-Banking-Card-accounting-anggara-glyph-anggara-putra.png" alt="icono de una billetera"/>
+                        </div>
+                        <div>
+                          Solicitud de Credito
+                          <p class="!text-sm font-light !text-gray-600">Opciones de credito flexibles y convenientes.</p>
+                        </div>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="/servicios#solicitud-credito"
+                        class="flex items-center p-2 -mx-2 space-x-2 font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-yellow-200">
+                        <div class="p-2 bg-yellow-500 rounded-full">
+                          <img width="24" height="24" src="https://img.icons8.com/ios-filled/50/FFFFFF/service.png" alt="icono representando una mano con tuerca encima"/>
+                        </div>
+                        <div>
+                          Asesoria Tecnica
+                          <p class="!text-sm font-light !text-gray-600">Soluciones rapidas y apoyo de primer mano .</p>
+                        </div>
+                      </a>
+                    </li>
+
+                    <!-- <li>
+                      <a href="/servicios#asesoria-tecnica"
+                        class="flex items-center p-2 -mx-2 space-x-2 font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-teal-200">
+                        <div class="p-2 bg-teal-500 rounded-full">
+                          <img width="24" height="24" src="https://img.icons8.com/ios-filled/50/FFFFFF/light-automation.png" alt="light-automation"/>
+                        </div>
+                        <div>
+                          Innovación e Investigación
+                          <p class="!text-sm font-bold text-gray-600">Componente vital del sistema de transmisión.</p>
+                        </div>
+                      </a>
+                    </li>     -->
+                      
+                     
+                  </ul>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li class="background relative px-3 py-2 group">
+        <a href="/sobre-nosotros/" class="effect"><!-- <i class="fa-solid fa-people-group mr-2"> --></i>Sobre Nosotros</a>
+      </li>
+
+      <li class="background relative px-3 py-2 group">
+        <a href="/contactanos/" class="effect"><!-- <i class="fa-solid fa-phone mr-2"> --></i>Contactanos</a>
+      </li> 
+
+      <li class="background relative px-3 py-2 group ">
+        
+        <a href="/blog/" class="effect"><!-- <i class="fa-regular fa-newspaper"> --></i> Blog</a>
+      </li> 
+        <!-- <div
+          class="absolute top-0 -left-2 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[200px] transform">
+          <div class="relative w-full p-6 bg-white shadow-xl top-6 rounded-xl">
+            <div
+              class="absolute top-0 z-0 w-10 h-10 transition-transform duration-500 ease-in-out transform rotate-45 -translate-x-4 bg-white rounded-sm group-hover:translate-x-3">
+            </div>
+             <div class="relative z-10">
+              <ul class="mt-3 text-[15px] space-y-4">
+                <li>
+                  <a href="#"
+                    class="flex items-center p-2 -mx-2 space-x-2 font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
+                    <div>
+                      Notifications
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="flex items-center p-2 -mx-2 space-x-2 font-bold text-green-600 transition duration-300 ease-in-out rounded-lg bg-green-50">
+                    <div>
+                      Analytics
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="flex items-center p-2 -mx-2 space-x-2 font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
+                    <div>
+                      Intregrations
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div> -->
+
+      
+    </ul>
+  </nav>
+
+
+  <div class="flex gap-8">
+    <nav class="md:flex sm:hidden">
+      <ul>
+        <section class="flex justify-  items-center gap-4">    
+          <a href="https://www.facebook.com/fertac.col?mibextid=9R9pXO" target="_blank" class="group social flex justify-center p-2 rounded-md drop-shadow-xl bg-white text-naranja font-semibold hover:rounded-[50%] transition-all duration-500"><i class="fa-brands fa-facebook"></i>
+            <span class="pointer-events-none absolute opacity-0 group-hover:opacity-100 group-hover:text-white group-hover:text-sm group-hover:-translate-y-8 duration-700">
+              Facebook
+            </span>
+        </a>
+
+        <a href="https://instagram.com/fertrac.col?igshid=MzMyNGUyNmU2YQ==" target="_blank" class="group social flex justify-center p-2 rounded-md drop-shadow-xl bg-white text-naranja font-semibold hover:rounded-[50%] transition-all duration-500"><i class="fa-brands fa-instagram"></i>
+          <span class="pointer-events-none absolute opacity-0 group-hover:opacity-100 group-hover:text-white group-hover:text-sm group-hover:-translate-y-8 duration-700">
+            Instagram
+          </span>
+      </a>
+
+      <a href="https://www.tiktok.com/@fertrac.col?_t=8n0duv13nev&_r=1" target="_blank" class="group social flex justify-center p-2 rounded-md drop-shadow-xl bg-white text-naranja font-semibold hover:rounded-[50%] transition-all duration-500"><i class="fa-brands fa-tiktok"></i>
+        <span class="pointer-events-none absolute opacity-0 group-hover:opacity-100 group-hover:text-white group-hover:text-sm group-hover:-translate-y-8 duration-700">
+          TikTok
+        </span>
+    </a>
+
+    <a href="https://www.linkedin.com/company/fertracsas/" target="_blank" class="group social flex justify-center p-2 rounded-md drop-shadow-xl bg-white text-naranja font-semibold hover:rounded-[50%] transition-all duration-500"><i class="fa-brands fa-linkedin-in"></i>
+      <span class="pointer-events-none absolute opacity-0 group-hover:opacity-100 group-hover:text-white group-hover:text-sm group-hover:-translate-y-8 duration-700">
+        LinkedIn
+      </span>
+  </a>
+        </section>
+        
+      </ul>
+        
+    </nav>
+  
+    <button id="mobile-menu-button" class="lg:hidden  ">
+      <div class="barras_menu">
+        <span class="linea1__barras"></span>
+        <span class="linea2__barras"></span>
+        <span class="linea3__barras"></span>
+    </div>
+    </button>
+  </div>
+  
+
+
+</div>
+
+    <div id="mobile-menu" class="hidden w-screen min-h-screen bg-naranja lg:hidden fixed z-40">
+      <nav class="px-4 pt-2">
+        <ul class="flex flex-col items-start justify-start w-full gap-2 font-semibold border-b py-2">
+          <li class="relative w-full">
+            <a href="/" class="flex items-center text-base text-white w-full p-2 cursor-pointer active:bg-gray-100 active:rounded-xl dropdown-toggle"><i class="fa-solid fa-house mr-4"></i>Inicio</a>
+
+          </li>
+
+          <li class="relative w-full">
+            <button
+              class="flex items-center text-base text-white w-full p-2 dropdown-toggle"><i class="fa-solid fa-gear mr-4"></i>
+              Especialidades
+              <i class="rotate fa-solid fa-caret-down ml-4"></i>
+            </button>
+
+            
+            <div class="hidden w-full py-4 bg-white rounded-lg dropdown">
+              <div class="relative z-10">
+                <div class="content grid items-stretch grid-cols-3">
+
+                    <ul class="text-[12px] text-center flex flex-col gap-2">
+                      <li class="">
+                        <a href="/especialidades/motor/" class="flex items-center flex-col justify-left  font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
+                          <div class="p-2 bg-blue-500 rounded-xl">
+                            <img class="w-4 h-4" src="https://img.icons8.com/ios-filled/100/FFFFFF/engine.png" alt="icono de un motor"/>
+                          </div>
+                            Motor
+  
+                        </a>
+                      </li>
+  
+                      <li class="">
+                        <a href="/especialidades/tren-delantero/" class="flex items-center justify-between flex-col  font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
+                          <div class="p-2 bg-orange-500 rounded-xl">
+                           <img width="16" height="16" src="https://img.icons8.com/external-goofy-solid-kerismaker/50/FFFFFF/external-Suspension-car-auto-parts-goofy-solid-kerismaker.png" alt="external-Suspension-car-auto-parts-goofy-solid-kerismaker"/>
+                          </div>
+                            Tren <br> Delantero
+                        </a>
+                      </li>
+                      
+                      <li class="">
+                        <a href="/especialidades/sistema-de-frenado/" class="flex items-center justify-between flex-col  font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
+                          <div class="p-2 bg-slate-900 rounded-xl">
+                            <img class="w-4 h-4" src="https://img.icons8.com/external-icongeek26-glyph-icongeek26/64/FFFFFF/external-break-car-parts-and-service-icongeek26-glyph-icongeek26.png" alt="icono de un freno de camión"/>
+                          </div>
+                            Sistema <br> de Frenado
+                        </a>
+                      </li> 
+
+                      <li class="">
+                        <a href="/especialidades/embrague-y-transmisión/" class="flex items-center justify-between flex-col  font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
+                          <div class="p-2 bg-fuchsia-500 rounded-xl">
+                            <img class="w-4 h-4" src="https://img.icons8.com/external-icongeek26-glyph-icongeek26/64/FFFFFF/external-clutch-disc-equipments-icongeek26-glyph-icongeek26.png" alt="icono de un embrague de transmisión"/>
+                          </div>
+                            Embrague y Transmisión
+                        </a>
+                      </li>
+
+                      
+
+                    </ul>
+                 
+                    <ul class="text-[12px] text-center flex flex-col gap-2">
+                      <li class="">
+                        <a href="/especialidades/filtración/" class="flex items-center flex-col justify-left  font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
+                          <div class="p-2 bg-red-500 rounded-xl">
+                            <img class="w-4 h-4" src="https://img.icons8.com/external-icongeek26-glyph-icongeek26/64/FFFFFF/external-bottle-travel-accessories-icongeek26-glyph-icongeek26.png" alt="">
+                          </div>
+                            Filtración
+  
+                        </a>
+                      </li>
+  
+                      <li class="">
+                        <a href="/especialidades/suspensión/" class="flex items-center justify-between flex-col  font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
+                          <div class="p-2 bg-yellow-500 rounded-xl">
+                            <img class="w-4 h-4" src="https://img.icons8.com/external-icongeek26-glyph-icongeek26/64/FFFFFF/external-suspension-equipments-icongeek26-glyph-icongeek26-2.png" alt="icono de una suspensión"/>
+                          </div>
+                            Suspensión
+  
+                        </a>
+                      </li>
+  
+                      <li class="">
+                        <a href="/especialidades/cardan/" class="flex items-center justify-between flex-col  font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
+                          <div class="p-2 bg-green-500 rounded-full">
+                            <img class="w-4" height="h-4" src="/img/cardan-menu.png" alt="icono de un diferencial"/>
+                          </div>
+                            Cardan
+  
+                        </a>
+                      </li>
+  
+                      <li class="">
+                        <a href="/especialidades/diferencial/" class="flex items-center justify-between flex-col  font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
+                          <div class="p-2 bg-green-900 rounded-xl">
+                            <img class="w-4 h-4" src="https://img.icons8.com/external-obvious-glyph-kerismaker/96/FFFFFF/external-accessories-car-auto-parts-glyph-obvious-glyph-kerismaker-6.png" alt="external-accessories-car-auto-parts-glyph-obvious-glyph-kerismaker-6"/>
+                          </div>
+                            Diferencial
+  
+
+                        </a>
+                      </li>
+                    </ul>
+
+                    <ul class="text-[12px] text-center flex flex-col gap-2">
+                      <li class="">
+                        <a href="/especialidades/sistema-de-refrigeración/" class="flex items-center justify-between flex-col  font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
+                          <div class="p-2 bg-teal-500 rounded-xl">
+                            <img class="w-4 h-4" src="https://img.icons8.com/ios-filled/100/FFFFFF/heating.png" alt="icono representando un filtro de un camion"/>
+                          </div>
+                            Sistema de Refrigeración
+                        </a>
+                      </li>
+
+                      <li class="">
+                        <a href="/especialidades/rodamientos/" class="flex items-center justify-between flex-col  font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
+                          <div class="p-2 bg-lime-500 rounded-xl">
+                            <img class="w-4 h-4" src="https://img.icons8.com/external-icongeek26-glyph-icongeek26/64/FFFFFF/external-ball-bearing-car-parts-and-service-icongeek26-glyph-icongeek26.png" alt="icono de un rodamiento"/>
+                          </div>
+                            Rodamientos
+                        </a>
+                      </li>
+
+                      <li class="">
+                        <a href="/especialidades/sistema-de-aire/" class="flex items-center justify-between flex-col  font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
+                          <div class="p-2 bg-slate-500 rounded-xl">
+                            <img class="w-4 h-4" src="https://img.icons8.com/glyph-neue/64/FFFFFF/air-element.png" alt="icono de sistema de aire"/>
+                          </div>
+                            Sistema de Aire
+                        </a>
+                      </li> 
+                    
+                      <li class="">
+                        <a href="/especialidades/otras-especialidades/" class="flex items-center justify-between flex-col  font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
+                          <div class="p-2 bg-violet-500 rounded-xl">
+                            <img class="w-4 h-4" src="https://img.icons8.com/ios-filled/50/FFFFFF/settings-3.png" alt="icono de un engranaje"/>
+                          </div>
+                            Otras <br> especialidades
+                        </a>
+                      </li>  
+
+                     
+                          
+                      
+                    </ul>
+
+                            
+                </div>
+              </div>
+            </div>
+
+          </li>
+
+          <!-- SERVICIOS -->
+
+          <li class="relative w-full">
+            <button
+              class="flex items-center w-full p-2 dropdown-toggle text-white"><i class="fa-regular fa-square-check mr-4"></i>
+              Servicios
+              <i class="rotate fa-solid fa-caret-down ml-4"></i>
+            </button>
+            <div class="hidden w-full py-4 bg-white rounded-lg dropdown">
+              <div class="relative z-10">
+    
+                <div class="">
+                    <ul class="gap-y-2.5 text-[12px] text-center grid grid-cols-2 grid-rows-2">
+
+                      <li class="">
+                        <a href="/servicios/" class="flex items-center flex-col justify-left  font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
+                          <div class="p-2 bg-blue-500 rounded-xl">
+                            <img class="w-4 h-4" src="https://img.icons8.com/ios-filled/50/FFFFFF/checked-truck.png" alt="checked-truck"/>
+                          </div>
+                          Repuestos para <br> vehiculos de carga
+
+                        </a>
+                      </li>
+
+                      <li class="">
+                        <a href="/servicios/" class="flex items-center flex-col justify-left  font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
+                          <div class="p-2 bg-green-500 rounded-xl">
+                            <img class="w-4 h-4" src="https://img.icons8.com/external-anggara-glyph-anggara-putra/32/FFFFFF/external-Banking-Card-accounting-anggara-glyph-anggara-putra.png" alt="icono de una billetera"/>
+                          </div>
+                            Solicitud de credito
+
+                        </a>
+                      </li>
+
+                      <li class="">
+                        <a href="/servicios/" class="flex items-center justify-between flex-col  font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
+                          <div class="p-2 bg-fuchsia-500 rounded-xl">
+                            <img class="w-4 h-4" src="https://img.icons8.com/glyph-neue/64/FFFFFF/pdf-2.png" alt="icono de un catalogo pdf"/>
+                          </div>
+                          Catalogo en linea
+
+                        </a>
+                      </li>
+                      
+                   <!--    <li class="">
+                        <a href="/servicios/" class="flex items-center justify-between flex-col  font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
+                          <div class="p-2 bg-yellow-500 rounded-xl">
+                            <img class="w-4 h-4" src="https://img.icons8.com/pastel-glyph/64/FFFFFF/shopping-trolley--v1.png" alt="shopping-trolley--v1"/>
+                          </div>
+                            Tienda Online
+
+                        </a>
+                      </li>
+ -->
+                      
+
+                      <li class="">
+                        <a href="/servicios/" class="flex items-center justify-between flex-col  font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
+                          <div class="p-2 bg-yellow-500  rounded-xl">
+                            <img class="w-4 h-4" src="https://img.icons8.com/ios-filled/50/FFFFFF/service.png" alt="icono representando una mano con tuerca encima"/>
+                          </div>
+                            Asesioria tecnica
+
+                        </a>
+                      </li>
+
+                     <!--  <li class="">
+                        <a href="/servicios/" class="flex items-center justify-between flex-col  font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
+                          <div class="p-2 bg-teal-500 rounded-xl">
+                            <img class="w-4 h-4" src="https://img.icons8.com/external-icongeek26-glyph-icongeek26/64/FFFFFF/external-clutch-disc-equipments-icongeek26-glyph-icongeek26.png" alt="icono de un embrague de transmisión"/>
+                          </div>
+                            Innovación e Investigación
+
+                        </a>
+                      </li> -->
+                    </ul>
+                  
+                 
+
+
+                </div>
+              </div>
+            </div>
+          </li>
+
+
+<!--           <li class="relative w-full">
+
+            <button
+              class="flex items-center w-full p-2 dropdown-toggle text-white"><i class="fa-solid fa-people-group mr-4"></i>
+              Sobre Nosotros
+              <i class="rotate fa-solid fa-caret-down ml-4"></i>
+            </button>
+            <div class="hidden w-full p-4 mt-2 bg-white rounded-lg dropdown">
+              <div class="relative z-10">
+                
+                <div class="grid grid-cols-1 gap-6">
+                  <div>
+                    <ul class="text-[15px] space-y-4">
+                      <li>
+                        <a href="#"
+                          class="flex items-center p-2 -mx-2 space-x-2 font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
+                          <div class="p-2 bg-red-200 rounded-xl">
+                            <svg class="w-4 h-4 text-red-500 fill-current" xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24">
+                              <path
+                                d="M20 17H22V19H2V17H4V10C4 5.58172 7.58172 2 12 2C16.4183 2 20 5.58172 20 10V17ZM9 21H15V23H9V21Z">
+                              </path>
+                            </svg>
+                          </div>
+                          <div>
+                            Historia
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          class="flex items-center p-2 -mx-2 space-x-2 font-bold text-green-600 transition duration-300 ease-in-out rounded-lg bg-green-50">
+                          <div class="p-2 bg-green-200 rounded-xl">
+                            <svg class="w-4 h-4 text-green-500 fill-current" xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24">
+                              <path
+                                d="M16 2L21 7V21.0082C21 21.556 20.5551 22 20.0066 22H3.9934C3.44476 22 3 21.5447 3 21.0082V2.9918C3 2.44405 3.44495 2 3.9934 2H16ZM11 7V17H13V7H11ZM15 11V17H17V11H15ZM7 13V17H9V13H7Z">
+                              </path>
+                            </svg>
+                          </div>
+                          <div>
+                            Mision y Vision
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          class="flex items-center p-2 -mx-2 space-x-2 font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
+                          <div class="p-2 bg-indigo-200 rounded-xl">
+                            <svg class="w-4 h-4 text-indigo-500 fill-current" xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24">
+                              <path d="M3 3H11V11H3V3ZM3 13H11V21H3V13ZM13 3H21V11H13V3ZM13 13H21V21H13V13Z"></path>
+                            </svg>
+                          </div>
+                          <div>
+                            Valores Corporativos</p>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </li> -->
+          <li class="relative w-full">
+            <a href="/sobre-nosotros/" class="flex items-center w-full p-2  text-white dropdown-toggle"><i class="fa-solid fa-people-group mr-4"></i>
+              Sobre Nosotros </a>
+          </li>
+
+          <li class="relative w-full">
+            <a href="/contactanos/" class="flex items-center w-full p-2  text-white dropdown-toggle"><i class="fa-solid fa-phone mr-4"></i>
+              Contactanos </a>
+          </li>
+
+          <li class="relative w-full">
+            <a href="/blog/" class="flex items-center w-full p-2  text-white dropdown-toggle"><i class="fa-regular fa-newspaper mr-4"></i>
+              Blog </a>
+          </li>
+        </ul>
+
+        <ul class="pt-4">
+          <li class="relative w-full">
+            <a href="https://www.facebook.com/fertac.col?mibextid=9R9pXO" class="flex items-center w-full p-2  text-white dropdown-toggle"><i class="fa-brands fa-facebook mr-4"></i>
+              Facebook </a>
+          </li>
+
+          <li class="relative w-full">
+            <a href="https://instagram.com/fertrac.col?igshid=MzMyNGUyNmU2YQ==" class="flex items-center w-full p-2  text-white dropdown-toggle"><i class="fa-brands fa-instagram mr-4"></i>
+              Instagram </a>
+          </li>
+
+          <li class="relative w-full">
+            <a href="https://www.tiktok.com/@fertrac.col?_t=8n0duv13nev&_r=1" class="flex items-center w-full p-2  text-white dropdown-toggle"><i class="fa-brands fa-tiktok mr-4"></i>
+              TikTok </a>
+          </li>
+
+          <li class="relative w-full">
+            <a href="https://www.linkedin.com/company/fertracsas/" class="flex items-center w-full p-2  text-white dropdown-toggle"><i class="fa-brands fa-linkedin-in mr-4"></i>
+              LinkedIn </a>
+          </li>
+
+          
+        </ul>
+
+        
+      </nav>
+      <img src="/img/footer-camion.png" alt="">
+
+<!--       <hr class="border boder-azul w-full">
+
+      <Form bgBlog="p-2  text-center" titulo="text-azul text-xl" parrafo="text-azul text-sm"/>
+
+      <hr class="border boder-azul w-full"> -->
+
+<!--       <div>
+        <ul class="py-4">
+          <li class="md:hidden flex justify-center bg-white text-naranja text-2xl rounded-full gap-8">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+          </li>
+        </ul>
+      </div> -->
+    </div>
+
+    <style>
+
+
+/* .effect:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+
+}
+.effect:hover:after { 
+  width: 100%; 
+  left: 0; 
+} */
+
+
+
+/* .ocultar {
+  display: none;
+}*/
+
+
+
+ul {
+  list-style: none;
+}
+
+.content ul li {
+  height: 70px  ;
+
+
+ }
+
+
+
+
+.barras_menu {
+  width: 30px;
+  height: 30px;   
+  cursor: pointer;
+  
+}
+
+.barras_menu span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: rgb(255, 255, 255);
+  margin-top: 6px;
+  transform-origin: 0px 100%;
+  transition: all 600ms;
+}
+
+.activar1 {
+  transform: rotate(45deg)
+  translate(-2px, 1px);
+
+}
+.activar2 {
+  opacity: 0;
+  margin-left: -30px;
+}
+
+.activar3 {
+  transform: rotate(-45deg)
+  translate(-4px, 2px);
+}
+
+
+.scrolled {
+  background: #f2790c;
+}
+
+</style>
+
+<script>
+
+
+
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+    //
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    // 
+
+    // 
+    dropdownToggles.forEach((toggle) => {
+      toggle.addEventListener('click', () => {
+        const dropdown = toggle.nextElementSibling;
+        const otherDropdowns = document.querySelectorAll('.dropdown');
+
+        otherDropdowns.forEach((d) => {
+          if (d !== dropdown) {
+            d.classList.add('hidden');
+
+          }
+        });
+
+        dropdown.classList.toggle('hidden');
+        toggle.querySelector('.rotate').classList.toggle('rotate-180');
+      });
+    });
+
+
+
+document.querySelector(".barras_menu").addEventListener("click", animacion);
+
+var linea1__barras = document.querySelector(".linea1__barras");
+var linea2__barras = document.querySelector(".linea2__barras");
+var linea3__barras = document.querySelector(".linea3__barras");
+
+function animacion () {
+    linea1__barras.classList.toggle("activar1")
+    linea2__barras.classList.toggle("activar2")
+    linea3__barras.classList.toggle("activar3")
+
+}
+
+window.addEventListener('scroll', function() {
+    var navbar = document.querySelector('.navbar');
+    
+
+    if (window.scrollY > 50) { 
+        navbar.classList.add('scrolled');
+        
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+
+/* document.addEventListener('scroll', function () {
+      const scrollY = window.scrollY;
+      const imagen1 = document.getElementById('imagen1');
+      const imagen2 = document.getElementById('imagen2');
+      const social = document.querySelectorAll('.social');
+      
+
+      if (scrollY > 50) { // Cambia este valor según tus necesidades
+        imagen1.classList.add('ocultar');
+        imagen2.classList.remove('ocultar');
+        social.forEach(node => {node.classList.add('bgsocial');
+      })
+    }else {
+        imagen1.classList.remove('ocultar');
+        imagen2.classList.add('ocultar');
+        social.forEach(node => {node.classList.remove('bgsocial');
+      })
+      }
+    }
+  );  */
+</script> 

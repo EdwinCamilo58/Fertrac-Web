@@ -1,0 +1,40 @@
+---
+
+import BotonPrincipal from "../BotonPrincipal.astro";
+import CardsBlog from "./CardsBlog.astro";
+
+const postList = await Astro.glob("/src/pages/posts/*.md");
+
+
+const postsArray = Object.values(postList).map(post => ({
+  title: post.frontmatter.title,
+  previewText: post.frontmatter.previewText,
+  image: post.frontmatter.image,
+  pubDate: new Date(post.frontmatter.pubDate), // Convertir a objeto Date
+  tags: post.frontmatter.tags,
+  url: post.url,
+  tiempoLectura: post.frontmatter.tiempoLectura
+  
+})).sort((a, b) => b.pubDate - a.pubDate);
+
+const latestPosts = postsArray.slice(0, 4);
+---
+
+<div class="max-w-screen-xl mx-auto sm:my-8 md:my-16 2xl:px-0 lg:px-24">
+  <div class=" md:mb-4 sm:p-4">
+    <div class="flex mb-4 items-center sm:justify-between lg:justify-start">
+      <h2 class="md:mr-8 sm:mr-2">NUESTRO BLOG</h2>
+    <BotonPrincipal url="/blog/" text="Visitar Blog" estilos="bg-naranja hover:bg-transparent hover:text-naranja hover:border border-naranja text-white !w-auto !text-base"/>
+    </div>
+    <p class="md:w-[600px] sm:w-auto text-azul" >Visita nuestro blog y mantente al día con consejos, novedades y tendencias que harán que tu camión siempre esté en su mejor forma. ¡No te lo pierdas! pruebaaa</p>
+    <hr class="mt-4 h-1 bg-naranja">
+  </div>
+
+
+    <ul class="grid md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-4 2xl:gap-8 lg:gap-0">
+            {latestPosts.map(post => (
+                <li><CardsBlog title={post.title} image={post.image} url={post.url} previewText={post.previewText} pubDate={post.pubDate} tags={post.tags} tiempoLectura={post.tiempoLectura}/></li>
+              
+            ))}
+    </ul>
+  </div>

@@ -1,0 +1,51 @@
+---
+import BlogLayout from "./BlogLayout.astro";
+import AsesoriaEspecialidades from "../components/AsesoriaEspecialidades.astro";
+
+
+const { frontmatter, image, title, tags } = Astro.props;
+const pubDate = frontmatter.pubDate;
+
+const formatearFecha = pubDate
+  ? new Date(pubDate).toLocaleDateString("es-ES", {
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+    })
+  : "Fecha no disponible";
+
+
+
+---
+
+<BlogLayout title={frontmatter.title}>
+    <div class="lg:w-[700px] mx-auto md:p-0 relative mt-[90px]">
+        <div
+            class="flex flex-col justify-center md:gap-6 sm:gap-0 sm:p-4"
+        >
+            <div class="w-full h-[300px] pb-4">
+                <img
+                    class="w-full h-full object-cover"
+                    src={frontmatter.image.url}
+                    alt=""
+                />
+                <div class="flex gap-4 py-2 justify-between">
+                    <time datetime={pubDate} class="text-base">{formatearFecha}</time>
+                    <span class="font-semibold font-lato text-naranja"> {frontmatter.tags}</span>
+                    
+                </div>
+            </div>
+
+            <article class="post-body">
+                <header>
+                    <h1 class="sm:text-2xl lg:text-1xl xl:text-4xl font-gotham font-extrabold tracking-tighter text-azul sm:text-left lg:text-left sm:leading-none my-4">
+                        {frontmatter.title}
+                    </h1>
+                </header>
+                <slot />  
+            </article>
+        
+        </div>
+    </div>
+
+</BlogLayout>

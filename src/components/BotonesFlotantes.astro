@@ -1,0 +1,92 @@
+<div
+  class="flex fixed bottom-10 lg:right-10 sm:right-4 flex-col gap-4 z-30 items-center"
+>
+
+  <a
+    href="https://api.whatsapp.com/send?phone=573124615606&text=Hola%2C%20Deseo%20informaci%C3%B3n%20sobre%3A"
+    class="whatsapp flex items-center justify-center w-14 h-14 bg-[#25d366] text-white rounded-full text-4xl z-50 group"
+    target="_blank"
+  >
+    <i class="fa-brands fa-whatsapp"></i>
+    <span
+      class="absolute sm:hidden lg:block right-full w-24 text-center mr-4 px-2 py-1 bg-[#25d366] text-white text-sm rounded hide-tooltip transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+    >
+      Contactar Asesor
+      <span class="ec ec-sunglasses"></span>
+    </span>
+  </a>
+</div>
+
+<style>
+  @keyframes vibrate {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-10px);
+    }
+    50% {
+      transform: translateX(10px);
+    }
+    75% {
+      transform: translateX(-10px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .vibrate {
+    animation: vibrate 0.3s infinite;
+  }
+
+  .show-tooltip {
+    opacity: 1;
+  }
+
+  .hide-tooltip {
+    opacity: 0;
+  }
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const whatsappButton = document.querySelector(".whatsapp");
+    const tooltip = whatsappButton.querySelector("span");
+    const speedDial = whatsappButton.querySelector("speedDial");
+
+    let firstRun = true;
+
+    function showTooltip() {
+      tooltip.classList.remove("hide-tooltip");
+      tooltip.classList.add("show-tooltip");
+
+      whatsappButton.classList.add("vibrate");
+
+      // Remove vibration after 1 second
+      setTimeout(() => {
+        whatsappButton.classList.remove("vibrate");
+      }, 1000); // Vibrates for 1 second
+    }
+
+    function hideTooltip() {
+      tooltip.classList.remove("show-tooltip");
+      tooltip.classList.add("hide-tooltip");
+    }
+
+    function toggleTooltip() {
+      showTooltip();
+      // Hide tooltip after 5 seconds
+      setTimeout(() => {
+        hideTooltip();
+      }, 5000); // Tooltip visible for 5 seconds
+    }
+
+    // Initial delay to prevent immediate vibration
+    setTimeout(() => {
+      setInterval(toggleTooltip, 10000); // Toggle tooltip and vibration every 7 seconds
+      firstRun = false;
+    }, 1000); // Delay the first run by 1 second to avoid immediate vibration
+  });
+</script>
+
+

@@ -1,0 +1,118 @@
+---
+import TarjetasEspecialidades from "../components/TarjetasEspecialidades.astro";
+import MainHero from "../components/MainHero.astro";
+import BotonPrincipal from "../components/BotonPrincipal.astro";
+import LogosProveedores from "../components/LogosProveedores.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+import Testimonios from "../components/Testimonios.astro";
+import Servicios from "../components/Servicios.astro";
+import Asesoria from "../components/Asesoria.astro";
+import FAQS from "../components/FAQS.astro";
+import MainHeroCopy from "../components/MainHeroCopy.astro";
+
+const title = "Fertrac - Venta de repuestos originales para vehiculos de carga y componentes de alta calidad";
+const description = "Especialistas en la venta de repuestos originales y de alta calidad para vehiculos de carga. En Fertrac, ofrecemos una amplia gama de componentes para mantener tus vehiculos de carga pesados en óptimas condiciones, con más de 20 años de experiencia en el mercado.";
+---
+
+<MainLayout title={title} descripción={description}>
+    <!-- HEADER CARRUSEL -->
+        
+        <MainHero />
+
+        <!-- SLIDER PROVEEDORES -->
+        <section class="marcas py-4">
+            <LogosProveedores />
+        </section>
+
+        <!-- FERTRAC -->
+        <section>
+            <div
+                class="fertrac-introduce flex items-center justify-center sm:px-4 lg:my-8 flex-wrap md:px-8 lg:gap-8"
+            >
+                <div class="sm:w-32 sm:pb-4 lg:w-72 lg:py-16">
+                    <img src="/img/iso web-8.png" alt="" class="" />
+                </div>
+                <div class=" sm:w-full lg:w-[60%] 2xl:w-[50%]">
+                    <h2 class="sm:pb-4 text-justify">
+                        En Fertrac, comprendemos la importancia de la fiabilidad y la eficiencia en el mundo del transporte de carga.
+                    </h2>
+                    <p class="sm:pb-4 text-justify">
+                        Por ello, nos comprometemos a proporcionar repuestos duraderos y de alta calidad que te ayudarán a maximizar el rendimiento y la vida útil de tus vehiculos de carga.
+                        <br />
+                        <br />
+                        Nuestro equipo está formado por expertos en la industria, listos para asistirte en cada paso del camino. Ya sea que necesites asesoramiento sobre qué repuesto es el adecuado para tu camión o asistencia con la instalación, estamos aquí para ayudarte.
+                    </p>
+                </div>
+                <div>
+                    <dl class="grid max-w-screen-xl grid-cols-2 sm:gap-0 md:gap-8 p-4 mx-auto text-gray-900 sm:grid-cols-3 xl:grid-cols-3 lg:px-24 sm:items-start sm:p-4 gap-2">
+                      <div class="flex flex-col items-center justify-center">
+                          <dt class="mb-2 text-4xl font-extrabold text-azul font-gotham">50+</dt>
+                          <dd class="sm:text-sm md:text-xl text-azul text-center font-bold">Marcas de repuestos</dd>
+                      </div>
+                     
+                      <div class="flex flex-col items-center justify-center">
+                          <dt class="mb-2 text-4xl font-extrabold text-azul font-gotham">20+</dt>
+                          <dd class="sm:text-sm md:text-xl text-azul text-center font-gotham font-bold">Años de Experiencia en el mercado</dd>
+                      </div>
+                      <div class="flex flex-col items-center justify-center">
+                          <dt class="mb-2 text-4xl font-extrabold text-azul">12+</dt>
+                          <dd class="sm:text-sm md:text-xl text-azul font-bold">Especialidades</dd>
+                      </div>
+                  </dl>
+                  </div>
+            </div>
+        </section>
+
+        <!-- ESPECIALIDADES -->
+
+        <TarjetasEspecialidades />
+       <!--  SERVICIOS -->
+
+        <Servicios/>
+
+        
+        <!-- NOVEDADES BLOG -->   
+        <section class="sm:px-4 lg:px-0">
+            <div
+                class="relative rounded-xl shadow-md overflow-hidden w-full bg-gradient-to-r from-orange-600 to-yellow-300"
+            >
+            <div class="absolute inset-0 bg-black opacity-10"></div>
+                <div class="md:flex md:w-full relative">
+                    <div class="md:shrink-0 md:w-6/12">
+                        <img
+                            class="h-48 w-full object-cover md:h-full md:w-full"
+                            src="/img/novedades-Fertrac.png"
+                            alt="Modern building architecture"
+                            style="clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+        "
+                        />
+                    </div>
+                    <div
+                        class="flex flex-col justify-center gap-5 2xl:pr-56 sm:p-4 lg:p-8 sm:items-center lg:items-start"
+                    >
+                        <h2 class="!text-white !text-left">
+                            Novedades Fertrac
+                        </h2>
+        
+                        <p
+                            class="!text-white sm:w-auto"
+                        >
+                        Te mantenemos al tanto de las últimas tendencias y lanzamientos en el mundo de las piezas de recambio para vehiculos de carga. Descubre los productos más recientes de nuestro catálogo y mantente informado sobre las ultimas novedades del mercado.
+                        </p>
+        
+                        <BotonPrincipal url="/img/catalogo-diciembre-fertrac.pdf" download="catalogo-agosto2-fertrac" text="Ver Novedades" estilos="bg-white hover:bg-transparent hover:text-white hover:border text-naranja mr-2 lg:!w-auto " icon="fa-regular fa-lightbulb"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- TESTIMONIOS -->
+        <Testimonios/>
+<!--         <div>
+            <Testimonios/>
+        </div> -->
+        <FAQS />
+        <Asesoria/>
+
+</MainLayout>
